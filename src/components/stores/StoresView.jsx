@@ -110,7 +110,7 @@ export default function StoresView() {
         </button>
       </div>
       <div style={{ marginTop: 12 }}>
-        {!district && !userLoc ? null : loading ? <p>Loading outlets...</p> : filtered.length === 0 ? <p>No outlets match.</p> : (
+        {loading ? <p>Loading outlets...</p> : filtered.length === 0 ? <p>No outlets match.</p> : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
             {filtered.map(o => (
               <div key={o.outlet_id}>
@@ -123,7 +123,10 @@ export default function StoresView() {
                   onClick={() => setSelected(selected?.outlet_id === o.outlet_id ? null : o)}
                 >
                   <div style={{ fontWeight: 600, fontSize: '0.9rem', display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: 0 }}><span style={{ fontSize: '0.7rem', color: 'var(--gold)', transition: 'transform 0.2s', display: 'inline-block', transform: selected?.outlet_id === o.outlet_id ? 'rotate(90deg)' : 'none' }}>▶</span>{o.name}</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: 0 }}>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--gold)', transition: 'transform 0.2s', display: 'inline-block', transform: selected?.outlet_id === o.outlet_id ? 'rotate(90deg)' : 'none' }}>▶</span>
+                      {o.name}
+                    </span>
                     {o._dist != null && <span style={{ fontSize: '0.8rem', color: 'var(--gold)' }}>{Math.round(o._dist)}km</span>}
                   </div>
                   <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{o.address1}, {o.district_name} — {o.depot}</div>

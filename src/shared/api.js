@@ -18,5 +18,5 @@ export async function getAllPrices(typeId) {
   if (!res.ok) throw new Error('Failed to load prices')
   const all = await res.json()
   const filtered = typeId ? all.filter(p => String(p.price_list_type_id) === String(typeId)) : all
-  return { data: filtered }
+  return filtered
 }

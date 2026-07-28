@@ -1,0 +1,5722 @@
+[
+  {
+    "product_id": 3,
+    "product_name": "BENGALGRAM BOLD (KADALA) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 63,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 5,
+    "product_name": "BLACKGRAM WASHED WHOLE (UZHUNNU) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 87,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1011,
+    "product_name": "BOILED RICE (A Grade) OMSS SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 27,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 11,
+    "product_name": "CHILLIES (MULAKU) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 136.5,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 12,
+    "product_name": "CORIANDER (MALLI) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 94.5,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1,
+    "product_name": "GREENGRAM (CHERUPAYAR) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 85,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 248,
+    "product_name": "JAYA RICE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 243,
+    "product_name": "KURUWA RICE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 7,
+    "product_name": "LOBIA (VANPAYAR) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 68,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1022,
+    "product_name": "MATTA RICE UNDA SUBSIDY",
+    "department": "NCDX (PURCHASE)",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1013,
+    "product_name": "RAW RICE (A Grade) OMSS SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 27,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1023,
+    "product_name": "RAWRICE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 29,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 66930,
+    "product_name": "SABARI K RICE (JAYA)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 66931,
+    "product_name": "SABARI K RICE (KURUVA)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 66932,
+    "product_name": "SABARI K RICE (MATTA)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 8,
+    "product_name": "TOORDHAL (THUVARA PARIPPU) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 83,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 238,
+    "product_name": "WHITECANE SUGAR (PANCHASARA) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 34.65,
+    "price_list_type_id": 1,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1222,
+    "product_name": "ASD-CO BOILED RICE SORTEX",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1269,
+    "product_name": "BENGAL GRAM BOLD (DRP)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 69,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1224,
+    "product_name": "BENGAL GRAM BOLD PREMIUM",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 97,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 183,
+    "product_name": "BENGALGRAM BOLD (KADALA) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 72,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1235,
+    "product_name": "BENGALGRAM BOLD (NONSUBSIDY)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 72,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1221,
+    "product_name": "BIRIYANI RICE - SONA",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 50,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 6,
+    "product_name": "BLACK GRAM SPLIT",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 110,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1413,
+    "product_name": "BLACK GRAM WASHED WHOLE (PREMIUM)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 130,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53299,
+    "product_name": "BLACK TOOR",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 135,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 172,
+    "product_name": "BLACKGRAM WASHED WHOLE (UZHUNNU) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 113,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70530,
+    "product_name": "BOILED RICE (A GRADE) OMSS FSSR",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 27,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1377,
+    "product_name": "CHAMBA RAW RICE",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 50,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 58195,
+    "product_name": "CHERUPAYAR PARIPPU - 500 GM PKT (GREEN GRAM DHA",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 70.88,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 175,
+    "product_name": "CHILLIES (MULAKU) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 245.007,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1411,
+    "product_name": "CHILLIES (PREMIUM)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 300.006,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 180,
+    "product_name": "CORIANDER (MALLI) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 168,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53298,
+    "product_name": "FENNEL (PERUMJEERAKAM)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 145.005,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 2,
+    "product_name": "GREEN GRAM DHALL (CHERUPAYAR PARIPPU)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 115,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1223,
+    "product_name": "GREEN GRAM PREMIUM",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 120,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1336,
+    "product_name": "GREEN GRAM PREMIUM 750 GM PKT",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 122.06,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1092,
+    "product_name": "GREEN PEAS (MAVELI)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 60,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 174,
+    "product_name": "GREENGRAM (CHERUPAYAR) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 98,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1260,
+    "product_name": "HORSEGRAM",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 55,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1219,
+    "product_name": "IDLI RICE CHENGALPETTU",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 39,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1112,
+    "product_name": "JAYA RICE (AFS)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 40,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1124,
+    "product_name": "JAYA RICE FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 40,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53297,
+    "product_name": "JAYA RICE PREMIUM (ANDHRA VARIETY)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1414,
+    "product_name": "JAYA RICE PREMIUM NON SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 176,
+    "product_name": "JEERAKAM (CUMINSEED) (NON SUBSIDY)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 269.997,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 13,
+    "product_name": "JEERAKAM (CUMINSEED).",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 269.997,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 10,
+    "product_name": "KADUKU (MUSTARD).",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 93.009,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 181,
+    "product_name": "KADUKU(NON SUBSIDY-MUSTARD)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 93.009,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1126,
+    "product_name": "KURUWA RICE FREE SALE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 36,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 178,
+    "product_name": "LOBIA (VANPAYAR) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 78,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1202,
+    "product_name": "LPG CYLINDER 5 KG POS REFILL",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 835,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1250,
+    "product_name": "MASOOR DHAL (ORANGE)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 87,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1249,
+    "product_name": "MASOOR DHAL (YELLOW)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 92,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 241,
+    "product_name": "MATTA RICE - VADI",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 47,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1111,
+    "product_name": "MATTA RICE (AFS)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1125,
+    "product_name": "MATTA RICE (FSSR)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 242,
+    "product_name": "MATTA RICE UNDA",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 253,
+    "product_name": "MATTA RICE UNDA FREE SALE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 252,
+    "product_name": "MATTA RICE VADI - SORTEX.",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 47,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1020,
+    "product_name": "MAVELI RAW RICE",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 9,
+    "product_name": "PEAS DHAL",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 58,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 179,
+    "product_name": "PEAS PARIPPU (NON SUBSIDY-PEAS DHAL)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 58,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1237,
+    "product_name": "PONNI RICE DOUBLE BOILED SORTEX",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 45,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1236,
+    "product_name": "PONNI RICE SINGLE BOILED SORTEX",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1102,
+    "product_name": "RAGI",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 50,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 250,
+    "product_name": "RAW RICE",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 0.0001,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70529,
+    "product_name": "RAW RICE (A GRADE) OMSS FSSR",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 27,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1114,
+    "product_name": "RAW RICE (AFS)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1220,
+    "product_name": "RAW RICE CO VARIETY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 38,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1127,
+    "product_name": "RAWRICE FREE SALE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1093,
+    "product_name": "RED PIRIYAN CHILLY (KASHMIRI CHILLY)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 269.997,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 55621,
+    "product_name": "SUGAR 1 KG PKT (VISHU RAMSAN SPL)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 39,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 246,
+    "product_name": "SUREKHA RICE",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 45,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 173,
+    "product_name": "TOORDHAL (THUVARA PARIPPU) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 108,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 14,
+    "product_name": "ULUVA (METHI)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 95.004,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 182,
+    "product_name": "ULUVA (METHI) (NON SUBSIDY)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 95.004,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1091,
+    "product_name": "WHITE GRAM (KABULI KADALA)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 85,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70423,
+    "product_name": "WHITE PEAS",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 56,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 171,
+    "product_name": "WHITECANE SUGAR (PANCHASARA) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 43.491,
+    "price_list_type_id": 2,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1222,
+    "product_name": "ASD-CO BOILED RICE SORTEX",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1269,
+    "product_name": "BENGAL GRAM BOLD (DRP)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 69,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1224,
+    "product_name": "BENGAL GRAM BOLD PREMIUM",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 97,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 183,
+    "product_name": "BENGALGRAM BOLD (KADALA) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 72,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1235,
+    "product_name": "BENGALGRAM BOLD (NONSUBSIDY)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 72,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1221,
+    "product_name": "BIRIYANI RICE - SONA",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 50,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 6,
+    "product_name": "BLACK GRAM SPLIT",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 110,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1413,
+    "product_name": "BLACK GRAM WASHED WHOLE (PREMIUM)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 130,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53299,
+    "product_name": "BLACK TOOR",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 135,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 172,
+    "product_name": "BLACKGRAM WASHED WHOLE (UZHUNNU) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 113,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70530,
+    "product_name": "BOILED RICE (A GRADE) OMSS FSSR",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 0.01,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1012,
+    "product_name": "BOILED RICE (COMMON) OMSS",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 35,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1377,
+    "product_name": "CHAMBA RAW RICE",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 50,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 175,
+    "product_name": "CHILLIES (MULAKU) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 245.007,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1411,
+    "product_name": "CHILLIES (PREMIUM)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 300.006,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 180,
+    "product_name": "CORIANDER (MALLI) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 168,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53298,
+    "product_name": "FENNEL (PERUMJEERAKAM)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 145.005,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 2,
+    "product_name": "GREEN GRAM DHALL (CHERUPAYAR PARIPPU)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 115,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1223,
+    "product_name": "GREEN GRAM PREMIUM",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 120,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1336,
+    "product_name": "GREEN GRAM PREMIUM 750 GM PKT",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 124.1625,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1092,
+    "product_name": "GREEN PEAS (MAVELI)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 60,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 174,
+    "product_name": "GREENGRAM (CHERUPAYAR) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 98,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1260,
+    "product_name": "HORSEGRAM",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 55,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1219,
+    "product_name": "IDLI RICE CHENGALPETTU",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 39,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1112,
+    "product_name": "JAYA RICE (AFS)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 40,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1124,
+    "product_name": "JAYA RICE FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 40,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53297,
+    "product_name": "JAYA RICE PREMIUM (ANDHRA VARIETY)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1414,
+    "product_name": "JAYA RICE PREMIUM NON SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 176,
+    "product_name": "JEERAKAM (CUMINSEED) (NON SUBSIDY)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 269.997,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 13,
+    "product_name": "JEERAKAM (CUMINSEED).",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 269.997,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 10,
+    "product_name": "KADUKU (MUSTARD).",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 93.009,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 181,
+    "product_name": "KADUKU(NON SUBSIDY-MUSTARD)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 93.009,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1126,
+    "product_name": "KURUWA RICE FREE SALE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 36,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 178,
+    "product_name": "LOBIA (VANPAYAR) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 78,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1250,
+    "product_name": "MASOOR DHAL (ORANGE)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 87,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1249,
+    "product_name": "MASOOR DHAL (YELLOW)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 92,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 241,
+    "product_name": "MATTA RICE - VADI",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 47,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1111,
+    "product_name": "MATTA RICE (AFS)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1125,
+    "product_name": "MATTA RICE (FSSR)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 242,
+    "product_name": "MATTA RICE UNDA",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 253,
+    "product_name": "MATTA RICE UNDA FREE SALE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 252,
+    "product_name": "MATTA RICE VADI - SORTEX.",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 47,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1020,
+    "product_name": "MAVELI RAW RICE",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 9,
+    "product_name": "PEAS DHAL",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 58,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 179,
+    "product_name": "PEAS PARIPPU (NON SUBSIDY-PEAS DHAL)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 58,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1237,
+    "product_name": "PONNI RICE DOUBLE BOILED SORTEX",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 45,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1236,
+    "product_name": "PONNI RICE SINGLE BOILED SORTEX",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1102,
+    "product_name": "RAGI",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 50,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70529,
+    "product_name": "RAW RICE (A GRADE) OMSS FSSR",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 0.01,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1013,
+    "product_name": "RAW RICE (A Grade) OMSS SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 0.01,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1114,
+    "product_name": "RAW RICE (AFS)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1220,
+    "product_name": "RAW RICE CO VARIETY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 38,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1127,
+    "product_name": "RAWRICE FREE SALE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1093,
+    "product_name": "RED PIRIYAN CHILLY (KASHMIRI CHILLY)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 269.997,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 147,
+    "product_name": "SABARI  SAMBAR POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 40.929,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1251,
+    "product_name": "SABARI  TEA BAG 25 NOS PKT",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 27.91,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1252,
+    "product_name": "SABARI  TEA BAG 50 NOS PKT",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 54.86,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 317,
+    "product_name": "SABARI 100 PAGES  UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 9.97,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 316,
+    "product_name": "SABARI 100 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 9.97,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 314,
+    "product_name": "SABARI 120 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 11.31,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 315,
+    "product_name": "SABARI 120 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 11.31,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 312,
+    "product_name": "SABARI 160 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14.11,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 313,
+    "product_name": "SABARI 160 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14.11,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 311,
+    "product_name": "SABARI 192 PAGES  UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 16.46,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 310,
+    "product_name": "SABARI 192PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 16.46,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70838,
+    "product_name": "SABARI 3 FOLD UMBRELLA 546 MM POLY B/S",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 304.5,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70839,
+    "product_name": "SABARI 3 FOLD UMBRELLA 546 MM POLY M/S",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 309.75,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 141,
+    "product_name": "SABARI AGMARK CHILLI POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 27.4365,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 142,
+    "product_name": "SABARI AGMARK CHILLI POWDER 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 55.3245,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 152,
+    "product_name": "SABARI AGMARK CHILLI POWDER 500 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 135.786,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 163,
+    "product_name": "SABARI AGMARK COCONUT OIL 1 LITRE.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 244.02,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 164,
+    "product_name": "SABARI AGMARK COCONUT OIL 1/2 LITRE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 122.493,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 140,
+    "product_name": "SABARI AGMARK COMP ASAFOETIDA PDR 50GM BOTTLE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 60.4485,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 148,
+    "product_name": "SABARI AGMARK COMPOUNDED ASAFOETIDA CAKE 50GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 55.797,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1062,
+    "product_name": "SABARI ASAFOETIDA CAKE 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 102.291,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1061,
+    "product_name": "SABARI ASAFOETIDA POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 106.9425,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 155,
+    "product_name": "SABARI BLACK PEPPER PDR  50 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 52.08,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72264,
+    "product_name": "SABARI BRAND SUGAR GRADE S30 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 52.5,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1157,
+    "product_name": "SABARI BRITE WASHING SOAP 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 31.624,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1399,
+    "product_name": "SABARI BRITE WASHING SOAP 400 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 53.95,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1400,
+    "product_name": "SABARI BRITE WASHING SOAP 800 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 106.94,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1140,
+    "product_name": "SABARI CHAKKI FRESH WHOLE WHEAT ATTA 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 54.894,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 321,
+    "product_name": "SABARI CHECK BOOK 100 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 9.97,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 154,
+    "product_name": "SABARI CHICKEN MASALA 100 GM.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 44.1735,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72458,
+    "product_name": "SABARI CHILLY PDR 100 GM (AAY ONAM KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 18.4999,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 68381,
+    "product_name": "SABARI CHILLY PDR 500GM + SABARI CORIANDER PDR 100GM (FREE)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 128.1,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 165,
+    "product_name": "SABARI COFFEE POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 23.2575,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 166,
+    "product_name": "SABARI COFFEE POWDER 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 45.4545,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1066,
+    "product_name": "SABARI COLLEGE BOOK (BIG)  192 PAGE UR",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 24.02,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1065,
+    "product_name": "SABARI COLLEGE BOOK (BIG) 192 PAGE R",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 24.02,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70368,
+    "product_name": "SABARI COLLEGE NOTE BOOK (BIG) 172 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70371,
+    "product_name": "SABARI COLLEGE NOTE BOOK (BIG) 172 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70366,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK 140 PAGES R",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 35.5,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70367,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK 140 PAGES UR",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 35.5,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1063,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK RULED 160 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 27.94,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1064,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK UNRULED 160 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 27.94,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 318,
+    "product_name": "SABARI COPY BOOK 100 PAGE 2 LINE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 9.97,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 319,
+    "product_name": "SABARI COPY BOOK 100 PAGE 4 LINE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 9.97,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 144,
+    "product_name": "SABARI CORIANDER PDR  200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 43.239,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 143,
+    "product_name": "SABARI CORIANDER PDR 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 22.323,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72460,
+    "product_name": "SABARI CORIANDER PDR 100GM (AAY ONAM KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 18.5001,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 158,
+    "product_name": "SABARI CRYSTAL SALT 1 KG.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 12,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1135,
+    "product_name": "SABARI CUMIN SEED 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 47.4285,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1038,
+    "product_name": "SABARI DRAWING  BOOK 24 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 7.95,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1246,
+    "product_name": "SABARI FENNEL SEEDS 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 23.7195,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1138,
+    "product_name": "SABARI FENUGREEK(METHI) 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 13.9545,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1130,
+    "product_name": "SABARI FISH MASALA 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 39.522,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 159,
+    "product_name": "SABARI FREE FLOW SALT 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 12.5,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1261,
+    "product_name": "SABARI GARAM MASALA POWDER 50 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 42.777,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1353,
+    "product_name": "SABARI GLAMOUR TOILET SOAP TURMERIC 100GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 17.38,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72455,
+    "product_name": "SABARI GOLD TEA 250 GM (AAY ONAM KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 84,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 138,
+    "product_name": "SABARI GREEN TEA 100 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 74.403,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1248,
+    "product_name": "SABARI KASHMIRI CHILLI POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 59.976,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 139,
+    "product_name": "SABARI LEAF TEA 250 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 88.3575,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 3215,
+    "product_name": "SABARI MATHS RULED 100 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 9.97,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1129,
+    "product_name": "SABARI MEAT MASALA 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 44.1735,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1136,
+    "product_name": "SABARI MUSTARD 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 13.9545,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70372,
+    "product_name": "SABARI NOTE BOOK 172 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 23,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70374,
+    "product_name": "SABARI NOTE BOOK 172 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 23,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70376,
+    "product_name": "SABARI NOTE BOOK 84 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70377,
+    "product_name": "SABARI NOTE BOOK 84 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 68383,
+    "product_name": "SABARI ONAM KIT 2024",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 189,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71524,
+    "product_name": "SABARI PALADA PAYASAM MIX 200GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 36.477,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72456,
+    "product_name": "SABARI PAYASAM MIX 200 GM (AAY ONAM KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1444,
+    "product_name": "SABARI PREMIUM BLACK TEA 200GM DO",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 72.53,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53315,
+    "product_name": "SABARI PREMIUM BLACK TEA 400GM DO",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 129.27,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1440,
+    "product_name": "SABARI PREMIUM CHAKKI FRESH ATTA 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 48.363,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 153,
+    "product_name": "SABARI RASAM POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 44.1735,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72461,
+    "product_name": "SABARI SALT 1 KG (AAY ONAM KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 15,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 74032,
+    "product_name": "SABARI SALT 1 KG OFFER RS 1",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 12.5,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71525,
+    "product_name": "SABARI SAMBAR PDR & FENUGREEK 200GM (COMBO 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 40.005,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72457,
+    "product_name": "SABARI SAMBAR PDR 100 GM (AAY ONAM KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 40,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 68382,
+    "product_name": "SABARI SAMBAR PDR 100GM + SABARI MUSTARD 100GM (FREE)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 46.2,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70836,
+    "product_name": "SABARI SCHOOL BAG BIG 17.5 TO 18.5 INCH",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1044.3,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70835,
+    "product_name": "SABARI SCHOOL BAG MEDIUM 16.5 TO 17.5 INCH",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 919.22,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70834,
+    "product_name": "SABARI SCHOOL BAG SMALL 15.5 TO 16.5 INCH",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 835.44,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71523,
+    "product_name": "SABARI SEMIYA PAYASAM MIX 200GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 35.595,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72022,
+    "product_name": "SABARI SPECIAL APPAM PODI 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 48.993,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72020,
+    "product_name": "SABARI SPECIAL PUTTUPODI 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 48.993,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70837,
+    "product_name": "SABARI STEEL WATER BOTTLE 600 ML",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 204.75,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1194,
+    "product_name": "SABARI SUPREME LOOSE TEA",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 252.21,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 131,
+    "product_name": "SABARI TEA GOLD 100 GM.",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 29.757,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 129,
+    "product_name": "SABARI TEA GOLD 250 GM.",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 76.251,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 130,
+    "product_name": "SABARI TEA GOLD 500 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 150.654,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 134,
+    "product_name": "SABARI TEA GOLD JAR 250 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 83.706,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 132,
+    "product_name": "SABARI TEA HOTEL BLEND 1 KG",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 240.8595,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 133,
+    "product_name": "SABARI TEA HOTEL BLEND 1/2 KG",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 123.6795,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 137,
+    "product_name": "SABARI TEA HOTEL BLEND EXTRA FRESH 250 GM DUPLEX C",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 56.73,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 127,
+    "product_name": "SABARI TEA LOOSE (FROM 25 KG BAG)",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 252.21,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71425,
+    "product_name": "SABARI TEA POT 500 ML",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 855.5,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 136,
+    "product_name": "SABARI TEA SFD 100 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 28.8225,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 135,
+    "product_name": "SABARI TEA SFD 250 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 70.686,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 128,
+    "product_name": "SABARI TEA SFD 500 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 135.786,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 146,
+    "product_name": "SABARI TURMERIC PDR  200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 54.39,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 145,
+    "product_name": "SABARI TURMERIC PDR 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 27.4365,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72459,
+    "product_name": "SABARI TURMERIC PDR 100GM (AAY ONAM KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 29.5,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71424,
+    "product_name": "SABARI WATER BOTTLE 800 ML",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 318.6,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57721,
+    "product_name": "SUPPLYCO SABARI ANDHRA JAYA RICE 10KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 575.001,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57722,
+    "product_name": "SUPPLYCO SABARI ANDHRA JAYA RICE 30KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1512,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57877,
+    "product_name": "SUPPLYCO SABARI ANDHRA JAYA RICE 5 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 292.01,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1117,
+    "product_name": "SUPPLYCO SABARI APPAMPODI 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 73.4685,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1118,
+    "product_name": "SUPPLYCO SABARI APPAMPODI 500 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 37.191,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1401,
+    "product_name": "SUPPLYCO SABARI BLACK PEPPER POWDER 100GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 102.291,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 67008,
+    "product_name": "SUPPLYCO SABARI KURUVA RICE 50 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 2205,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57728,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 10 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 545.16,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57723,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 30KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1510,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57727,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 5 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 277.2,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 66905,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 50 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 2453,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57725,
+    "product_name": "SUPPLYCO SABARI MATTA RICE VADI 10KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 649.0995,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57726,
+    "product_name": "SUPPLYCO SABARI MATTA RICE VADI 30KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1796,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57724,
+    "product_name": "SUPPLYCO SABARI MATTA RICE VADI 5 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 329.175,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57729,
+    "product_name": "SUPPLYCO SABARI MUSTARD 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 26.9745,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1115,
+    "product_name": "SUPPLYCO SABARI PUTTUPODI 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 73.4685,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1116,
+    "product_name": "SUPPLYCO SABARI PUTTUPODI 500GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 37.191,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 246,
+    "product_name": "SUREKHA RICE",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 45,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 173,
+    "product_name": "TOORDHAL (THUVARA PARIPPU) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 108,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 14,
+    "product_name": "ULUVA (METHI)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 95.004,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 182,
+    "product_name": "ULUVA (METHI) (NON SUBSIDY)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 95.004,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1091,
+    "product_name": "WHITE GRAM (KABULI KADALA)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 85,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70423,
+    "product_name": "WHITE PEAS",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 56,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 171,
+    "product_name": "WHITECANE SUGAR (PANCHASARA) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 45.003,
+    "price_list_type_id": 3,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 147,
+    "product_name": "SABARI  SAMBAR POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 39.5955,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1410,
+    "product_name": "SABARI AG COC-OIL SUBSIDY 500ML+NON SUBSIDY 500 ML",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 125,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 141,
+    "product_name": "SABARI AGMARK CHILLI POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 26.5545,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 142,
+    "product_name": "SABARI AGMARK CHILLI POWDER 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 53.5395,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 152,
+    "product_name": "SABARI AGMARK CHILLI POWDER 500 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 131.397,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 163,
+    "product_name": "SABARI AGMARK COCONUT OIL 1 LITRE.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 240.282,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 164,
+    "product_name": "SABARI AGMARK COCONUT OIL 1/2 LITRE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 120.6135,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 140,
+    "product_name": "SABARI AGMARK COMP ASAFOETIDA PDR 50GM BOTTLE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 58.4955,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 148,
+    "product_name": "SABARI AGMARK COMPOUNDED ASAFOETIDA CAKE 50GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 54.0015,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 150,
+    "product_name": "SABARI AGMARK SEEDLESS TAMARIND 250 GM PKT.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 48,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 151,
+    "product_name": "SABARI AGMARK SEEDLESS TAMARIND 500 GM PKT.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 96,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1062,
+    "product_name": "SABARI ASAFOETIDA CAKE 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 98.994,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1061,
+    "product_name": "SABARI ASAFOETIDA POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 103.4985,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 155,
+    "product_name": "SABARI BLACK PEPPER PDR  50 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 50.4105,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1157,
+    "product_name": "SABARI BRITE WASHING SOAP 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 30.6092,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1399,
+    "product_name": "SABARI BRITE WASHING SOAP 400 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 52.2,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1400,
+    "product_name": "SABARI BRITE WASHING SOAP 800 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 103.5,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 156,
+    "product_name": "SABARI CARDAMOM 10 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 17,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 157,
+    "product_name": "SABARI CARDAMOM 20 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1140,
+    "product_name": "SABARI CHAKKI FRESH WHOLE WHEAT ATTA 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 51,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 154,
+    "product_name": "SABARI CHICKEN MASALA 100 GM.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 42.756,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 165,
+    "product_name": "SABARI COFFEE POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 22.491,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 166,
+    "product_name": "SABARI COFFEE POWDER 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 44.0895,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1063,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK RULED 160 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 0.893,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1064,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK UNRULED 160 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 0.893,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 144,
+    "product_name": "SABARI CORIANDER PDR  200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 41.8425,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 143,
+    "product_name": "SABARI CORIANDER PDR 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 21.5985,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 158,
+    "product_name": "SABARI CRYSTAL SALT 1 KG.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 9,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1135,
+    "product_name": "SABARI CUMIN SEED 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 45.906,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1262,
+    "product_name": "SABARI DOUBLE FORTIFIED FF SALT 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 13,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1246,
+    "product_name": "SABARI FENNEL SEEDS 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 22.9425,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1138,
+    "product_name": "SABARI FENUGREEK(METHI) 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 13.4925,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1130,
+    "product_name": "SABARI FISH MASALA 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 38.2515,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 159,
+    "product_name": "SABARI FREE FLOW SALT 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 10.5,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1261,
+    "product_name": "SABARI GARAM MASALA POWDER 50 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 41.391,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1353,
+    "product_name": "SABARI GLAMOUR TOILET SOAP TURMERIC 100GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 16.82,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1248,
+    "product_name": "SABARI KASHMIRI CHILLI POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 58.044,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 3215,
+    "product_name": "SABARI MATHS RULED 100 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 0.893,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1129,
+    "product_name": "SABARI MEAT MASALA 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 42.756,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1136,
+    "product_name": "SABARI MUSTARD 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 13.4925,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1440,
+    "product_name": "SABARI PREMIUM CHAKKI FRESH ATTA 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 46.7985,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 153,
+    "product_name": "SABARI RASAM POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 42.756,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 146,
+    "product_name": "SABARI TURMERIC PDR  200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 52.6575,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 145,
+    "product_name": "SABARI TURMERIC PDR 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 26.5545,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1401,
+    "product_name": "SUPPLYCO SABARI BLACK PEPPER POWDER 100GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 98.994,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1349,
+    "product_name": "SUPPLYCO SABARI CHAKKI FRESH WHOLE WHEAT ATTA 5KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 250,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57729,
+    "product_name": "SUPPLYCO SABARI MUSTARD 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 26.103,
+    "price_list_type_id": 4,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1222,
+    "product_name": "ASD-CO BOILED RICE SORTEX",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1269,
+    "product_name": "BENGAL GRAM BOLD (DRP)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 69,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1224,
+    "product_name": "BENGAL GRAM BOLD PREMIUM",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 97,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 183,
+    "product_name": "BENGALGRAM BOLD (KADALA) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 72,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 3,
+    "product_name": "BENGALGRAM BOLD (KADALA) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 63,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1235,
+    "product_name": "BENGALGRAM BOLD (NONSUBSIDY)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 72,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1221,
+    "product_name": "BIRIYANI RICE - SONA",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 50,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 6,
+    "product_name": "BLACK GRAM SPLIT",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 110,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1413,
+    "product_name": "BLACK GRAM WASHED WHOLE (PREMIUM)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 130,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53299,
+    "product_name": "BLACK TOOR",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 135,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 172,
+    "product_name": "BLACKGRAM WASHED WHOLE (UZHUNNU) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 113,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 5,
+    "product_name": "BLACKGRAM WASHED WHOLE (UZHUNNU) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 87,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70530,
+    "product_name": "BOILED RICE (A GRADE) OMSS FSSR",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 27,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1011,
+    "product_name": "BOILED RICE (A Grade) OMSS SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 27,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1377,
+    "product_name": "CHAMBA RAW RICE",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 50,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 58195,
+    "product_name": "CHERUPAYAR PARIPPU - 500 GM PKT (GREEN GRAM DHA",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 70.88,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 175,
+    "product_name": "CHILLIES (MULAKU) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 245.007,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 11,
+    "product_name": "CHILLIES (MULAKU) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 136.5,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1411,
+    "product_name": "CHILLIES (PREMIUM)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 300.006,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 180,
+    "product_name": "CORIANDER (MALLI) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 168,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 12,
+    "product_name": "CORIANDER (MALLI) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 94.5,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53298,
+    "product_name": "FENNEL (PERUMJEERAKAM)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 145.005,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57823,
+    "product_name": "FREE CHAKKI FRSH ATTA 1KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 0.0105,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1397,
+    "product_name": "FREE SABARI CHAKKI FRESH WHOLE WHEAT ATTA 1KG",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 0.01,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 67933,
+    "product_name": "FREE SABARI LEAF TEA 250 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 0.0105,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 2,
+    "product_name": "GREEN GRAM DHALL (CHERUPAYAR PARIPPU)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 115,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1223,
+    "product_name": "GREEN GRAM PREMIUM",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 120,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1336,
+    "product_name": "GREEN GRAM PREMIUM 750 GM PKT",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 122.06,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1092,
+    "product_name": "GREEN PEAS (MAVELI)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 60,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 174,
+    "product_name": "GREENGRAM (CHERUPAYAR) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 98,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1,
+    "product_name": "GREENGRAM (CHERUPAYAR) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 85,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1260,
+    "product_name": "HORSEGRAM",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 55,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1219,
+    "product_name": "IDLI RICE CHENGALPETTU",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 39,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1112,
+    "product_name": "JAYA RICE (AFS)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 40,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1124,
+    "product_name": "JAYA RICE FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 40,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53297,
+    "product_name": "JAYA RICE PREMIUM (ANDHRA VARIETY)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1414,
+    "product_name": "JAYA RICE PREMIUM NON SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 248,
+    "product_name": "JAYA RICE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 176,
+    "product_name": "JEERAKAM (CUMINSEED) (NON SUBSIDY)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 269.997,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 13,
+    "product_name": "JEERAKAM (CUMINSEED).",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 269.997,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 10,
+    "product_name": "KADUKU (MUSTARD).",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 93.009,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 181,
+    "product_name": "KADUKU(NON SUBSIDY-MUSTARD)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 93.009,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1126,
+    "product_name": "KURUWA RICE FREE SALE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 36,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 243,
+    "product_name": "KURUWA RICE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 178,
+    "product_name": "LOBIA (VANPAYAR) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 78,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 7,
+    "product_name": "LOBIA (VANPAYAR) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 68,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1202,
+    "product_name": "LPG CYLINDER 5 KG POS REFILL",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 835,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1250,
+    "product_name": "MASOOR DHAL (ORANGE)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 87,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1249,
+    "product_name": "MASOOR DHAL (YELLOW)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 92,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 241,
+    "product_name": "MATTA RICE - VADI",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 47,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1111,
+    "product_name": "MATTA RICE (AFS)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1125,
+    "product_name": "MATTA RICE (FSSR)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 242,
+    "product_name": "MATTA RICE UNDA",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 253,
+    "product_name": "MATTA RICE UNDA FREE SALE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 41,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1022,
+    "product_name": "MATTA RICE UNDA SUBSIDY",
+    "department": "NCDX (PURCHASE)",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 252,
+    "product_name": "MATTA RICE VADI - SORTEX.",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 47,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1020,
+    "product_name": "MAVELI RAW RICE",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 9,
+    "product_name": "PEAS DHAL",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 58,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 179,
+    "product_name": "PEAS PARIPPU (NON SUBSIDY-PEAS DHAL)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 58,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1237,
+    "product_name": "PONNI RICE DOUBLE BOILED SORTEX",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 45,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1236,
+    "product_name": "PONNI RICE SINGLE BOILED SORTEX",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1102,
+    "product_name": "RAGI",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 50,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 250,
+    "product_name": "RAW RICE",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 0.0001,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70529,
+    "product_name": "RAW RICE (A GRADE) OMSS FSSR",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 27,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1013,
+    "product_name": "RAW RICE (A Grade) OMSS SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 27,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1114,
+    "product_name": "RAW RICE (AFS)",
+    "department": "NFSA DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1220,
+    "product_name": "RAW RICE CO VARIETY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 38,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1127,
+    "product_name": "RAWRICE FREE SALE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1023,
+    "product_name": "RAWRICE SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 29,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1093,
+    "product_name": "RED PIRIYAN CHILLY (KASHMIRI CHILLY)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 269.997,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 147,
+    "product_name": "SABARI  SAMBAR POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 43.995,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1251,
+    "product_name": "SABARI  TEA BAG 25 NOS PKT",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 30.01,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1252,
+    "product_name": "SABARI  TEA BAG 50 NOS PKT",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 59.01,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 317,
+    "product_name": "SABARI 100 PAGES  UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 8.91,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 316,
+    "product_name": "SABARI 100 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 8.91,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 314,
+    "product_name": "SABARI 120 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 10.09,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 315,
+    "product_name": "SABARI 120 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 10.09,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 312,
+    "product_name": "SABARI 160 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 12.59,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 313,
+    "product_name": "SABARI 160 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 12.59,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 311,
+    "product_name": "SABARI 192 PAGES  UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14.7,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 310,
+    "product_name": "SABARI 192PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14.7,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70838,
+    "product_name": "SABARI 3 FOLD UMBRELLA 546 MM POLY B/S",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 271.87,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70839,
+    "product_name": "SABARI 3 FOLD UMBRELLA 546 MM POLY M/S",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 276.57,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1410,
+    "product_name": "SABARI AG COC-OIL SUBSIDY 500ML+NON SUBSIDY 500 ML",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 229.005,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 141,
+    "product_name": "SABARI AGMARK CHILLI POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 29.505,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 142,
+    "product_name": "SABARI AGMARK CHILLI POWDER 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 59.493,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 152,
+    "product_name": "SABARI AGMARK CHILLI POWDER 500 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 145.992,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72010,
+    "product_name": "SABARI AGMARK CHILLY PDR 100GM (SIGNATURE KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 15.498,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 163,
+    "product_name": "SABARI AGMARK COCONUT OIL 1 LITRE.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 248.997,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72519,
+    "product_name": "SABARI AGMARK COCONUT OIL 1 LTR (SPL OFFR)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 339.003,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 164,
+    "product_name": "SABARI AGMARK COCONUT OIL 1/2 LITRE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 124.992,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 140,
+    "product_name": "SABARI AGMARK COMP ASAFOETIDA PDR 50GM BOTTLE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 64.995,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 148,
+    "product_name": "SABARI AGMARK COMPOUNDED ASAFOETIDA CAKE 50GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 59.997,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1062,
+    "product_name": "SABARI ASAFOETIDA CAKE 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 109.998,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1061,
+    "product_name": "SABARI ASAFOETIDA POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 114.996,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 155,
+    "product_name": "SABARI BLACK PEPPER PDR  50 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 56.007,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72264,
+    "product_name": "SABARI BRAND SUGAR GRADE S30 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 50.001,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1157,
+    "product_name": "SABARI BRITE WASHING SOAP 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 34.0076,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1399,
+    "product_name": "SABARI BRITE WASHING SOAP 400 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 58.01,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1400,
+    "product_name": "SABARI BRITE WASHING SOAP 800 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 115,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1140,
+    "product_name": "SABARI CHAKKI FRESH WHOLE WHEAT ATTA 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 48.006,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 321,
+    "product_name": "SABARI CHECK BOOK 100 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 8.91,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 154,
+    "product_name": "SABARI CHICKEN MASALA 100 GM.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 47.502,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 68381,
+    "product_name": "SABARI CHILLY PDR 500GM + SABARI CORIANDER PDR 100GM (FREE)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 122.01,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 76938,
+    "product_name": "SABARI CO OIL (2)+SUGAR RS 9 COMBO OFR",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 546.9975,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 74288,
+    "product_name": "SABARI COCONUT OIL 500 ML (TB KIT)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 162.0003,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 165,
+    "product_name": "SABARI COFFEE POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 24.99,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 166,
+    "product_name": "SABARI COFFEE POWDER 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 48.993,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1066,
+    "product_name": "SABARI COLLEGE BOOK (BIG)  192 PAGE UR",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 21.44,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1065,
+    "product_name": "SABARI COLLEGE BOOK (BIG) 192 PAGE R",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 21.44,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 308,
+    "product_name": "SABARI COLLEGE BOOK 192 PAGE RULED",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 33.92,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 309,
+    "product_name": "SABARI COLLEGE BOOK 192 PAGE UNRULED",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 33.92,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70368,
+    "product_name": "SABARI COLLEGE NOTE BOOK (BIG) 172 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 35,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70371,
+    "product_name": "SABARI COLLEGE NOTE BOOK (BIG) 172 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 35,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70366,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK 140 PAGES R",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 37,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70367,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK 140 PAGES UR",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 37,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1063,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK RULED 160 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 24.94,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1064,
+    "product_name": "SABARI COLLEGE PREMIUM NOTE BOOK UNRULED 160 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 24.94,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 318,
+    "product_name": "SABARI COPY BOOK 100 PAGE 2 LINE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 8.91,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 319,
+    "product_name": "SABARI COPY BOOK 100 PAGE 4 LINE",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 8.91,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 144,
+    "product_name": "SABARI CORIANDER PDR  200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 46.494,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 143,
+    "product_name": "SABARI CORIANDER PDR 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 24.003,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72051,
+    "product_name": "SABARI CORIANDER PDR 100GM (SAMRUDHI KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 18.501,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72011,
+    "product_name": "SABARI CORIANDER PDR 100GM (SIGNATURE KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 15.498,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 158,
+    "product_name": "SABARI CRYSTAL SALT 1 KG.",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 12,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1135,
+    "product_name": "SABARI CUMIN SEED 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 51.009,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72047,
+    "product_name": "SABARI CUMIN SEED 100GM (SAMRUDHI KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 53.4975,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1038,
+    "product_name": "SABARI DRAWING  BOOK 24 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 7.09,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1246,
+    "product_name": "SABARI FENNEL SEEDS 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 25.494,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72016,
+    "product_name": "SABARI FENUGREEK (METHI) 100GM (SIGNATURE KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 12.0015,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72046,
+    "product_name": "SABARI FENUGREEK 100GM (SAMRUDHI KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 15.0045,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1138,
+    "product_name": "SABARI FENUGREEK(METHI) 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14.994,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1130,
+    "product_name": "SABARI FISH MASALA 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 42.504,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 159,
+    "product_name": "SABARI FREE FLOW SALT 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 12.5,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1261,
+    "product_name": "SABARI GARAM MASALA POWDER 50 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 45.99,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1353,
+    "product_name": "SABARI GLAMOUR TOILET SOAP TURMERIC 100GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 18.69,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57816,
+    "product_name": "SABARI GOLD TEA 100GM (FEST)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 25,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57817,
+    "product_name": "SABARI GOLD TEA 250GM (FEST)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 60,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72052,
+    "product_name": "SABARI GOLD TEA 250GM (SAMRUDHI KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 78.0045,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57819,
+    "product_name": "SABARI GOLD TEA 250GM JAR (FEST)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 72,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 73088,
+    "product_name": "SABARI GOLD TEA 250GM SPL OFFER 2025",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 61.509,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57818,
+    "product_name": "SABARI GOLD TEA 500GM (FEST)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 120,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 138,
+    "product_name": "SABARI GREEN TEA 100 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 80.01,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57821,
+    "product_name": "SABARI HOTEL BLEND TEA 1 KG (FEST)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 229,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57820,
+    "product_name": "SABARI HOTEL BLEND TEA 500GM (FEST)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 115,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 66930,
+    "product_name": "SABARI K RICE (JAYA)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 66931,
+    "product_name": "SABARI K RICE (KURUVA)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 66932,
+    "product_name": "SABARI K RICE (MATTA)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 33,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1248,
+    "product_name": "SABARI KASHMIRI CHILLI POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 64.491,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 139,
+    "product_name": "SABARI LEAF TEA 250 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 95.004,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 3215,
+    "product_name": "SABARI MATHS RULED 100 PAGES",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 8.91,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1129,
+    "product_name": "SABARI MEAT MASALA 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 47.502,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1136,
+    "product_name": "SABARI MUSTARD 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14.994,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72044,
+    "product_name": "SABARI MUSTARD 100GM (SAMRUDHI KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 15.0045,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72015,
+    "product_name": "SABARI MUSTARD 100GM (SIGNATURE KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 9.996,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70372,
+    "product_name": "SABARI NOTE BOOK 172 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 25,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70374,
+    "product_name": "SABARI NOTE BOOK 172 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 25,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70376,
+    "product_name": "SABARI NOTE BOOK 84 PAGES RULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14.5,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70377,
+    "product_name": "SABARI NOTE BOOK 84 PAGES UNRULED",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 14.5,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 68383,
+    "product_name": "SABARI ONAM KIT 2024",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 180,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71524,
+    "product_name": "SABARI PALADA PAYASAM MIX 200GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 40.992,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72050,
+    "product_name": "SABARI PAYASAM MIX 200GM (SAMRUDHI KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 37.37,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1444,
+    "product_name": "SABARI PREMIUM BLACK TEA 200GM DO",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 77.99,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 53315,
+    "product_name": "SABARI PREMIUM BLACK TEA 400GM DO",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 139,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1440,
+    "product_name": "SABARI PREMIUM CHAKKI FRESH ATTA 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 51.996,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57822,
+    "product_name": "SABARI PREMIUM CHAKKI FRSH ATTA 1KG B2G1 FRE MRP 60 (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 63,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72049,
+    "product_name": "SABARI PUTTUPODI 1 KG (SAMRUDHI KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 76.9965,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72017,
+    "product_name": "SABARI PUTTUPODI 500GM (SIGNATURE KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 35.9835,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72014,
+    "product_name": "SABARI RASAM PDR 100GM (SIGNATURE KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 39.0075,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 153,
+    "product_name": "SABARI RASAM POWDER 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 47.502,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 74032,
+    "product_name": "SABARI SALT 1 KG OFFER RS 1",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 12.5,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71525,
+    "product_name": "SABARI SAMBAR PDR & FENUGREEK 200GM (COMBO 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 40.005,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72013,
+    "product_name": "SABARI SAMBAR PDR 100GM (SIGNATURE KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 35.5005,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 68382,
+    "product_name": "SABARI SAMBAR PDR 100GM + SABARI MUSTARD 100GM (FREE)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 43.995,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70836,
+    "product_name": "SABARI SCHOOL BAG BIG 17.5 TO 18.5 INCH",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 885,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70835,
+    "product_name": "SABARI SCHOOL BAG MEDIUM 16.5 TO 17.5 INCH",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 778.9888,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70834,
+    "product_name": "SABARI SCHOOL BAG SMALL 15.5 TO 16.5 INCH",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 708,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71523,
+    "product_name": "SABARI SEMIYA PAYASAM MIX 200GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 40.005,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72018,
+    "product_name": "SABARI SEMIYA PAYASAM MIX 200GM (SIGNATURE KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 34.7,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57813,
+    "product_name": "SABARI SFD TEA 100GM (FEST)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 24,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57814,
+    "product_name": "SABARI SFD TEA 250GM (FEST)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 58,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57815,
+    "product_name": "SABARI SFD TEA 500GM (FEST)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 115,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72022,
+    "product_name": "SABARI SPECIAL APPAM PODI 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 48.993,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72020,
+    "product_name": "SABARI SPECIAL PUTTUPODI 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 48.993,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 76053,
+    "product_name": "SABARI SPECIAL PUTTUPODI OFFER RS 1",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72520,
+    "product_name": "SABARI SPL PUTTUPODI 1 KG+APPAMPODI 1 KG COMBO",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 87.99,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70837,
+    "product_name": "SABARI STEEL WATER BOTTLE 600 ML",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 182.8,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1194,
+    "product_name": "SABARI SUPREME LOOSE TEA",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 245.007,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 131,
+    "product_name": "SABARI TEA GOLD 100 GM.",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 32.004,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 129,
+    "product_name": "SABARI TEA GOLD 250 GM.",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 82.005,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 130,
+    "product_name": "SABARI TEA GOLD 500 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 161.994,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 134,
+    "product_name": "SABARI TEA GOLD JAR 250 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 90.006,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 132,
+    "product_name": "SABARI TEA HOTEL BLEND 1 KG",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 258.993,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 133,
+    "product_name": "SABARI TEA HOTEL BLEND 1/2 KG",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 132.993,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 137,
+    "product_name": "SABARI TEA HOTEL BLEND EXTRA FRESH 250 GM DUPLEX C",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 61,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 127,
+    "product_name": "SABARI TEA LOOSE (FROM 25 KG BAG)",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 260.001,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71425,
+    "product_name": "SABARI TEA POT 500 ML",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 855.5,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 136,
+    "product_name": "SABARI TEA SFD 100 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 30.996,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 135,
+    "product_name": "SABARI TEA SFD 250 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 75.999,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 128,
+    "product_name": "SABARI TEA SFD 500 GM",
+    "department": "SABARI TEA DIVISION",
+    "status": true,
+    "rate": 145.992,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 146,
+    "product_name": "SABARI TURMERIC PDR  200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 58.506,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 145,
+    "product_name": "SABARI TURMERIC PDR 100 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 29.505,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72048,
+    "product_name": "SABARI TURMERIC PDR 100GM (SAMRUDHI KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 29.505,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 72012,
+    "product_name": "SABARI TURMERIC PDR 100GM (SIGNATURE KIT 2025)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 26.502,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 71424,
+    "product_name": "SABARI WATER BOTTLE 800 ML",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 318.6,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 55621,
+    "product_name": "SUGAR 1 KG PKT (VISHU RAMSAN SPL)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 39,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57721,
+    "product_name": "SUPPLYCO SABARI ANDHRA JAYA RICE 10KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 575.001,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57795,
+    "product_name": "SUPPLYCO SABARI ANDHRA JAYA RICE 30 KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1606.5,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57722,
+    "product_name": "SUPPLYCO SABARI ANDHRA JAYA RICE 30KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1512,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57877,
+    "product_name": "SUPPLYCO SABARI ANDHRA JAYA RICE 5 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 292.01,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57793,
+    "product_name": "SUPPLYCO SABARI ANDHRA JAYA RICE 5 KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 275,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57754,
+    "product_name": "SUPPLYCO SABARI APPAM PODI 1 KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 58.46,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57755,
+    "product_name": "SUPPLYCO SABARI APPAM PODI 500 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 29.6,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1117,
+    "product_name": "SUPPLYCO SABARI APPAMPODI 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 79.002,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1118,
+    "product_name": "SUPPLYCO SABARI APPAMPODI 500 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 40.005,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57739,
+    "product_name": "SUPPLYCO SABARI BLACK PEPPER PDR 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 95.991,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1401,
+    "product_name": "SUPPLYCO SABARI BLACK PEPPER POWDER 100GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 109.998,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57751,
+    "product_name": "SUPPLYCO SABARI BRITE WASHING SOAP 200 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 24.72,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57752,
+    "product_name": "SUPPLYCO SABARI BRITE WASHING SOAP 400 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 49.55,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57753,
+    "product_name": "SUPPLYCO SABARI BRITE WASHING SOAP 800 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 99.1,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57731,
+    "product_name": "SUPPLYCO SABARI CHILLI PDR 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 29.78,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57732,
+    "product_name": "SUPPLYCO SABARI CHILLI PDR 200 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 59.25,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57733,
+    "product_name": "SUPPLYCO SABARI CHILLI PDR 500 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 151.25,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57749,
+    "product_name": "SUPPLYCO SABARI COFFEE PDR 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 32.99,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57750,
+    "product_name": "SUPPLYCO SABARI COFFEE PDR 200 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 65,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57734,
+    "product_name": "SUPPLYCO SABARI CORIANDER PDR 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 16.51,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57735,
+    "product_name": "SUPPLYCO SABARI CORIANDER PDR 200 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 32.25,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57744,
+    "product_name": "SUPPLYCO SABARI CUMIN SEEDS 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 86.26,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57745,
+    "product_name": "SUPPLYCO SABARI FENNEL SEEDS 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 37.51,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57746,
+    "product_name": "SUPPLYCO SABARI FENUGREEK SEEDS 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 15.74,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57759,
+    "product_name": "SUPPLYCO SABARI FISH MASALA PDR 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 39.74,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57741,
+    "product_name": "SUPPLYCO SABARI GARAM MASALA PDR 50 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 37.51,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57740,
+    "product_name": "SUPPLYCO SABARI KASHMIRI CHILLY PDR 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 60,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 67008,
+    "product_name": "SUPPLYCO SABARI KURUVA RICE 50 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 2205,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57728,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 10 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 545.16,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57797,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 10 KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 544.99,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57798,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 30 KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1638,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57723,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 30KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1510,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57727,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 5 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 277.2,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57796,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 5 KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 267.75,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 66905,
+    "product_name": "SUPPLYCO SABARI MATTA RICE UNDA 50 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 2453,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57872,
+    "product_name": "SUPPLYCO SABARI MATTA RICE VADI 10 KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 630,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57725,
+    "product_name": "SUPPLYCO SABARI MATTA RICE VADI 10KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 649.11,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57874,
+    "product_name": "SUPPLYCO SABARI MATTA RICE VADI 30 KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1858.5,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57726,
+    "product_name": "SUPPLYCO SABARI MATTA RICE VADI 30KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 1796,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57724,
+    "product_name": "SUPPLYCO SABARI MATTA RICE VADI 5 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 329.175,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57873,
+    "product_name": "SUPPLYCO SABARI MATTA RICE VADI 5KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 320.25,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57729,
+    "product_name": "SUPPLYCO SABARI MUSTARD 200 GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 29.001,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57748,
+    "product_name": "SUPPLYCO SABARI MUSTARD SEEDS 200 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 23.26,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57756,
+    "product_name": "SUPPLYCO SABARI PUTTU PODI 1 KG (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 58.46,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57757,
+    "product_name": "SUPPLYCO SABARI PUTTU PODI 500 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 29.6,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1115,
+    "product_name": "SUPPLYCO SABARI PUTTUPODI 1 KG",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 79.002,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1116,
+    "product_name": "SUPPLYCO SABARI PUTTUPODI 500GM",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 40.005,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57736,
+    "product_name": "SUPPLYCO SABARI TURMERIC PDR 100 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 21.38,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 57737,
+    "product_name": "SUPPLYCO SABARI TURMERIC PDR 200 GM (ONAM 2023)",
+    "department": "SABARI BRANDED DIVISION",
+    "status": true,
+    "rate": 42,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 246,
+    "product_name": "SUREKHA RICE",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 45,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 173,
+    "product_name": "TOORDHAL (THUVARA PARIPPU) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 108,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 8,
+    "product_name": "TOORDHAL (THUVARA PARIPPU) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 83,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 14,
+    "product_name": "ULUVA (METHI)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 95.004,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 182,
+    "product_name": "ULUVA (METHI) (NON SUBSIDY)",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 95.004,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 1091,
+    "product_name": "WHITE GRAM (KABULI KADALA)",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 85,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 70423,
+    "product_name": "WHITE PEAS",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 56,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 171,
+    "product_name": "WHITECANE SUGAR (PANCHASARA) FREE SALE SUBSIDY",
+    "department": "MAVELI RETAIL(PURCHASE)",
+    "status": true,
+    "rate": 43.491,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  },
+  {
+    "product_id": 238,
+    "product_name": "WHITECANE SUGAR (PANCHASARA) SUBSIDY",
+    "department": "ETENDER (PURCHASE)",
+    "status": true,
+    "rate": 34.65,
+    "price_list_type_id": 5,
+    "year": 2026,
+    "month": 7
+  }
+]

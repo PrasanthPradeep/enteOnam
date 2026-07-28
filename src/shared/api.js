@@ -1,49 +1,22 @@
-const API_BASE = "/api";
-
-async function fetchJSON(path, params = {}) {
-  const qs = new URLSearchParams(
-    Object.entries(params).filter(([_, v]) => v != null)
-  ).toString();
-  const url = API_BASE + path + (qs ? "?" + qs : "");
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("API " + res.status + ": " + url);
-  return res.json();
-}
-
-export async function getOutlets(page = 1, limit = 1000) {
-  return fetchJSON("/outlets", { page, limit });
-}
+const DATA_BASE = '/data'
 
 export async function getAllOutlets() {
-  let page = 1, all = [];
-  while (true) {
-    const resp = await getOutlets(page);
-    all.push(...(resp.data || []));
-    if (all.length >= (resp.pagination?.total || 0)) break;
-    page++;
-  }
-  return all;
+  const res = await fetch(DATA_BASE + '/outlets.json')
+  if (!res.ok) throw new Error('Failed to load outlets')
+  return res.json()
 }
 
 export async function getPriceListTypes() {
-  return fetchJSON("/price-list-types", { limit: 1000, status: 1 });
+  const res = await fetch(DATA_BASE + '/price_list_types.json')
+  if (!res.ok) throw new Error('Failed to load price list types')
+  const data = await res.json()
+  return { data }
 }
 
-export async function getPriceLists(typeId, year, month, page = 1, limit = 100) {
-  return fetchJSON("/price-list", {
-    page, limit, status: 1,
-    price_list_type_id: typeId,
-    year, month,
-  });
-}
-
-export async function getAllPrices(typeId, year, month) {
-  let page = 1, all = [];
-  while (true) {
-    const resp = await getPriceLists(typeId, year, month, page);
-    all.push(...(resp.data || []));
-    if (page >= (resp.pagination?.totalPages || 0)) break;
-    page++;
-  }
-  return all;
+export async function getAllPrices(typeId) {
+  const res = await fetch(DATA_BASE + '/price_lists.json')
+  if (!res.ok) throw new Error('Failed to load prices')
+  const all = await res.json()
+  const filtered = typeId ? all.filter(p => String(p.price_list_type_id) === String(typeId)) : all
+  return { data: filtered }
 }

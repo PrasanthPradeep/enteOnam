@@ -200,13 +200,14 @@ export default function SpotsView() {
         <CardContent className="space-y-4">
           {/* Map Container */}
           <div className="relative">
-            {mapLoading ? (
-              <MapLoadingSkeleton />
-            ) : (
-              <div 
-                ref={mapRef} 
-                className="w-full h-80 md:h-96 rounded-lg border shadow-sm cursor-crosshair"
-              />
+            <div
+              ref={mapRef}
+              className="w-full h-80 md:h-96 rounded-lg border shadow-sm cursor-crosshair"
+            />
+            {mapLoading && (
+              <div className="absolute inset-0 flex items-center justify-center rounded-lg bg-[var(--bg)]/90">
+                <MapLoadingSkeleton />
+              </div>
             )}
           </div>
 

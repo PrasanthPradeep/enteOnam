@@ -119,7 +119,7 @@ export default function CountdownView() {
         <div className="space-y-2">
           <h1 className="text-4xl md:text-5xl font-bold text-green-800 flex items-center justify-center gap-3">
             <Flower className="h-8 w-8 md:h-12 md:w-12 text-gold" />
-            Onam 2026
+            ഓണം 2026
             <Flower className="h-8 w-8 md:h-12 md:w-12 text-gold" />
           </h1>
           <p className="text-lg text-muted-foreground">
@@ -247,13 +247,17 @@ export default function CountdownView() {
               discover celebration spots, and more!
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Button variant="default" className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                Plan Sadya
+              <Button asChild variant="default" className="flex items-center gap-2">
+                <a href="./sadya">
+                  <Calendar className="h-4 w-4" />
+                  Plan Sadya
+                </a>
               </Button>
-              <Button variant="secondary" className="flex items-center gap-2">
-                <Gift className="h-4 w-4" />
-                Find Stores
+              <Button asChild variant="secondary" className="flex items-center gap-2">
+                <a href="./stores">
+                  <Gift className="h-4 w-4" />
+                  Find Stores
+                </a>
               </Button>
             </div>
           </div>

@@ -5,9 +5,7 @@ import {
   Phone, 
   Navigation, 
   Search, 
-  Filter, 
   ChevronDown, 
-  ChevronRight,
   Loader2,
   ExternalLink,
   X
@@ -62,7 +60,6 @@ export default function StoresView() {
   const [userLoc, setUserLoc] = useState(null)
   const [loading, setLoading] = useState(true)
   const [locating, setLocating] = useState(false)
-  const [showFilters, setShowFilters] = useState(false)
 
   useEffect(() => {
     getAllOutlets()
@@ -143,29 +140,12 @@ export default function StoresView() {
               {loading ? 'Loading stores...' : `${outlets.length} outlets across Kerala`}
             </p>
           </div>
-          <Button
-            variant="outline"
-            onClick={() => setShowFilters(!showFilters)}
-            className="flex items-center gap-2"
-          >
-            <Filter className="h-4 w-4" />
-            Filters
-            {activeFiltersCount > 0 && (
-              <Badge variant="secondary" className="ml-1 px-1.5 py-0.5 text-xs">
-                {activeFiltersCount}
-              </Badge>
-            )}
-            {showFilters ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
-          </Button>
         </div>
 
         {/* Filters */}
-        <Card className={`festival-card transition-all duration-300 ${
-          showFilters ? 'opacity-100 scale-100' : 'opacity-0 scale-95 h-0 overflow-hidden'
-        }`}>
-          {showFilters && (
-            <CardContent className="p-6">
-              <div className="space-y-4">
+        <Card className="festival-card">
+          <CardContent className="p-6">
+            <div className="space-y-4">
                 {/* Search */}
                 <div className="relative">
                   <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
@@ -241,7 +221,6 @@ export default function StoresView() {
                 </div>
               </div>
             </CardContent>
-          )}
         </Card>
       </div>
 
@@ -261,13 +240,9 @@ export default function StoresView() {
             <CardContent className="text-center py-12">
               <Store className="h-12 w-12 text-gold mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-green-800 mb-2">Find Supplyco Stores</h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground">
                 Select a district, search by name, or find nearby stores to get started
               </p>
-              <Button onClick={() => setShowFilters(true)} className="flex items-center gap-2">
-                <Filter className="h-4 w-4" />
-                Open Filters
-              </Button>
             </CardContent>
           </Card>
         ) : filtered.length === 0 ? (

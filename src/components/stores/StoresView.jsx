@@ -39,6 +39,7 @@ export default function StoresView() {
   const [depot, setDepot] = useState('')
   const [userLoc, setUserLoc] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [locating, setLocating] = useState(false)
 
   useEffect(() => {
     getAllOutlets()
@@ -59,9 +60,16 @@ export default function StoresView() {
 
   const locate = () => {
     if (!navigator.geolocation) return
+    setLocating(true)
     navigator.geolocation.getCurrentPosition(
-      pos => setUserLoc({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
-      () => setUserLoc(null)
+      pos => {
+        setUserLoc({ lat: pos.coords.latitude, lng: pos.coords.longitude })
+        setLocating(false)
+      },
+      () => {
+        setUserLoc(null)
+        setLocating(false)
+      }
     )
   }
 
@@ -105,8 +113,8 @@ export default function StoresView() {
           </select>
           <input className="form-input" style={{ flex: 2, minWidth: 180 }} placeholder="Search name or address..." value={query} onChange={e => setQuery(e.target.value)} />
         </div>
-        <button className="btn btn-secondary" style={{ alignSelf: 'flex-start' }} onClick={locate}>
-          {userLoc ? 'Nearby: ' + Math.round(filtered[0]?._dist || 0) + 'km' : 'Nearby'}
+        <button className="btn btn-secondary" style={{ alignSelf: 'flex-start' }} onClick={locate} disabled={locating}>
+          {locating ? 'Locating...' : userLoc ? 'Nearby: ' + Math.round(filtered[0]?._dist || 0) + 'km' : 'Nearby'}
         </button>
       </div>
       <div style={{ marginTop: 12 }}>

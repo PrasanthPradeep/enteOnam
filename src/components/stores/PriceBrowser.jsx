@@ -26,8 +26,7 @@ export default function PriceBrowser() {
   useEffect(() => {
     if (!activeType) return
     setLoading(true)
-    const now = new Date()
-    getAllPrices(activeType, now.getFullYear(), now.getMonth() + 1)
+    getAllPrices(activeType)
       .then(data => setPrices(data))
       .finally(() => setLoading(false))
   }, [activeType])

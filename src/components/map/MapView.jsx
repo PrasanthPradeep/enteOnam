@@ -6,6 +6,32 @@ import { Button } from '../ui/button'
 import { Badge } from '../ui/badge'
 import { Skeleton } from '../ui/skeleton'
 
+let markerClusterLoader
+
+function loadMarkerCluster() {
+  if (window.L?.markerClusterGroup) return Promise.resolve()
+  if (markerClusterLoader) return markerClusterLoader
+
+  markerClusterLoader = new Promise((resolve, reject) => {
+    const existing = document.querySelector('script[data-markercluster="true"]')
+    if (existing) {
+      existing.addEventListener('load', () => resolve(), { once: true })
+      existing.addEventListener('error', () => reject(new Error('Failed to load marker cluster script')), { once: true })
+      return
+    }
+
+    const script = document.createElement('script')
+    script.dataset.markercluster = 'true'
+    script.src = 'https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js'
+    script.async = true
+    script.onload = () => resolve()
+    script.onerror = () => reject(new Error('Failed to load marker cluster script'))
+    document.head.appendChild(script)
+  })
+
+  return markerClusterLoader
+}
+
 export default function MapView() {
   const [outlets, setOutlets] = useState([])
   const [loading, setLoading] = useState(true)
@@ -37,66 +63,71 @@ export default function MapView() {
       link.href = 'https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css'
       document.head.appendChild(link)
 
-      const map = L.map('map').setView([10.5, 76.2], 8)
-      mapInstance.current = map
-      
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap',
-        maxZoom: 18,
-      }).addTo(map)
+      loadMarkerCluster().catch(() => null).finally(() => {
+        const map = L.map('map').setView([10.5, 76.2], 8)
+        mapInstance.current = map
+        window.L = L
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© OpenStreetMap',
+          maxZoom: 18,
+        }).addTo(map)
 
-      const greenIcon = L.divIcon({
-        html: '<div style="background:#1E6B4E;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 4px rgba(0,0,0,0.2);"></div>',
-        iconSize: [14, 14],
-        className: '',
-      })
+        const greenIcon = L.divIcon({
+          html: '<div style="background:#1E6B4E;width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 4px rgba(0,0,0,0.2);"></div>',
+          iconSize: [14, 14],
+          className: '',
+        })
 
-      const userIcon = L.divIcon({
-        html: '<div style="background:#D9A441;width:16px;height:16px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.3);"><div style="width:6px;height:6px;background:#fff;border-radius:50%;margin:2px;"></div></div>',
-        iconSize: [16, 16],
-        className: '',
-      })
+        const userIcon = L.divIcon({
+          html: '<div style="background:#D9A441;width:16px;height:16px;border-radius:50%;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.3);"><div style="width:6px;height:6px;background:#fff;border-radius:50%;margin:2px;"></div></div>',
+          iconSize: [16, 16],
+          className: '',
+        })
 
-      const markers = L.markerClusterGroup({
-        chunkedLoading: true,
-        maxClusterRadius: 50,
-        iconCreateFunction: cluster => {
-          const count = cluster.getChildCount()
-          return L.divIcon({
-            html: `<div style="background:#1E6B4E;color:white;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:12px;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.2);">${count}</div>`,
-            className: 'custom-cluster-icon',
-            iconSize: L.point(40, 40, true),
-          })
-        }
-      })
+        const markers = window.L?.markerClusterGroup
+          ? L.markerClusterGroup({
+              chunkedLoading: true,
+              maxClusterRadius: 50,
+              iconCreateFunction: cluster => {
+                const count = cluster.getChildCount()
+                return L.divIcon({
+                  html: `<div style="background:#1E6B4E;color:white;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:12px;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,0.2);">${count}</div>`,
+                  className: 'custom-cluster-icon',
+                  iconSize: L.point(40, 40, true),
+                })
+              }
+            })
+          : L.featureGroup()
 
-      outlets.forEach(o => {
-        const m = L.marker([o.latitude, o.longitude], { icon: greenIcon })
-        const popupContent = `
-          <div style="min-width:200px;">
-            <h3 style="margin:0 0 8px 0;color:#1E6B4E;font-size:14px;">${o.name}</h3>
-            <p style="margin:0 0 4px 0;font-size:12px;color:#666;">${o.address1}</p>
-            <p style="margin:0 0 8px 0;font-size:12px;color:#666;">${o.district_name}</p>
-            <div style="display:flex;gap:8px;align-items:center;">
-              <span style="background:${o.status ? '#1E6B4E' : '#C1502E'};color:white;padding:2px 8px;border-radius:12px;font-size:10px;">${o.status ? 'Active' : 'Inactive'}</span>
-              ${o.depot ? `<span style="font-size:11px;color:#666;">${o.depot}</span>` : ''}
+        outlets.forEach(o => {
+          const m = L.marker([o.latitude, o.longitude], { icon: greenIcon })
+          const popupContent = `
+            <div style="min-width:200px;">
+              <h3 style="margin:0 0 8px 0;color:#1E6B4E;font-size:14px;">${o.name}</h3>
+              <p style="margin:0 0 4px 0;font-size:12px;color:#666;">${o.address1}</p>
+              <p style="margin:0 0 8px 0;font-size:12px;color:#666;">${o.district_name}</p>
+              <div style="display:flex;gap:8px;align-items:center;">
+                <span style="background:${o.status ? '#1E6B4E' : '#C1502E'};color:white;padding:2px 8px;border-radius:12px;font-size:10px;">${o.status ? 'Active' : 'Inactive'}</span>
+                ${o.depot ? `<span style="font-size:11px;color:#666;">${o.depot}</span>` : ''}
+              </div>
             </div>
-          </div>
-        `
-        m.bindPopup(popupContent)
-        markers.addLayer(m)
+          `
+          m.bindPopup(popupContent)
+          markers.addLayer(m)
+        })
+
+        map.addLayer(markers)
+        window.markersLayer = markers
+
+        if (outlets.length > 0) {
+          const bounds = L.latLngBounds(outlets.map(o => [o.latitude, o.longitude]))
+          map.fitBounds(bounds, { padding: [30, 30] })
+        }
+
+        map.on('load', () => setMapLoading(false))
+        setTimeout(() => setMapLoading(false), 1000) // Fallback
       })
-
-      map.addLayer(markers)
-      window.markersLayer = markers
-
-      if (outlets.length > 0) {
-        const bounds = L.latLngBounds(outlets.map(o => [o.latitude, o.longitude]))
-        map.fitBounds(bounds, { padding: [30, 30] })
-      }
-
-      map.on('load', () => setMapLoading(false))
-      setTimeout(() => setMapLoading(false), 1000) // Fallback
     })
   }, [loading, outlets])
 

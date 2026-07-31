@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { MapPin, Loader2, Navigation, Maximize2, Eye, EyeOff } from 'lucide-react'
 import { getAllOutlets } from '../../shared/api.js'
+import ReportDialog from '../shared/ReportDialog.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Button } from '../ui/button'
 import { Badge } from '../ui/badge'
@@ -275,6 +276,13 @@ export default function MapView() {
               )}
               {showClusters ? 'Disable Clusters' : 'Enable Clusters'}
             </Button>
+
+            <ReportDialog
+              type="general"
+              triggerVariant="outline"
+              triggerSize="sm"
+              triggerText="Report Issue"
+            />
 
             {userLocation && (
               <Badge variant="secondary" className="flex items-center gap-1">

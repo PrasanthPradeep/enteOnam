@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Search, IndianRupee, Loader2, ShoppingCart, Package } from 'lucide-react'
 import { getPriceListTypes, getAllPrices } from '../../shared/api.js'
+import ReportDialog from '../shared/ReportDialog.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Input } from '../ui/input'
 import { Badge } from '../ui/badge'
@@ -77,17 +78,25 @@ export default function PricesView() {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="space-y-4">
-        <div className="text-center space-y-2">
-          <h1 className="text-3xl font-bold text-green-800 flex items-center justify-center gap-2">
-            <IndianRupee className="h-8 w-8 text-gold" />
-            Supplyco Prices
-          </h1>
-          <p className="text-muted-foreground">
-            {loading ? 'Loading prices...' : `${prices.length} items in current list`}
-          </p>
-        </div>
+        {/* Header */}
+        <div className="space-y-4">
+          <div className="text-center space-y-2">
+            <div className="flex items-center justify-center gap-3">
+              <h1 className="text-3xl font-bold text-green-800 flex items-center gap-2">
+                <IndianRupee className="h-8 w-8 text-gold" />
+                Supplyco Prices
+              </h1>
+              <ReportDialog
+                type="price"
+                triggerVariant="ghost"
+                triggerSize="sm"
+                showIcon={true}
+              />
+            </div>
+            <p className="text-muted-foreground">
+              {loading ? 'Loading prices...' : `${prices.length} items in current list`}
+            </p>
+          </div>
 
         {/* Price Type Tabs */}
         <Card className="festival-card">
@@ -216,7 +225,9 @@ export default function PricesView() {
                       <div className="text-right flex-shrink-0">
                         <div className="text-lg font-bold text-green-600 flex items-center gap-1">
                           <IndianRupee className="h-4 w-4" />
-                          {parseFloat(product.rate).toFixed(2)}
+                          {product.rate != null
+                            ? parseFloat(product.rate).toFixed(2)
+                            : 'N/A'}
                         </div>
                       </div>
                     </div>

@@ -96,6 +96,22 @@ create table if not exists location_flags (
   created_at timestamptz default now()
 );
 
+-- User reports for data quality issues
+create table if not exists reports (
+  id serial primary key,
+  type text check (type in ('outlet','price','general')) not null,
+  issue_type text check (issue_type in ('coordinates','price','stock','closed','contact','other')) not null,
+  description text not null,
+  contact_email text,
+  outlet_id int references outlets(outlet_id),
+  outlet_name text,
+  price_id int,
+  product_name text,
+  user_agent text,
+  status text default 'pending' check (status in ('pending','reviewed','resolved','dismissed')),
+  created_at timestamptz default now()
+);
+
 -- Sadya menu reference
 create table if not exists sadya_dishes (
   id serial primary key,
@@ -129,3 +145,9 @@ create policy "anyone_can_read_flower_details" on flower_shop_details for select
 alter table location_flags enable row level security;
 create policy "authenticated_can_flag" on location_flags for insert
 with check (auth.role() = 'authenticated');
+
+alter table reports enable row level security;
+create policy "anyone_can_submit_reports" on reports for insert
+with check (true);
+create policy "only_admins_can_read_reports" on reports for select
+using (false); -- Admin access only via service role

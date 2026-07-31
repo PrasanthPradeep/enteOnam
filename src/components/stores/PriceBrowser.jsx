@@ -59,7 +59,7 @@ export default function PriceBrowser() {
               <CardContent className="p-3 flex items-center justify-between gap-2">
                 <span className="text-sm">{p.product_name}</span>
                 <span className="text-sm font-semibold text-green whitespace-nowrap">
-                  ₹{p.rate}
+                  {p.rate != null ? `₹${p.rate}` : 'N/A'}
                 </span>
               </CardContent>
             </Card>

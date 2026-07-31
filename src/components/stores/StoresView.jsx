@@ -13,6 +13,7 @@ import {
 import { getAllOutlets } from '../../shared/api.js'
 import { haversine } from '../../shared/utils.js'
 import StockReportForm from './StockReportForm.jsx'
+import ReportDialog from '../shared/ReportDialog.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
@@ -358,13 +359,20 @@ export default function StoresView() {
                             </a>
                           </Button>
                         )}
+                        <ReportDialog
+                          type="outlet"
+                          outletId={selected.outlet_id}
+                          outletName={selected.name}
+                          triggerVariant="outline"
+                          triggerText="Report Issue"
+                        />
                         <Button 
-                          variant="outline" 
+                          variant="ghost" 
                           onClick={() => setSelected(null)}
                           className="flex items-center gap-2"
                         >
                           <X className="h-4 w-4" />
-                          Close Details
+                          Close
                         </Button>
                       </div>
 

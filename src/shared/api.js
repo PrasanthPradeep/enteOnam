@@ -1,3 +1,5 @@
+import { applyCoordinateCorrections } from './coordinateCorrections.js'
+
 const API_BASE = '/api'
 
 async function fetchReal(path, params = {}) {
@@ -26,7 +28,15 @@ async function fetchReal(path, params = {}) {
 }
 
 export async function getAllOutlets() {
-  return fetchReal('/outlets', { limit: 9999 })
+  const outlets = await fetchReal('/outlets', { limit: 9999 })
+  const corrected = applyCoordinateCorrections(outlets)
+  
+  const correctionCount = corrected.filter(o => o._corrected).length
+  if (correctionCount > 0) {
+    console.log(`[API] Applied ${correctionCount} coordinate corrections`)
+  }
+  
+  return corrected
 }
 
 export async function getPriceListTypes() {
@@ -38,8 +48,8 @@ export async function getAllPrices(typeId, year, month) {
   const now = new Date()
   const queryYear = year || now.getFullYear()
   const queryMonth = month || now.getMonth() + 1
-  
-  return fetchReal('/price-list', {
+
+  let data = await fetchReal('/price-list', {
     page: 1,
     limit: 1000,
     status: 1,
@@ -47,4 +57,30 @@ export async function getAllPrices(typeId, year, month) {
     year: queryYear,
     month: queryMonth,
   })
+
+  if (data.some(p => p.rate != null)) return data
+
+  let fallbackYear = queryYear
+  let fallbackMonth = queryMonth - 1
+  if (fallbackMonth < 1) {
+    fallbackMonth = 12
+    fallbackYear -= 1
+  }
+  while (fallbackYear > 2020) {
+    const prev = await fetchReal('/price-list', {
+      page: 1,
+      limit: 1000,
+      status: 1,
+      price_list_type_id: typeId,
+      year: fallbackYear,
+      month: fallbackMonth,
+    })
+    if (prev.some(p => p.rate != null)) return prev
+    fallbackMonth -= 1
+    if (fallbackMonth < 1) {
+      fallbackMonth = 12
+      fallbackYear -= 1
+    }
+  }
+  return data
 }

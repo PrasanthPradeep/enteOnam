@@ -110,7 +110,7 @@ export default function StoresView() {
         </button>
       </div>
       <div style={{ marginTop: 12 }}>
-        {loading ? <p>Loading outlets...</p> : filtered.length === 0 ? <p>No outlets match.</p> : (
+        {!district && !userLoc ? null : loading ? <p>Loading outlets...</p> : filtered.length === 0 ? <p>No outlets match.</p> : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
             {filtered.map(o => (
               <div key={o.outlet_id}>

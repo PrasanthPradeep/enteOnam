@@ -43,59 +43,91 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background">
       {/* Enhanced Navigation */}
-      <nav className={`nav transition-all duration-300 ${scrolled ? 'shadow-lg backdrop-blur-md' : ''}`}>
-        <div className="nav-inner">
-          {/* Brand */}
-          <NavLink 
-            to="/" 
-            className="nav-brand flex items-center gap-2 hover:scale-105 transition-transform"
-            onClick={closeMobileMenu}
-          >
-            <Calendar className="h-6 w-6" />
-            <span className="font-bold text-lg">EnteOnam</span>
-          </NavLink>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2 ml-auto">
-            {navigationItems.map((item) => {
-              const Icon = item.icon
-              return (
-                <NavLink
-                  key={item.path}
-                  to={item.path}
-                  className={({ isActive }) =>
-                    `nav-link flex items-center gap-1.5 ${isActive ? 'active' : ''}`
-                  }
-                >
-                  <Icon className="h-4 w-4" />
-                  <span>{item.label}</span>
-                </NavLink>
-              )
-            })}
-            <AuthModal />
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden ml-auto flex items-center gap-2">
-            <AuthModal />
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleMobileMenu}
-              className="text-white hover:bg-white/10 h-10 w-10"
+      <nav className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-green-800/95 backdrop-blur-lg shadow-2xl border-b border-green-700/50' 
+          : 'bg-green-800 shadow-lg'
+      }`}>
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-16">
+            {/* Brand with Flower Accent */}
+            <NavLink 
+              to="/" 
+              className="flex items-center gap-3 group"
+              onClick={closeMobileMenu}
             >
-              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-            </Button>
+              <div className="relative">
+                <div className="absolute inset-0 bg-gold/20 rounded-full blur-xl group-hover:bg-gold/30 transition-all"></div>
+                <div className="relative bg-gold/10 p-2 rounded-full group-hover:bg-gold/20 transition-all">
+                  <Flower className="h-5 w-5 text-gold group-hover:scale-110 transition-transform" />
+                </div>
+              </div>
+              <span className="font-bold text-xl text-white group-hover:text-gold transition-colors">
+                EnteOnam
+              </span>
+            </NavLink>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center gap-1">
+              {navigationItems.map((item) => {
+                const Icon = item.icon
+                return (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `relative flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 group ${
+                        isActive 
+                          ? 'text-white bg-gold shadow-lg shadow-gold/20' 
+                          : 'text-white/80 hover:text-white hover:bg-white/10'
+                      }`
+                    }
+                  >
+                    {({ isActive }) => (
+                      <>
+                        <Icon className={`h-4 w-4 transition-transform ${
+                          isActive ? 'scale-110' : 'group-hover:scale-110'
+                        }`} />
+                        <span className="text-sm">{item.label}</span>
+                        {isActive && (
+                          <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/50 rounded-full"></div>
+                        )}
+                      </>
+                    )}
+                  </NavLink>
+                )
+              })}
+              <div className="ml-2 pl-2 border-l border-white/20">
+                <AuthModal />
+              </div>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center gap-2">
+              <AuthModal />
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleMobileMenu}
+                className="text-white hover:bg-white/10 hover:text-gold transition-all h-10 w-10"
+              >
+                {isMobileMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
+              </Button>
+            </div>
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
-        <div className={`md:hidden overflow-hidden transition-all duration-300 ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        {/* Mobile Navigation Menu with Smooth Animation */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="bg-green-700 border-t border-green-600">
-            <div className="container py-4">
-              <div className="grid grid-cols-2 gap-2">
+          <div className="bg-green-900/50 backdrop-blur-md border-t border-green-700/50">
+            <div className="container mx-auto px-4 py-4">
+              <div className="grid grid-cols-2 gap-3">
                 {navigationItems.map((item) => {
                   const Icon = item.icon
                   return (
@@ -103,16 +135,22 @@ export default function App() {
                       key={item.path}
                       to={item.path}
                       className={({ isActive }) =>
-                        `flex flex-col items-center gap-2 p-3 rounded-lg transition-colors ${
+                        `flex flex-col items-center gap-2 p-4 rounded-xl transition-all duration-200 ${
                           isActive 
-                            ? 'bg-gold text-foreground' 
-                            : 'text-white hover:bg-white/10'
+                            ? 'bg-gold text-green-900 shadow-lg shadow-gold/20 scale-105' 
+                            : 'text-white hover:bg-white/10 active:scale-95'
                         }`
                       }
                       onClick={closeMobileMenu}
                     >
-                      <Icon className="h-5 w-5" />
-                      <span className="text-xs font-medium">{item.label}</span>
+                      {({ isActive }) => (
+                        <>
+                          <Icon className={`h-6 w-6 transition-transform ${
+                            isActive ? 'scale-110' : ''
+                          }`} />
+                          <span className="text-xs font-semibold">{item.label}</span>
+                        </>
+                      )}
                     </NavLink>
                   )
                 })}

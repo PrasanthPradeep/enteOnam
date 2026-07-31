@@ -1,4 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
+import {
+  Flower2, MapPin, Loader2, ExternalLink, Link2, Store, Plus, X,
+  CheckCircle2, Navigation
+} from 'lucide-react'
+import { Card, CardContent } from '../ui/card'
+import { Button } from '../ui/button'
+import { Input } from '../ui/input'
+import { Label } from '../ui/label'
+import { Badge } from '../ui/badge'
 
 const STORAGE_KEY = 'enteonam_flower_shops'
 const FLOWER_TYPES = ['Thumba', 'Arali', 'Jamanthi', 'Marigold', 'Chembarathi', 'Mukutti', 'Krishna kireedam']
@@ -17,6 +26,7 @@ export default function FlowerView() {
   const [lng, setLng] = useState(null)
   const [locating, setLocating] = useState(false)
   const [mapLink, setMapLink] = useState('')
+  const [saved, setSaved] = useState(false)
   const mapRef = useRef(null)
   const mapInstance = useRef(null)
   const LRef = useRef(null)
@@ -99,80 +109,167 @@ export default function FlowerView() {
     shops.push(shop)
     localStorage.setItem(STORAGE_KEY, JSON.stringify(shops))
     setName(''); setArea(''); setLat(null); setLng(null); setPrices({}); setShowForm(false)
+    setSaved(true)
+    setTimeout(() => setSaved(false), 1500)
     refresh()
   }
 
+  const canSubmit = name && area && lat != null && lng != null
+
   return (
-    <section>
-      <h2>Flower Shops</h2>
-      <p style={{ marginBottom: 8 }}>{shops.length} shops reported</p>
-      <div ref={mapRef} style={{ width: '100%', height: 300, borderRadius: 'var(--radius)', marginBottom: 12 }} />
-      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
-        <button className={'btn ' + (showForm ? 'btn-primary' : 'btn-outline')} onClick={() => setShowForm(!showForm)}>
-          {showForm ? 'Cancel' : 'Report a Flower Shop'}
-        </button>
-        <button className='btn btn-outline' onClick={locateMe} disabled={locating}>
-          {locating ? 'Locating...' : 'Use my location'}
-        </button>
-        {lat != null && (
-          <span style={{ fontSize: '0.85rem', alignSelf: 'center', color: 'var(--green)' }}>
-            {lat.toFixed(4)}, {lng.toFixed(4)}
-          </span>
-        )}
-        {lat != null && (
-          <a
-            className='btn btn-outline'
-            style={{ fontSize: '0.8rem', padding: '4px 10px', textDecoration: 'none' }}
-            href={'https://www.google.com/maps?q=' + lat + ',' + lng}
-            target='_blank' rel='noopener noreferrer'
-          >
-            Google Maps
-          </a>
-        )}
-        {lat == null && <span style={{ fontSize: '0.85rem', alignSelf: 'center', color: 'var(--text-muted)' }}>Click the map to place a marker</span>}
-      </div>
-      <input
-        className='form-input'
-        style={{ marginBottom: 12 }}
-        placeholder='Or paste a Google Maps link...'
-        value={mapLink}
-        onChange={e => { setMapLink(e.target.value); parseMapLink(e.target.value) }}
-      />
-      {showForm && (
-        <div className='card' style={{ marginTop: 8 }}>
-          <div className='form-group'><label>Shop name</label><input className='form-input' value={name} onChange={e => setName(e.target.value)} /></div>
-          <div className='form-group'><label>Area / Location</label><input className='form-input' value={area} onChange={e => setArea(e.target.value)} /></div>
-          <div className='form-group'>
-            <label>Location set from map click</label>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{lat != null ? lat.toFixed(4) + ', ' + lng.toFixed(4) : 'Not set'}</p>
+    <section className="space-y-5">
+      <header>
+        <h1 className="text-2xl font-semibold text-foreground">Flower Shops</h1>
+        <p className="text-sm text-muted-foreground">
+          Find and report shops selling pookalam flowers near you
+        </p>
+      </header>
+
+      <Card className="overflow-hidden">
+        <div ref={mapRef} className="w-full h-72 z-0" />
+        <CardContent className="p-4 space-y-3">
+          <div className="flex flex-wrap items-center gap-2">
+            <Button
+              variant={showForm ? 'outline' : 'default'}
+              onClick={() => setShowForm(!showForm)}
+              className="flex items-center gap-2"
+            >
+              <Plus className="h-4 w-4" />
+              {showForm ? 'Cancel' : 'Report a Flower Shop'}
+            </Button>
+            <Button
+              variant="outline"
+              onClick={locateMe}
+              disabled={locating}
+              className="flex items-center gap-2"
+            >
+              {locating ? <Loader2 className="h-4 w-4 animate-spin" /> : <Navigation className="h-4 w-4" />}
+              {locating ? 'Locating...' : 'Use my location'}
+            </Button>
+            {lat != null && (
+              <Badge variant="outline" className="gap-1">
+                <MapPin className="h-3 w-3" />
+                {lat.toFixed(4)}, {lng.toFixed(4)}
+              </Badge>
+            )}
+            {lat != null && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="gap-1"
+                asChild
+              >
+                <a
+                  href={'https://www.google.com/maps?q=' + lat + ',' + lng}
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  <ExternalLink className="h-3 w-3" />
+                  Google Maps
+                </a>
+              </Button>
+            )}
+            {lat == null && (
+              <span className="text-sm text-muted-foreground">Click the map to place a marker</span>
+            )}
           </div>
-          <p style={{ fontWeight: 500, margin: '8px 0 4px' }}>Current prices:</p>
-          {FLOWER_TYPES.map(ft => (
-            <div key={ft} className='form-group' style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>
-              <label style={{ minWidth: 140, margin: 0 }}>{ft}</label>
-              <input className='form-input' style={{ maxWidth: 100 }} placeholder='₹' value={prices[ft] || ''} onChange={e => setPrices({ ...prices, [ft]: e.target.value })} />
-              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>/ bunch</span>
-            </div>
-          ))}
-          <button className='btn btn-primary' onClick={submit} disabled={!name || !area || lat == null || lng == null}>Save Shop</button>
-        </div>
-      )}
-      {shops.length > 0 && (
-        <div style={{ marginTop: 12 }}>
-          <h3 style={{ fontSize: '1rem', marginBottom: 8 }}>Reported Shops</h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-            {shops.map(s => (
-              <div key={s.id} className='card' style={{ padding: '10px 14px' }}>
-                <div style={{ fontWeight: 600, fontSize: '0.9rem' }}>{s.name}</div>
-                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{s.area}</div>
-                {Object.keys(s.prices || {}).length > 0 && (
-                  <div style={{ fontSize: '0.85rem', marginTop: 4, display: 'flex', flexWrap: 'wrap', gap: '4px 12px' }}>
-                    {Object.entries(s.prices || {}).map(([k, v]) => (
-                      <span key={k}><strong>{k}:</strong> ₹{v}/bunch</span>
-                    ))}
-                  </div>
-                )}
+
+          <div className="relative">
+            <Link2 className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              className="pl-10"
+              placeholder="Or paste a Google Maps link..."
+              value={mapLink}
+              onChange={e => { setMapLink(e.target.value); parseMapLink(e.target.value) }}
+            />
+          </div>
+
+          {showForm && (
+            <div className="space-y-4 pt-3 border-t border-border">
+              <div className="space-y-2">
+                <Label htmlFor="shop-name">Shop name *</Label>
+                <Input id="shop-name" value={name} onChange={e => setName(e.target.value)} placeholder="e.g. Aluva Flower Market" />
               </div>
+              <div className="space-y-2">
+                <Label htmlFor="shop-area">Area / Location *</Label>
+                <Input id="shop-area" value={area} onChange={e => setArea(e.target.value)} placeholder="e.g. Mattancherry, Kochi" />
+              </div>
+
+              <div>
+                <Label>Current prices (₹ per bunch)</Label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2">
+                  {FLOWER_TYPES.map(ft => (
+                    <div key={ft} className="flex items-center gap-2">
+                      <span className="text-sm flex-1">{ft}</span>
+                      <Input
+                        className="max-w-[90px]"
+                        placeholder="₹"
+                        value={prices[ft] || ''}
+                        onChange={e => setPrices({ ...prices, [ft]: e.target.value })}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <Button
+                onClick={submit}
+                disabled={!canSubmit}
+                className="w-full flex items-center gap-2"
+              >
+                {saved ? (
+                  <>
+                    <CheckCircle2 className="h-4 w-4" />
+                    Saved!
+                  </>
+                ) : (
+                  <>
+                    <Store className="h-4 w-4" />
+                    Save Shop
+                  </>
+                )}
+              </Button>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+
+      {shops.length > 0 && (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-semibold text-foreground">Reported Shops</h2>
+            <Badge variant="secondary">{shops.length} shops</Badge>
+          </div>
+          <div className="grid grid-cols-1 gap-3">
+            {shops.map(s => (
+              <Card key={s.id}>
+                <CardContent className="p-4">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <Flower2 className="h-4 w-4 text-gold" />
+                      <span className="font-semibold text-foreground">{s.name}</span>
+                    </div>
+                    <Button variant="outline" size="sm" className="gap-1" asChild>
+                      <a
+                        href={'https://www.google.com/maps?q=' + s.lat + ',' + s.lng}
+                        target="_blank" rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="h-3 w-3" />
+                        Maps
+                      </a>
+                    </Button>
+                  </div>
+                  <p className="text-sm text-muted-foreground mt-0.5">{s.area}</p>
+                  {Object.keys(s.prices || {}).length > 0 && (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {Object.entries(s.prices || {}).map(([k, v]) => (
+                        <Badge key={k} variant="outline" className="text-xs">
+                          {k}: ₹{v}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>

@@ -1,7 +1,25 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
+import { 
+  Store, 
+  MapPin, 
+  Phone, 
+  Navigation, 
+  Search, 
+  Filter, 
+  ChevronDown, 
+  ChevronRight,
+  Loader2,
+  ExternalLink,
+  X
+} from 'lucide-react'
 import { getAllOutlets } from '../../shared/api.js'
 import { haversine } from '../../shared/utils.js'
 import StockReportForm from './StockReportForm.jsx'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
+import { Button } from '../ui/button'
+import { Input } from '../ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select'
+import { Badge } from '../ui/badge'
 
 function OutletMap({ outlet }) {
   const mapRef = useRef(null)
@@ -25,10 +43,14 @@ function OutletMap({ outlet }) {
   }, [outlet])
 
   if (!outlet.latitude || !outlet.longitude) {
-    return <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>No coordinates</p>
+    return (
+      <div className="h-44 bg-muted rounded-md flex items-center justify-center">
+        <p className="text-sm text-muted-foreground">No coordinates available</p>
+      </div>
+    )
   }
 
-  return <div ref={mapRef} style={{ width: '100%', height: 180, borderRadius: 'var(--radius)', marginTop: 8 }} />
+  return <div ref={mapRef} className="w-full h-44 rounded-md mt-4" />
 }
 
 export default function StoresView() {
@@ -40,6 +62,7 @@ export default function StoresView() {
   const [userLoc, setUserLoc] = useState(null)
   const [loading, setLoading] = useState(true)
   const [locating, setLocating] = useState(false)
+  const [showFilters, setShowFilters] = useState(false)
 
   useEffect(() => {
     getAllOutlets()
@@ -73,6 +96,13 @@ export default function StoresView() {
     )
   }
 
+  const clearFilters = () => {
+    setDistrict('')
+    setDepot('')
+    setQuery('')
+    setUserLoc(null)
+  }
+
   const filtered = useMemo(() => {
     let list = outlets
     if (district) list = list.filter(o => o.district_name === district)
@@ -97,78 +127,284 @@ export default function StoresView() {
     return list.slice(0, 50)
   }, [outlets, district, depot, query, userLoc])
 
+  const activeFiltersCount = [district, depot, query, userLoc].filter(Boolean).length
+
   return (
-    <section>
-      <h2>Supplyco Stores</h2>
-      <p style={{ marginBottom: 16 }}>{outlets.length} outlets across Kerala</p>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-        <div style={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-          <select className="form-input" style={{ flex: 1, minWidth: 140 }} value={district} onChange={e => { setDistrict(e.target.value); setDepot('') }}>
-            <option value="">All districts</option>
-            {districts.map(d => <option key={d} value={d}>{d}</option>)}
-          </select>
-          <select className="form-input" style={{ flex: 1, minWidth: 140 }} value={depot} onChange={e => setDepot(e.target.value)}>
-            <option value="">All depots</option>
-            {depots.map(d => <option key={d} value={d}>{d}</option>)}
-          </select>
-          <input className="form-input" style={{ flex: 2, minWidth: 180 }} placeholder="Search name or address..." value={query} onChange={e => setQuery(e.target.value)} />
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-green-800 flex items-center gap-2">
+              <Store className="h-8 w-8 text-gold" />
+              Supplyco Stores
+            </h1>
+            <p className="text-muted-foreground mt-1">
+              {loading ? 'Loading stores...' : `${outlets.length} outlets across Kerala`}
+            </p>
+          </div>
+          <Button
+            variant="outline"
+            onClick={() => setShowFilters(!showFilters)}
+            className="flex items-center gap-2"
+          >
+            <Filter className="h-4 w-4" />
+            Filters
+            {activeFiltersCount > 0 && (
+              <Badge variant="secondary" className="ml-1 px-1.5 py-0.5 text-xs">
+                {activeFiltersCount}
+              </Badge>
+            )}
+            {showFilters ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+          </Button>
         </div>
-        <button className="btn btn-secondary" style={{ alignSelf: 'flex-start' }} onClick={locate} disabled={locating}>
-          {locating ? 'Locating...' : userLoc ? 'Nearby: ' + Math.round(filtered[0]?._dist || 0) + 'km' : 'Nearby'}
-        </button>
-      </div>
-      <div style={{ marginTop: 12 }}>
-        {!district && !userLoc ? null : loading ? <p>Loading outlets...</p> : filtered.length === 0 ? <p>No outlets match.</p> : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-            {filtered.map(o => (
-              <div key={o.outlet_id}>
-                <div
-                  className="card"
-                  style={{
-                    cursor: 'pointer', padding: '12px 16px',
-                    borderColor: selected?.outlet_id === o.outlet_id ? 'var(--gold)' : undefined,
-                  }}
-                  onClick={() => setSelected(selected?.outlet_id === o.outlet_id ? null : o)}
-                >
-                  <div style={{ fontWeight: 600, fontSize: '0.9rem', display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: 0 }}>
-                      <span style={{ fontSize: '0.7rem', color: 'var(--gold)', transition: 'transform 0.2s', display: 'inline-block', transform: selected?.outlet_id === o.outlet_id ? 'rotate(90deg)' : 'none' }}>▶</span>
-                      {o.name}
-                    </span>
-                    {o._dist != null && <span style={{ fontSize: '0.8rem', color: 'var(--gold)' }}>{Math.round(o._dist)}km</span>}
-                  </div>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{o.address1}, {o.district_name} — {o.depot}</div>
+
+        {/* Filters */}
+        <Card className={`festival-card transition-all duration-300 ${
+          showFilters ? 'opacity-100 scale-100' : 'opacity-0 scale-95 h-0 overflow-hidden'
+        }`}>
+          {showFilters && (
+            <CardContent className="p-6">
+              <div className="space-y-4">
+                {/* Search */}
+                <div className="relative">
+                  <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                  <Input
+                    placeholder="Search by name or address..."
+                    value={query}
+                    onChange={e => setQuery(e.target.value)}
+                    className="pl-10"
+                  />
                 </div>
-                {selected?.outlet_id === o.outlet_id && (
-                  <div className="card" style={{ marginTop: 2, borderColor: 'var(--gold)' }}>
-                    <h3>{selected.name}</h3>
-                    <p style={{ fontSize: '0.85rem', margin: '4px 0' }}>{selected.address1}, {selected.address2}, {selected.address3}</p>
-                    <p style={{ fontSize: '0.85rem', margin: '4px 0' }}>{selected.district_name} — {selected.depot}</p>
-                    <p style={{ fontSize: '0.85rem', margin: '4px 0' }}>{selected.phone}</p>
-                    <span className={'badge ' + (selected.status ? 'badge-green' : 'badge-red')}>{selected.status ? 'Active' : 'Inactive'}</span>
-                    <OutletMap outlet={selected} />
-                    <div style={{ display: 'flex', gap: 2, marginTop: 8 }}>
-                      {selected.latitude && selected.longitude && (
-                        <a
-                          className="btn btn-primary"
-                          href={'https://www.google.com/maps/dir/?api=1&destination=' + selected.latitude + ',' + selected.longitude}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{ textDecoration: 'none' }}
-                        >
-                          Directions
-                        </a>
-                      )}
-                      <button className="btn btn-outline" onClick={() => setSelected(null)}>Close</button>
-                    </div>
-                    <StockReportForm outletId={selected.outlet_id} />
-                  </div>
-                )}
+
+                {/* District and Depot Selects */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Select value={district} onValueChange={value => {
+                    setDistrict(value)
+                    setDepot('')
+                  }}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select District" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="">All Districts</SelectItem>
+                      {districts.map(d => (
+                        <SelectItem key={d} value={d}>{d}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+
+                  <Select value={depot} onValueChange={setDepot}>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select Depot" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="">All Depots</SelectItem>
+                      {depots.map(d => (
+                        <SelectItem key={d} value={d}>{d}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                {/* Action Buttons */}
+                <div className="flex flex-wrap gap-3">
+                  <Button
+                    variant="secondary"
+                    onClick={locate}
+                    disabled={locating}
+                    className="flex items-center gap-2"
+                  >
+                    {locating ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        Locating...
+                      </>
+                    ) : (
+                      <>
+                        <Navigation className="h-4 w-4" />
+                        {userLoc ? `Nearby (${Math.round(filtered[0]?._dist || 0)}km away)` : 'Find Nearby'}
+                      </>
+                    )}
+                  </Button>
+                  
+                  {activeFiltersCount > 0 && (
+                    <Button
+                      variant="outline"
+                      onClick={clearFilters}
+                      className="flex items-center gap-2"
+                    >
+                      <X className="h-4 w-4" />
+                      Clear Filters
+                    </Button>
+                  )}
+                </div>
               </div>
+            </CardContent>
+          )}
+        </Card>
+      </div>
+
+      {/* Results */}
+      <div className="space-y-4">
+        {loading ? (
+          <Card className="festival-card">
+            <CardContent className="flex items-center justify-center py-12">
+              <div className="flex items-center gap-3">
+                <Loader2 className="h-6 w-6 animate-spin text-green" />
+                <span className="text-lg">Loading stores...</span>
+              </div>
+            </CardContent>
+          </Card>
+        ) : !district && !userLoc && !query ? (
+          <Card className="festival-card">
+            <CardContent className="text-center py-12">
+              <Store className="h-12 w-12 text-gold mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-green-800 mb-2">Find Supplyco Stores</h3>
+              <p className="text-muted-foreground mb-4">
+                Select a district, search by name, or find nearby stores to get started
+              </p>
+              <Button onClick={() => setShowFilters(true)} className="flex items-center gap-2">
+                <Filter className="h-4 w-4" />
+                Open Filters
+              </Button>
+            </CardContent>
+          </Card>
+        ) : filtered.length === 0 ? (
+          <Card className="festival-card">
+            <CardContent className="text-center py-12">
+              <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-green-800 mb-2">No stores found</h3>
+              <p className="text-muted-foreground mb-4">
+                Try adjusting your filters or search terms
+              </p>
+              <Button variant="outline" onClick={clearFilters}>
+                Clear Filters
+              </Button>
+            </CardContent>
+          </Card>
+        ) : (
+          <div className="space-y-4">
+            <p className="text-sm text-muted-foreground">
+              Showing {filtered.length} {filtered.length === 1 ? 'store' : 'stores'}
+              {userLoc && ', sorted by distance'}
+            </p>
+            
+            {filtered.map(outlet => (
+              <Card key={outlet.outlet_id} className="festival-card hover:shadow-lg transition-all duration-200">
+                <CardHeader className="pb-3">
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <CardTitle className="text-lg flex items-center gap-2">
+                        <Store className="h-5 w-5 text-green" />
+                        {outlet.name}
+                        <Badge variant={outlet.status ? "success" : "error"}>
+                          {outlet.status ? 'Active' : 'Inactive'}
+                        </Badge>
+                      </CardTitle>
+                      <CardDescription className="mt-1">
+                        {outlet.address1}, {outlet.district_name}
+                      </CardDescription>
+                    </div>
+                    
+                    <div className="flex items-center gap-2 ml-4">
+                      {outlet._dist != null && (
+                        <Badge variant="outline" className="text-gold border-gold">
+                          {Math.round(outlet._dist)}km away
+                        </Badge>
+                      )}
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => setSelected(selected?.outlet_id === outlet.outlet_id ? null : outlet)}
+                        className="flex items-center gap-1"
+                      >
+                        {selected?.outlet_id === outlet.outlet_id ? 'Less' : 'More'}
+                        <ChevronDown className={`h-4 w-4 transition-transform ${
+                          selected?.outlet_id === outlet.outlet_id ? 'rotate-180' : ''
+                        }`} />
+                      </Button>
+                    </div>
+                  </div>
+                </CardHeader>
+
+                {selected?.outlet_id === outlet.outlet_id && (
+                  <CardContent className="pt-0 border-t">
+                    <div className="space-y-4">
+                      {/* Detailed Info */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-sm">
+                            <MapPin className="h-4 w-4 text-muted-foreground" />
+                            <span>{selected.address1}</span>
+                          </div>
+                          {selected.address2 && (
+                            <div className="text-sm text-muted-foreground ml-6">
+                              {selected.address2}
+                            </div>
+                          )}
+                          {selected.address3 && (
+                            <div className="text-sm text-muted-foreground ml-6">
+                              {selected.address3}
+                            </div>
+                          )}
+                        </div>
+                        
+                        <div className="space-y-2">
+                          {selected.phone && (
+                            <div className="flex items-center gap-2 text-sm">
+                              <Phone className="h-4 w-4 text-muted-foreground" />
+                              <span>{selected.phone}</span>
+                            </div>
+                          )}
+                          {selected.depot && (
+                            <div className="text-sm">
+                              <span className="font-medium">Depot:</span> {selected.depot}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+
+                      {/* Map */}
+                      <OutletMap outlet={selected} />
+
+                      {/* Action Buttons */}
+                      <div className="flex flex-wrap gap-3">
+                        {selected.latitude && selected.longitude && (
+                          <Button asChild variant="default">
+                            <a
+                              href={`https://www.google.com/maps/dir/?api=1&destination=${selected.latitude},${selected.longitude}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                              Get Directions
+                            </a>
+                          </Button>
+                        )}
+                        <Button 
+                          variant="outline" 
+                          onClick={() => setSelected(null)}
+                          className="flex items-center gap-2"
+                        >
+                          <X className="h-4 w-4" />
+                          Close Details
+                        </Button>
+                      </div>
+
+                      {/* Stock Report Form */}
+                      <div className="pt-4 border-t">
+                        <StockReportForm outletId={selected.outlet_id} />
+                      </div>
+                    </div>
+                  </CardContent>
+                )}
+              </Card>
             ))}
           </div>
         )}
       </div>
-    </section>
+    </div>
   )
 }

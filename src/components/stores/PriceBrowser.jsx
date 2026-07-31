@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react'
+import { Loader2, Tag } from 'lucide-react'
 import { getPriceListTypes, getAllPrices } from '../../shared/api.js'
+import { Card, CardContent } from '../ui/card'
+import { Button } from '../ui/button'
+import { cn } from '../../lib/utils'
 
 const TYPE_NAMES = {
   1: 'Subsidy',
@@ -29,29 +33,43 @@ export default function PriceBrowser() {
   }, [activeType])
 
   return (
-    <div>
-      <div className="tabs" style={{ marginBottom: 16 }}>
+    <div className="space-y-4">
+      <div className="flex flex-wrap gap-2">
         {[5, 1, 2, 3, 4].map(id => (
-          <button
+          <Button
             key={id}
-            className={'tab' + (activeType === id ? ' active' : '')}
+            variant={activeType === id ? 'default' : 'outline'}
+            size="sm"
             onClick={() => setActiveType(id)}
+            className={cn('rounded-full', activeType !== id && 'text-foreground')}
           >
             {TYPE_NAMES[id]}
-          </button>
+          </Button>
         ))}
       </div>
+
       {loading ? (
-        <p>Loading prices...</p>
-      ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+        <div className="flex items-center justify-center gap-2 py-8 text-muted-foreground">
+          <Loader2 className="h-5 w-5 animate-spin" />
+          <span className="text-sm">Loading prices...</span>
+        </div>
+      ) : prices.length > 0 ? (
+        <div className="grid grid-cols-1 gap-2">
           {prices.map((p, i) => (
-            <div key={p.product_id + '-' + i} className="card" style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 16px' }}>
-              <span style={{ fontSize: '0.9rem' }}>{p.product_name}</span>
-              <span style={{ fontWeight: 600, color: 'var(--green)' }}>₹{p.rate}</span>
-            </div>
+            <Card key={p.product_id + '-' + i}>
+              <CardContent className="p-3 flex items-center justify-between gap-2">
+                <span className="text-sm">{p.product_name}</span>
+                <span className="text-sm font-semibold text-green whitespace-nowrap">
+                  ₹{p.rate}
+                </span>
+              </CardContent>
+            </Card>
           ))}
-          {prices.length === 0 && <p>No prices found for this month.</p>}
+        </div>
+      ) : (
+        <div className="flex flex-col items-center gap-2 py-8 text-muted-foreground">
+          <Tag className="h-5 w-5" />
+          <p className="text-sm">No prices found for this month.</p>
         </div>
       )}
     </div>

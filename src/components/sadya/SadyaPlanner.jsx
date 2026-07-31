@@ -1,4 +1,10 @@
 import { useState, useMemo } from 'react'
+import { Users, UtensilsCrossed, IndianRupee, CheckCircle2 } from 'lucide-react'
+import { Card, CardContent } from '../ui/card'
+import { Button } from '../ui/button'
+import { Input } from '../ui/input'
+import { Label } from '../ui/label'
+import { Badge } from '../ui/badge'
 
 const SADYA_DISHES = [
   { id: 'pappadam', name: 'Pappadam', category: 'Chips & Sides', costPerPerson: 2 },
@@ -62,61 +68,96 @@ export default function SadyaPlanner() {
     return map
   }, [])
 
+  const selectedCount = useMemo(
+    () => SADYA_DISHES.reduce((n, d) => n + (selected.get(d.id) ? 1 : 0), 0),
+    [selected]
+  )
+
   return (
-    <section>
-      <h2>Sadya Planner</h2>
-      <p style={{ marginBottom: 16 }}>Plan your Onam feast & estimate cost</p>
-      <div className="card" style={{ marginBottom: 16 }}>
-        <div className="form-group">
-          <label>Number of guests</label>
-          <input
-            type="number"
-            className="form-input"
-            value={guests}
-            onChange={e => setGuests(Math.max(1, +e.target.value))}
-            min="1"
-            style={{ maxWidth: 120 }}
-          />
-        </div>
-        <p style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--green)', margin: 0 }}>
-          Total: ₹{total}
+    <section className="space-y-5">
+      <header>
+        <h1 className="text-2xl font-semibold text-foreground">Sadya Planner</h1>
+        <p className="text-sm text-muted-foreground">
+          Plan your Onam feast and estimate the cost
         </p>
-        <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', margin: 0 }}>
-          ₹{Math.round(total / guests)} per guest
-        </p>
-      </div>
+      </header>
+
+      <Card className="festival-card">
+        <CardContent className="p-5 space-y-4">
+          <div className="flex flex-wrap items-end gap-4">
+            <div className="space-y-2">
+              <Label htmlFor="guests" className="flex items-center gap-2">
+                <Users className="h-4 w-4 text-muted-foreground" />
+                Number of guests
+              </Label>
+              <Input
+                id="guests"
+                type="number"
+                min="1"
+                className="max-w-[120px]"
+                value={guests}
+                onChange={e => setGuests(Math.max(1, +e.target.value))}
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 p-4 rounded-lg bg-green-50">
+            <div className="p-2 rounded-full bg-white">
+              <IndianRupee className="h-5 w-5 text-green" />
+            </div>
+            <div className="flex-1">
+              <p className="text-2xl font-bold text-green">
+                ₹{total.toLocaleString('en-IN')}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                ₹{Math.round(total / guests)} per guest · {selectedCount} dishes selected
+              </p>
+            </div>
+            <Badge variant="secondary">{guests} guests</Badge>
+          </div>
+        </CardContent>
+      </Card>
+
       {CATEGORIES.map(cat => {
         const dishes = grouped[cat] || []
         return (
-          <div key={cat} style={{ marginBottom: 16 }}>
-            <h3 style={{ margin: '0 0 8px', fontSize: '1rem', color: 'var(--gold)' }}>{cat}</h3>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+          <div key={cat} className="space-y-2">
+            <div className="flex items-center gap-2">
+              <h2 className="text-sm font-semibold text-gold uppercase tracking-wide">{cat}</h2>
+              <div className="h-px flex-1 bg-border" />
+            </div>
+            <div className="grid grid-cols-1 gap-2">
               {dishes.map(d => {
                 const included = selected.get(d.id)
                 return (
-                  <label
+                  <Card
                     key={d.id}
-                    className="card"
-                    style={{
-                      display: 'flex', alignItems: 'center', gap: 10, padding: '8px 12px', cursor: 'pointer',
-                      opacity: included ? 1 : 0.45,
-                    }}
+                    className={`cursor-pointer transition-colors ${included ? 'border-green bg-green-50/50' : 'opacity-50 hover:opacity-75'}`}
+                    onClick={() => toggle(d.id)}
                   >
-                    <input
-                      type="checkbox"
-                      checked={included}
-                      onChange={() => toggle(d.id)}
-                      style={{ accentColor: 'var(--green)' }}
-                    />
-                    <span style={{ flex: 1, fontWeight: included ? 500 : 400 }}>{d.name}</span>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>₹{d.costPerPerson}/person</span>
-                  </label>
+                    <CardContent className="p-3 flex items-center gap-3">
+                      <CheckCircle2
+                        className={`h-5 w-5 shrink-0 ${included ? 'text-green' : 'text-border'}`}
+                      />
+                      <span className={`flex-1 text-sm ${included ? 'font-medium text-foreground' : 'text-muted-foreground'}`}>
+                        {d.name}
+                      </span>
+                      <span className="text-xs text-muted-foreground">
+                        ₹{d.costPerPerson}/person
+                      </span>
+                    </CardContent>
+                  </Card>
                 )
               })}
             </div>
           </div>
         )
       })}
+
+      <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground pt-2">
+        <UtensilsCrossed className="h-4 w-4 text-gold" />
+        A complete traditional Onam sadya
+      </div>
     </section>
   )
 }

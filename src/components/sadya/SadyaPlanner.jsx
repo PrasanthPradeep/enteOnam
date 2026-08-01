@@ -47,7 +47,8 @@ const getDishPrice = (dishId) => priceData[dishId] || 0
 const CATEGORIES = ['Chips & Sides', 'Curries', 'Main Curries', 'Rice', 'Payasam', 'Finishers']
 
 export default function SadyaPlanner() {
-  const [guests, setGuests] = useState(10)
+  const [guestsInput, setGuestsInput] = useState('5')
+  const guests = Math.max(1, parseInt(guestsInput, 10) || 1)
   const [selected, setSelected] = useState(() => new Map(SADYA_DISHES.map(d => [d.id, true])))
   const [recipeDialog, setRecipeDialog] = useState({ open: false, dish: null })
 
@@ -125,8 +126,8 @@ export default function SadyaPlanner() {
                 type="number"
                 min="1"
                 className="max-w-[120px]"
-                value={guests}
-                onChange={e => setGuests(Math.max(1, +e.target.value))}
+                value={guestsInput}
+                onChange={e => setGuestsInput(e.target.value)}
               />
             </div>
           </div>
@@ -137,7 +138,7 @@ export default function SadyaPlanner() {
             </div>
             <div className="flex-1">
               <p className="text-2xl font-bold text-green">
-                ₹{total.toLocaleString('en-IN')}
+                ₹{total.toLocaleString('en-IN')} ~approx
               </p>
               <p className="text-xs text-muted-foreground">
                 ₹{Math.round(total / guests)} per guest · {selectedCount} dishes selected

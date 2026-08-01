@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Search, IndianRupee, Loader2, ShoppingCart, Package } from 'lucide-react'
+import { Search, IndianRupee, Loader2, Package, ArrowUp } from 'lucide-react'
 import { getPriceListTypes, getAllPrices } from '../../shared/api.js'
 import ReportDialog from '../shared/ReportDialog.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
@@ -39,6 +39,15 @@ export default function PricesView() {
   const [query, setQuery] = useState('')
   const [loading, setLoading] = useState(false)
   const [typesLoading, setTypesLoading] = useState(true)
+  const [visibleCount, setVisibleCount] = useState(100)
+  const [showTopButton, setShowTopButton] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setShowTopButton(window.scrollY > 400)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   useEffect(() => {
     getPriceListTypes()
@@ -49,6 +58,7 @@ export default function PricesView() {
   useEffect(() => {
     if (!activeType) return
     setLoading(true)
+    setVisibleCount(100)
     getAllPrices(activeType)
       .then(data => setPrices(data))
       .finally(() => setLoading(false))
@@ -57,6 +67,9 @@ export default function PricesView() {
   const filtered = query
     ? prices.filter(p => p.product_name?.toLowerCase().includes(query.toLowerCase()))
     : prices
+
+  const visible = filtered.slice(0, visibleCount)
+  const remaining = filtered.length - visibleCount
 
   const LoadingSkeleton = () => (
     <div className="space-y-3">
@@ -194,7 +207,7 @@ export default function PricesView() {
             {/* Results count */}
             <div className="flex items-center justify-between">
               <p className="text-sm text-muted-foreground">
-                {query ? `${filtered.length} of ${prices.length} products` : `${prices.length} products`}
+                {query ? `${filtered.length} of ${prices.length} products` : `${filtered.length} products`}
               </p>
               <Badge variant="outline" className="text-gold border-gold">
                 {TYPE_NAMES[activeType]}
@@ -203,13 +216,15 @@ export default function PricesView() {
 
             {/* Product Grid */}
             <div className="grid gap-3">
-              {filtered.map((product, index) => (
+              {visible.map((product, index) => (
                 <Card key={`${product.product_id}-${index}`} className="festival-card hover:shadow-md transition-shadow">
                   <CardContent className="p-4">
                     <div className="flex items-center justify-between gap-4">
                       <div className="flex-1 min-w-0">
-                        <div className="flex items-start gap-2">
-                          <ShoppingCart className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                        <div className="flex items-start gap-3">
+                          <span className="w-6 h-6 flex-shrink-0 rounded-md bg-green-50 text-green-700 text-xs font-semibold flex items-center justify-center mt-0.5">
+                            {index + 1}
+                          </span>
                           <div className="min-w-0 flex-1">
                             <h3 className="font-medium text-green-800 leading-tight">
                               {product.product_name}
@@ -236,19 +251,42 @@ export default function PricesView() {
               ))}
             </div>
 
-            {/* Show more message if results are limited */}
-            {prices.length >= 100 && (
+            {/* Show remaining items */}
+            {remaining > 0 && (
               <Card className="festival-card border-dashed">
                 <CardContent className="text-center py-6">
-                  <p className="text-sm text-muted-foreground">
-                    Showing first 100 items. Use search to find specific products.
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Showing {Math.min(visibleCount, filtered.length)} of {filtered.length} products
                   </p>
+                  <Button onClick={() => setVisibleCount(visibleCount + 100)}>
+                    Show more ({Math.min(remaining, 100)} more)
+                  </Button>
+                  {remaining > 100 && (
+                    <Button
+                      variant="ghost"
+                      className="ml-2"
+                      onClick={() => setVisibleCount(filtered.length)}
+                    >
+                      Show all {remaining} remaining
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             )}
           </div>
         )}
       </div>
+
+      {/* Scroll to top */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className={`fixed bottom-6 right-6 z-50 h-11 w-11 rounded-full bg-green text-white shadow-lg flex items-center justify-center transition-all duration-300 hover:bg-green-600 ${
+          showTopButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+        }`}
+        aria-label="Go to top"
+      >
+        <ArrowUp className="h-5 w-5" />
+      </button>
     </div>
   )
 }

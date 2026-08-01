@@ -1,217 +1,48 @@
 import { useState, useMemo } from 'react'
-import { Users, UtensilsCrossed, IndianRupee, CheckCircle2, BookOpen, X } from 'lucide-react'
+import { Users, UtensilsCrossed, IndianRupee, CheckCircle2, BookOpen, X, Clock, ChefHat } from 'lucide-react'
 import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Badge } from '../ui/badge'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../ui/dialog'
+import recipesData from './sadya_recipes_full.json'
+import priceData from './sadya_home_cost_estimate.json'
 
 const SADYA_DISHES = [
-  { 
-    id: 'pappadam', 
-    name: 'Pappadam', 
-    category: 'Chips & Sides', 
-    costPerPerson: 4.7,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'sharkara_upperi', 
-    name: 'Sharkara Upperi', 
-    category: 'Chips & Sides', 
-    costPerPerson: 8.95,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'kaya_varuthathu', 
-    name: 'Kaya Varuthathu', 
-    category: 'Chips & Sides', 
-    costPerPerson: 10.9,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'chena_varuthathu', 
-    name: 'Chena Varuthathu', 
-    category: 'Chips & Sides', 
-    costPerPerson: 11.3,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'sarkara_upperi', 
-    name: 'Sarkara Upperi', 
-    category: 'Chips & Sides', 
-    costPerPerson: 8.95,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'banana_chips', 
-    name: 'Banana Chips', 
-    category: 'Chips & Sides', 
-    costPerPerson: 8.9,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'pulinji', 
-    name: 'Pulinji', 
-    category: 'Curries', 
-    costPerPerson: 5.25,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'kaalan', 
-    name: 'Kaalan (Mathanga)', 
-    category: 'Curries', 
-    costPerPerson: 9.8,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'olans', 
-    name: 'Olan', 
-    category: 'Curries', 
-    costPerPerson: 6.9,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'avial', 
-    name: 'Avial', 
-    category: 'Curries', 
-    costPerPerson: 16.6,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'thoran', 
-    name: 'Thoran (Cabbage)', 
-    category: 'Curries', 
-    costPerPerson: 9.84,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'pachadi', 
-    name: 'Pachadi (Pineapple)', 
-    category: 'Curries', 
-    costPerPerson: 9.26,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'kichadi', 
-    name: 'Kichadi (Vellarikka)', 
-    category: 'Curries', 
-    costPerPerson: 9.2,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'erisheri', 
-    name: 'Erisheri (Chena)', 
-    category: 'Curries', 
-    costPerPerson: 12.9,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'sambar', 
-    name: 'Sambar', 
-    category: 'Main Curries', 
-    costPerPerson: 12.5,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'rasam', 
-    name: 'Rasam', 
-    category: 'Main Curries', 
-    costPerPerson: 4.1,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'pulisheri', 
-    name: 'Pulisheri', 
-    category: 'Main Curries', 
-    costPerPerson: 9.2,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'moru', 
-    name: 'Moru (Buttermilk)', 
-    category: 'Main Curries', 
-    costPerPerson: 10.0,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'injipuli', 
-    name: 'Injipuli', 
-    category: 'Main Curries', 
-    costPerPerson: 7.95,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'nellikka', 
-    name: 'Nellikka Curry', 
-    category: 'Main Curries', 
-    costPerPerson: 5.9,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'koottukari', 
-    name: 'Koottukari', 
-    category: 'Main Curries', 
-    costPerPerson: 10.6,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'mathanga_erisheri', 
-    name: 'Mathanga Erisheri', 
-    category: 'Main Curries', 
-    costPerPerson: 9.8,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'rice', 
-    name: 'Steamed Rice (Matta)', 
-    category: 'Rice', 
-    costPerPerson: 7.8,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'payasam_ada', 
-    name: 'Ada Payasam', 
-    category: 'Payasam', 
-    costPerPerson: 15.3,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'payasam_palada', 
-    name: 'Palada Payasam', 
-    category: 'Payasam', 
-    costPerPerson: 19.63,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'payasam_nyp', 
-    name: 'Neyyappam', 
-    category: 'Payasam', 
-    costPerPerson: 13.33,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'payasam_kozhukkatta', 
-    name: 'Kozhukkatta', 
-    category: 'Payasam', 
-    costPerPerson: 6.48,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'buttermilk', 
-    name: 'Buttermilk (finale)', 
-    category: 'Finishers', 
-    costPerPerson: 7.0,
-    recipe: 'Recipe will be added soon.'
-  },
-  { 
-    id: 'vada', 
-    name: 'Vada', 
-    category: 'Finishers', 
-    costPerPerson: 14.7,
-    recipe: 'Recipe will be added soon.'
-  },
+  { id: 'pappadam', name: 'Pappadam', category: 'Chips & Sides' },
+  { id: 'sharkara_upperi', name: 'Sharkara Upperi', category: 'Chips & Sides' },
+  { id: 'kaya_varuthathu', name: 'Kaya Varuthathu', category: 'Chips & Sides' },
+  { id: 'chena_varuthathu', name: 'Chena Varuthathu', category: 'Chips & Sides' },
+  { id: 'sarkara_upperi', name: 'Sarkara Upperi', category: 'Chips & Sides' },
+  { id: 'banana_chips', name: 'Banana Chips', category: 'Chips & Sides' },
+  { id: 'pulinji', name: 'Pulinji', category: 'Curries' },
+  { id: 'kaalan', name: 'Kaalan (Mathanga)', category: 'Curries' },
+  { id: 'olans', name: 'Olan', category: 'Curries' },
+  { id: 'avial', name: 'Avial', category: 'Curries' },
+  { id: 'thoran', name: 'Thoran (Cabbage)', category: 'Curries' },
+  { id: 'pachadi', name: 'Pachadi (Pineapple)', category: 'Curries' },
+  { id: 'kichadi', name: 'Kichadi (Vellarikka)', category: 'Curries' },
+  { id: 'erisheri', name: 'Erisheri (Chena)', category: 'Curries' },
+  { id: 'sambar', name: 'Sambar', category: 'Main Curries' },
+  { id: 'rasam', name: 'Rasam', category: 'Main Curries' },
+  { id: 'pulisheri', name: 'Pulisheri', category: 'Main Curries' },
+  { id: 'moru', name: 'Moru (Buttermilk)', category: 'Main Curries' },
+  { id: 'injipuli', name: 'Injipuli', category: 'Main Curries' },
+  { id: 'nellikka', name: 'Nellikka Curry', category: 'Main Curries' },
+  { id: 'koottukari', name: 'Koottukari', category: 'Main Curries' },
+  { id: 'mathanga_erisheri', name: 'Mathanga Erisheri', category: 'Main Curries' },
+  { id: 'rice', name: 'Steamed Rice (Matta)', category: 'Rice' },
+  { id: 'payasam_ada', name: 'Ada Payasam', category: 'Payasam' },
+  { id: 'payasam_palada', name: 'Palada Payasam', category: 'Payasam' },
+  { id: 'payasam_nyp', name: 'Neyyappam', category: 'Payasam' },
+  { id: 'payasam_kozhukkatta', name: 'Kozhukkatta', category: 'Payasam' },
+  { id: 'buttermilk', name: 'Buttermilk (finale)', category: 'Finishers' },
+  { id: 'vada', name: 'Vada', category: 'Finishers' },
 ]
+
+// Helper function to get price for a dish
+const getDishPrice = (dishId) => priceData[dishId] || 0
 
 const CATEGORIES = ['Chips & Sides', 'Curries', 'Main Curries', 'Rice', 'Payasam', 'Finishers']
 
@@ -237,9 +68,23 @@ export default function SadyaPlanner() {
     setRecipeDialog({ open: false, dish: null })
   }
 
+  // Calculate scaled ingredients based on guest count
+  const getScaledIngredients = (dishId, guestCount) => {
+    const recipe = recipesData[dishId]
+    if (!recipe || !recipe.ingredients) return []
+    
+    return recipe.ingredients.map(ing => ({
+      ...ing,
+      scaledQty: (ing.qty * guestCount).toFixed(1)
+    }))
+  }
+
+  const currentRecipe = recipeDialog.dish ? recipesData[recipeDialog.dish.id] : null
+  const scaledIngredients = recipeDialog.dish ? getScaledIngredients(recipeDialog.dish.id, guests) : []
+
   const total = useMemo(() => {
     return SADYA_DISHES.reduce((sum, d) => {
-      if (selected.get(d.id)) sum += d.costPerPerson * guests
+      if (selected.get(d.id)) sum += getDishPrice(d.id) * guests
       return sum
     }, 0)
   }, [guests, selected])
@@ -331,7 +176,7 @@ export default function SadyaPlanner() {
                         {d.name}
                       </span>
                       <span className="text-xs text-muted-foreground">
-                        ₹{d.costPerPerson}/person
+                        ₹{getDishPrice(d.id)}/person
                       </span>
                       <Button
                         size="sm"
@@ -357,26 +202,88 @@ export default function SadyaPlanner() {
 
       {/* Recipe Dialog */}
       <Dialog open={recipeDialog.open} onOpenChange={closeRecipe}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+        <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-2xl text-green-800">
-              <BookOpen className="h-6 w-6 text-gold" />
+              <ChefHat className="h-6 w-6 text-gold" />
               {recipeDialog.dish?.name}
             </DialogTitle>
           </DialogHeader>
-          <div className="space-y-4 pt-4">
-            <div className="flex items-center gap-4 text-sm">
-              <Badge variant="secondary">{recipeDialog.dish?.category}</Badge>
-              <span className="text-muted-foreground">
-                ₹{recipeDialog.dish?.costPerPerson} per person
-              </span>
-            </div>
-            <div className="prose prose-sm max-w-none">
-              <div className="whitespace-pre-wrap text-foreground">
-                {recipeDialog.dish?.recipe}
+          
+          {currentRecipe && (
+            <div className="space-y-6 pt-4">
+              {/* Recipe Meta Info */}
+              <div className="flex flex-wrap items-center gap-3">
+                <Badge variant="secondary">{recipeDialog.dish?.category}</Badge>
+                <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                  <Clock className="h-4 w-4" />
+                  <span>Prep: {currentRecipe.prepTime}</span>
+                </div>
+                <div className="flex items-center gap-1.5 text-sm text-muted-foreground">
+                  <Clock className="h-4 w-4" />
+                  <span>Cook: {currentRecipe.cookTime}</span>
+                </div>
+                <Badge 
+                  variant={currentRecipe.difficulty === 'Easy' ? 'default' : 'outline'}
+                  className={currentRecipe.difficulty === 'Medium' ? 'border-gold text-gold' : ''}
+                >
+                  {currentRecipe.difficulty}
+                </Badge>
+              </div>
+
+              <div className="p-4 rounded-lg bg-green-50 border border-green-200">
+                <div className="flex items-center gap-2 mb-2">
+                  <Users className="h-4 w-4 text-green" />
+                  <span className="font-semibold text-green-800">
+                    Recipe scaled for {guests} {guests === 1 ? 'person' : 'people'}
+                  </span>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Total cost: ₹{(getDishPrice(recipeDialog.dish?.id) * guests).toFixed(2)}
+                </p>
+              </div>
+
+              {/* Ingredients */}
+              <div className="space-y-3">
+                <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                  <span className="text-gold">📦</span>
+                  Ingredients
+                </h3>
+                <div className="bg-white border border-border rounded-lg divide-y">
+                  {scaledIngredients.map((ing, idx) => (
+                    <div key={idx} className="flex items-center justify-between p-3 hover:bg-green-50/50 transition-colors">
+                      <span className="text-sm font-medium text-foreground capitalize">
+                        {ing.item}
+                      </span>
+                      <span className="text-sm font-semibold text-green">
+                        {ing.scaledQty} {ing.unit}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Cooking Steps */}
+              <div className="space-y-3">
+                <h3 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                  <span className="text-gold">👨‍🍳</span>
+                  Instructions
+                </h3>
+                <div className="space-y-3">
+                  {currentRecipe.steps.map((step, idx) => (
+                    <div key={idx} className="flex gap-3">
+                      <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold text-white flex items-center justify-center text-xs font-bold">
+                        {idx + 1}
+                      </div>
+                      <p className="text-sm text-foreground leading-relaxed pt-0.5">
+                        {step}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </DialogContent>
       </Dialog>
     </section>

@@ -1,0 +1,1577 @@
+{
+  "pappadam": {
+    "id": "pappadam",
+    "name": "Pappadam",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "urad dal",
+        "qty": 20.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 5.0,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Heat coconut oil in a pan until hot.",
+      "Fry pappadam for 5-10 seconds per side until it puffs and turns light golden.",
+      "Drain on paper towel and serve immediately."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "5-10 mins",
+    "difficulty": "Easy"
+  },
+  "sharkara_upperi": {
+    "id": "sharkara_upperi",
+    "name": "Sharkara Upperi",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "raw banana",
+        "qty": 80.0,
+        "unit": "g"
+      },
+      {
+        "item": "jaggery",
+        "qty": 30.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 10.0,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Peel and slice raw banana into thin oval pieces.",
+      "Deep fry in coconut oil until half-cooked, then remove.",
+      "Melt jaggery with a splash of water into thick syrup, add dry ginger powder and cumin.",
+      "Toss fried banana pieces in jaggery syrup and coat well, then fry again briefly for a glossy finish.",
+      "Cool completely before storing (turns crisp on cooling)."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "kaya_varuthathu": {
+    "id": "kaya_varuthathu",
+    "name": "Kaya Varuthathu",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "raw banana",
+        "qty": 120,
+        "unit": "g"
+      },
+      {
+        "item": "rice flour",
+        "qty": 1,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "salt",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "coconut oil (for deep frying)",
+        "qty": 500,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Slice raw banana thinly using a mandoline or knife.",
+      "Soak slices in turmeric-salt water for 10 minutes.",
+      "Drain and pat dry the slices.",
+      "Deep fry in hot coconut oil until crisp and golden.",
+      "Drain excess oil and sprinkle salt while hot."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "chena_varuthathu": {
+    "id": "chena_varuthathu",
+    "name": "Chena Varuthathu",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "yam",
+        "qty": 120,
+        "unit": "g"
+      },
+      {
+        "item": "rice flour",
+        "qty": 1,
+        "unit": "tsp"
+      },
+      {
+        "item": "chilli powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "salt",
+        "qty": 0.3,
+        "unit": "tsp"
+      },
+      {
+        "item": "coconut oil (for deep frying)",
+        "qty": 500,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Peel and cube yam (chena) into thin, bite-sized pieces.",
+      "Marinate with turmeric, salt, and a pinch of rice flour.",
+      "Deep fry in coconut oil until crisp and golden brown.",
+      "Drain on paper towel and serve hot."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "sarkara_upperi": {
+    "id": "sarkara_upperi",
+    "name": "Sarkara Upperi",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "raw banana",
+        "qty": 80.0,
+        "unit": "g"
+      },
+      {
+        "item": "jaggery",
+        "qty": 30.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 10.0,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Same process as Sharkara Upperi: fry raw banana slices, coat in melted jaggery-ginger syrup, and fry again for a crisp finish."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "banana_chips": {
+    "id": "banana_chips",
+    "name": "Banana Chips",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "raw banana",
+        "qty": 120,
+        "unit": "g"
+      },
+      {
+        "item": "coconut oil (for deep frying)",
+        "qty": 500,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.125,
+        "unit": "tsp"
+      },
+      {
+        "item": "water",
+        "qty": 30,
+        "unit": "ml"
+      }
+    ],
+    "steps": [
+      "Slice raw banana thin and even using a mandoline.",
+      "Soak in turmeric-salt water briefly for color and flavor.",
+      "Deep fry in hot coconut oil in batches until crisp.",
+      "Drain and salt while still hot."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Easy"
+  },
+  "pulinji": {
+    "id": "pulinji",
+    "name": "Pulinji",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "ginger",
+        "qty": 35,
+        "unit": "g"
+      },
+      {
+        "item": "tamarind",
+        "qty": 10,
+        "unit": "g"
+      },
+      {
+        "item": "jaggery",
+        "qty": 15,
+        "unit": "g"
+      },
+      {
+        "item": "green chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "fenugreek",
+        "qty": 0.125,
+        "unit": "tsp"
+      },
+      {
+        "item": "dry red chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 10,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Grate or finely chop ginger.",
+      "Heat coconut oil, add mustard seeds, dry red chili, and curry leaves.",
+      "Add ginger and saute until fragrant.",
+      "Add tamarind extract, jaggery, chili powder, and salt; simmer until thick and glossy."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "kaalan": {
+    "id": "kaalan",
+    "name": "Kaalan (Mathanga)",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "raw banana",
+        "qty": 60,
+        "unit": "g"
+      },
+      {
+        "item": "yam",
+        "qty": 60,
+        "unit": "g"
+      },
+      {
+        "item": "thick curd",
+        "qty": 80,
+        "unit": "ml"
+      },
+      {
+        "item": "grated coconut",
+        "qty": 25,
+        "unit": "g"
+      },
+      {
+        "item": "black pepper",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "cumin seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "fenugreek",
+        "qty": 0.125,
+        "unit": "tsp"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 8,
+        "unit": "ml"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Cube pumpkin (mathanga) and pressure cook until soft.",
+      "Grind grated coconut with cumin into a smooth paste.",
+      "Add coconut paste to cooked pumpkin and simmer briefly.",
+      "Whisk curd and stir in off heat to avoid curdling.",
+      "Temper with coconut oil, mustard seeds, fenugreek, and curry leaves; pour over curry."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "olans": {
+    "id": "olans",
+    "name": "Olan",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "ash gourd",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "item": "red cowpeas cooked",
+        "qty": 30,
+        "unit": "g"
+      },
+      {
+        "item": "thin coconut milk",
+        "qty": 80,
+        "unit": "ml"
+      },
+      {
+        "item": "thick coconut milk",
+        "qty": 40,
+        "unit": "ml"
+      },
+      {
+        "item": "green chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 5,
+        "unit": "ml"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Cut pumpkin and other vegetables into thin slices.",
+      "Cook vegetables in a little water with salt until just tender.",
+      "Add thin coconut milk and simmer for 2-3 minutes.",
+      "Finish with thick coconut milk, a drizzle of coconut oil, and curry leaves."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "avial": {
+    "id": "avial",
+    "name": "Avial",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "mixed vegetables",
+        "qty": 200,
+        "unit": "g"
+      },
+      {
+        "item": "grated coconut",
+        "qty": 30,
+        "unit": "g"
+      },
+      {
+        "item": "green chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "cumin seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "curd",
+        "qty": 40,
+        "unit": "ml"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 10,
+        "unit": "ml"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Cut mixed vegetables (yam, drumstick, carrot, beans, raw banana) into 2-inch batons.",
+      "Cook harder vegetables first with turmeric and salt, then add softer ones.",
+      "Grind coconut, cumin, and green chili into a coarse paste.",
+      "Mix coconut paste into cooked vegetables without mashing.",
+      "Stir in whisked curd, simmer briefly, then finish with raw coconut oil and curry leaves off heat."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "thoran": {
+    "id": "thoran",
+    "name": "Thoran (Cabbage)",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "cabbage",
+        "qty": 120,
+        "unit": "g"
+      },
+      {
+        "item": "grated coconut",
+        "qty": 20,
+        "unit": "g"
+      },
+      {
+        "item": "green chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "urad dal",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "dry red chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 8,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Finely chop cabbage.",
+      "Heat coconut oil, temper mustard seeds, urad dal, dried chili, and curry leaves.",
+      "Add chopped cabbage, turmeric, and salt; cover and cook until tender.",
+      "Mix in grated coconut and cook uncovered for 2 minutes to dry out excess moisture."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "pachadi": {
+    "id": "pachadi",
+    "name": "Pachadi (Pineapple)",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "pineapple",
+        "qty": 100,
+        "unit": "g"
+      },
+      {
+        "item": "grated coconut",
+        "qty": 20,
+        "unit": "g"
+      },
+      {
+        "item": "green chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.75,
+        "unit": "tsp"
+      },
+      {
+        "item": "curd",
+        "qty": 50,
+        "unit": "ml"
+      },
+      {
+        "item": "jaggery",
+        "qty": 8,
+        "unit": "g"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 5,
+        "unit": "ml"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      },
+      {
+        "item": "salt",
+        "qty": 0.4,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Cook chopped pineapple with turmeric, salt, and a little jaggery/sugar until soft.",
+      "Grind coconut with green chili and mustard seeds into a paste.",
+      "Add coconut paste to cooked pineapple and simmer briefly.",
+      "Cool slightly, then mix in whisked curd.",
+      "Temper with mustard seeds and curry leaves in coconut oil, pour over."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "kichadi": {
+    "id": "kichadi",
+    "name": "Kichadi (Vellarikka)",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "cucumber",
+        "qty": 120,
+        "unit": "g"
+      },
+      {
+        "item": "grated coconut",
+        "qty": 20,
+        "unit": "g"
+      },
+      {
+        "item": "green chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.75,
+        "unit": "tsp"
+      },
+      {
+        "item": "curd",
+        "qty": 60,
+        "unit": "ml"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 5,
+        "unit": "ml"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      },
+      {
+        "item": "salt",
+        "qty": 0.4,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Grate or thinly slice cucumber (vellarikka).",
+      "Grind coconut with green chili and mustard into a smooth paste.",
+      "Mix cucumber with whisked curd and the coconut paste.",
+      "Temper mustard seeds and curry leaves in coconut oil, pour over the mixture and mix gently."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "erisheri": {
+    "id": "erisheri",
+    "name": "Erisheri (Chena)",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "pumpkin",
+        "qty": 120,
+        "unit": "g"
+      },
+      {
+        "item": "red cowpeas cooked",
+        "qty": 35,
+        "unit": "g"
+      },
+      {
+        "item": "grated coconut",
+        "qty": 30,
+        "unit": "g"
+      },
+      {
+        "item": "cumin seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 8,
+        "unit": "ml"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "dry red chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "roasted coconut",
+        "qty": 10,
+        "unit": "g"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Cube yam (chena) and cook with turmeric and salt until soft.",
+      "Cook green gram (cheruparippu) separately until tender and mash lightly.",
+      "Grind coconut with cumin and mix into cooked yam and gram.",
+      "Simmer briefly, then temper with coconut oil, mustard seeds, dried chili, and curry leaves."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "sambar": {
+    "id": "sambar",
+    "name": "Sambar",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "toor dal",
+        "qty": 35,
+        "unit": "g"
+      },
+      {
+        "item": "mixed vegetables",
+        "qty": 150,
+        "unit": "g"
+      },
+      {
+        "item": "shallots",
+        "qty": 20,
+        "unit": "g"
+      },
+      {
+        "item": "tamarind",
+        "qty": 8,
+        "unit": "g"
+      },
+      {
+        "item": "sambar powder",
+        "qty": 1.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "asafoetida",
+        "qty": 0.125,
+        "unit": "tsp"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "dry red chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 8,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.75,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Cook toor dal until soft and mash lightly.",
+      "Boil mixed vegetables with tamarind extract, turmeric, and sambar powder.",
+      "Add cooked dal to the vegetable mixture and simmer until thickened.",
+      "Temper mustard seeds, dried chili, curry leaves, and asafoetida in coconut oil; pour over sambar."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "rasam": {
+    "id": "rasam",
+    "name": "Rasam",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "tomato",
+        "qty": 50,
+        "unit": "g"
+      },
+      {
+        "item": "garlic",
+        "qty": 3,
+        "unit": "cloves"
+      },
+      {
+        "item": "cumin seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "dry red chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      },
+      {
+        "item": "coriander leaves",
+        "qty": 1,
+        "unit": "tbsp"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Extract tamarind juice and combine with rasam powder, turmeric, and salt.",
+      "Cook toor dal separately and mash; add a spoonful of dal water to the tamarind mixture.",
+      "Simmer the mixture gently, do not boil vigorously.",
+      "Add crushed pepper-cumin and chopped tomato if desired.",
+      "Temper mustard seeds, curry leaves, and dried chili in ghee/oil, pour over rasam off heat."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "5-10 mins",
+    "difficulty": "Medium"
+  },
+  "pulisheri": {
+    "id": "pulisheri",
+    "name": "Pulisheri",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "curd",
+        "qty": 80,
+        "unit": "ml"
+      },
+      {
+        "item": "grated coconut",
+        "qty": 20,
+        "unit": "g"
+      },
+      {
+        "item": "green chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "cumin seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "fenugreek",
+        "qty": 0.125,
+        "unit": "tsp"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "dry red chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 8,
+        "unit": "ml"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Whisk curd well with a little water until smooth.",
+      "Grind coconut with cumin and green chili into a paste; mix into the curd.",
+      "Heat gently on low flame, stirring continuously (do not boil).",
+      "Temper mustard seeds, fenugreek, dried chili, and curry leaves in coconut oil; pour over."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "moru": {
+    "id": "moru",
+    "name": "Moru (Buttermilk)",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "curd",
+        "qty": 150.0,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.1,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Whisk curd with water until a thin, smooth buttermilk consistency is reached.",
+      "Add finely chopped ginger, green chili, and curry leaves.",
+      "Add salt to taste and mix well.",
+      "Chill before serving as a palate cleanser."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "5-10 mins",
+    "difficulty": "Easy"
+  },
+  "injipuli": {
+    "id": "injipuli",
+    "name": "Injipuli",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "ginger",
+        "qty": 40,
+        "unit": "g"
+      },
+      {
+        "item": "tamarind",
+        "qty": 10,
+        "unit": "g"
+      },
+      {
+        "item": "jaggery",
+        "qty": 15,
+        "unit": "g"
+      },
+      {
+        "item": "green chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "fenugreek",
+        "qty": 0.125,
+        "unit": "tsp"
+      },
+      {
+        "item": "dry red chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 10,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Slice ginger thinly and fry lightly in coconut oil until edges brown.",
+      "Add tamarind extract, jaggery, chili powder, and salt.",
+      "Simmer until the mixture thickens into a sweet-tangy glaze.",
+      "Cool completely as it thickens further on cooling; stores well for days."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "nellikka": {
+    "id": "nellikka",
+    "name": "Nellikka Curry",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "vegetables mixed",
+        "qty": 50.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 5.0,
+        "unit": "ml"
+      },
+      {
+        "item": "mustard",
+        "qty": 0.1,
+        "unit": "tsp"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Lightly crush or slice gooseberries (nellikka).",
+      "Cook briefly in water with turmeric and salt until slightly softened.",
+      "Add a light tempering of mustard seeds, dried chili, and curry leaves in coconut oil.",
+      "Simmer for a couple of minutes and remove from heat."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "koottukari": {
+    "id": "koottukari",
+    "name": "Koottukari",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "raw banana",
+        "qty": 80,
+        "unit": "g"
+      },
+      {
+        "item": "yam",
+        "qty": 80,
+        "unit": "g"
+      },
+      {
+        "item": "black chickpeas cooked",
+        "qty": 40,
+        "unit": "g"
+      },
+      {
+        "item": "grated coconut",
+        "qty": 30,
+        "unit": "g"
+      },
+      {
+        "item": "cumin seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "black pepper",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 8,
+        "unit": "ml"
+      },
+      {
+        "item": "mustard seeds",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "dry red chilli",
+        "qty": 2,
+        "unit": "nos"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Cut mixed vegetables and pressure cook with turmeric until soft.",
+      "Cook green gram separately until tender.",
+      "Combine vegetables and gram, add ground coconut paste, and simmer.",
+      "Temper mustard seeds and curry leaves in coconut oil, pour over the curry."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "mathanga_erisheri": {
+    "id": "mathanga_erisheri",
+    "name": "Mathanga Erisheri",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "pumpkin mathanga",
+        "qty": 80.0,
+        "unit": "g"
+      },
+      {
+        "item": "green gram",
+        "qty": 30.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut grated",
+        "qty": 30.0,
+        "unit": "g"
+      },
+      {
+        "item": "cumin",
+        "qty": 0.1,
+        "unit": "tsp"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Cube pumpkin and cook with turmeric and salt until soft.",
+      "Cook green gram separately until tender and mash lightly.",
+      "Combine pumpkin and gram, mix in ground coconut-cumin paste, and simmer briefly.",
+      "Temper with coconut oil, mustard seeds, dried chili, and curry leaves."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "rice": {
+    "id": "rice",
+    "name": "Steamed Rice (Matta)",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "rice matta",
+        "qty": 150.0,
+        "unit": "g"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Wash matta rice thoroughly until water runs clear.",
+      "Add rice to a pot with double the volume of water.",
+      "Bring to a boil, then simmer covered until all water is absorbed and rice is soft.",
+      "Fluff gently with a fork before serving."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Easy"
+  },
+  "payasam_ada": {
+    "id": "payasam_ada",
+    "name": "Ada Payasam",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "ada",
+        "qty": 40.0,
+        "unit": "g"
+      },
+      {
+        "item": "jaggery",
+        "qty": 40.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut grated",
+        "qty": 20.0,
+        "unit": "g"
+      },
+      {
+        "item": "milk",
+        "qty": 50.0,
+        "unit": "ml"
+      },
+      {
+        "item": "ghee",
+        "qty": 5.0,
+        "unit": "g"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Cook rice ada in water or milk until soft.",
+      "In a separate pan, melt jaggery with a little water into syrup and strain to remove impurities.",
+      "Add cooked ada to jaggery syrup and simmer.",
+      "Stir in coconut milk and simmer gently (do not boil after adding thin coconut milk).",
+      "Finish with a ghee-fried garnish of cashews, raisins, and coconut bits."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "payasam_palada": {
+    "id": "payasam_palada",
+    "name": "Palada Payasam",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "ada",
+        "qty": 30.0,
+        "unit": "g"
+      },
+      {
+        "item": "milk",
+        "qty": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item": "sugar",
+        "qty": 30.0,
+        "unit": "g"
+      },
+      {
+        "item": "ghee",
+        "qty": 5.0,
+        "unit": "g"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Cook ada (rice flakes) separately in water until soft, then drain.",
+      "Boil milk in a heavy-bottomed pan, stirring frequently, until reduced and slightly thickened.",
+      "Add cooked ada to the reduced milk and simmer on low heat, stirring often.",
+      "Add sugar and continue simmering until the payasam reaches a creamy consistency.",
+      "Finish with a pinch of cardamom and a spoon of ghee."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "payasam_nyp": {
+    "id": "payasam_nyp",
+    "name": "Neyyappam",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "rice matta",
+        "qty": 40.0,
+        "unit": "g"
+      },
+      {
+        "item": "jaggery",
+        "qty": 30.0,
+        "unit": "g"
+      },
+      {
+        "item": "ghee",
+        "qty": 10.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 10.0,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Mix rice flour (or ground soaked rice) with jaggery syrup and mashed ripe banana into a thick batter.",
+      "Add a pinch of cumin and dry ginger powder.",
+      "Heat coconut oil in a small deep pan (appam chatti).",
+      "Pour small ladles of batter and fry until golden brown and crisp outside, soft inside.",
+      "Drain on paper towels and serve warm."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "payasam_kozhukkatta": {
+    "id": "payasam_kozhukkatta",
+    "name": "Kozhukkatta",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "rice matta",
+        "qty": 40.0,
+        "unit": "g"
+      },
+      {
+        "item": "jaggery",
+        "qty": 20.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut grated",
+        "qty": 20.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 5.0,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Make a dough with rice flour, hot water, and a pinch of salt.",
+      "Prepare filling by cooking grated coconut with jaggery until thick.",
+      "Shape dough into small cups, fill with coconut-jaggery mixture, and seal into dumplings.",
+      "Steam the dumplings for 10-15 minutes until cooked through.",
+      "Serve warm, optionally with a drizzle of ghee."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  },
+  "buttermilk": {
+    "id": "buttermilk",
+    "name": "Buttermilk (finale)",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "curd",
+        "qty": 100.0,
+        "unit": "ml"
+      },
+      {
+        "item": "salt",
+        "qty": 0.1,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Whisk curd thoroughly with cold water until smooth and frothy.",
+      "Add a pinch of salt and crushed curry leaves or ginger if desired.",
+      "Chill well before serving as a finishing drink after the meal."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "5-10 mins",
+    "difficulty": "Easy"
+  },
+  "vada": {
+    "id": "vada",
+    "name": "Vada",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "urad vada",
+        "qty": 50.0,
+        "unit": "g"
+      },
+      {
+        "item": "coconut oil",
+        "qty": 15.0,
+        "unit": "ml"
+      },
+      {
+        "item": "cumin",
+        "qty": 0.1,
+        "unit": "tsp"
+      },
+      {
+        "item": "salt",
+        "qty": 0.5,
+        "unit": "tsp"
+      },
+      {
+        "item": "turmeric powder",
+        "qty": 0.25,
+        "unit": "tsp"
+      },
+      {
+        "item": "curry leaves",
+        "qty": 1,
+        "unit": "sprig"
+      }
+    ],
+    "steps": [
+      "Soak urad dal for 3-4 hours, then grind into a thick, fluffy batter with minimal water.",
+      "Mix in chopped onions, green chili, ginger, curry leaves, and salt.",
+      "Shape batter into small discs with a hole in the center using wet hands.",
+      "Deep fry in hot coconut oil until golden brown and crisp on both sides.",
+      "Drain on paper towel and serve hot."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "20 mins",
+    "difficulty": "Medium"
+  }
+}

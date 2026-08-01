@@ -87,7 +87,7 @@ export default function CountdownView() {
   })
 
   useEffect(() => {
-    const target = new Date('2026-09-08T00:00:00')
+    const target = new Date('2026-08-26T00:00:00')
     
     const updateCountdown = () => {
       const now = new Date()

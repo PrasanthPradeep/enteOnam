@@ -8,10 +8,15 @@ import {
   ChevronDown, 
   Loader2,
   ExternalLink,
-  X
+  X,
+  Package,
+  CheckCircle2,
+  AlertCircle,
+  XCircle
 } from 'lucide-react'
 import { getAllOutlets } from '../../shared/api.js'
 import { haversine } from '../../shared/utils.js'
+import { supabase } from '../../shared/supabase.js'
 import StockReportForm from './StockReportForm.jsx'
 import ReportDialog from '../shared/ReportDialog.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
@@ -19,6 +24,29 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select'
 import { Badge } from '../ui/badge'
+
+const ESSENTIAL_ITEMS = [
+  'Matta Rice Unda',
+  'Jaya Rice',
+  'Raw Rice',
+  'Toordhal (Thuvara Parippu)',
+  'Green Gram Dhall (Cherupayar Parippu)',
+  'Bengal Gram Bold (Kadala)',
+  'Black Gram (Uzhunnu)',
+  'Coconut Oil',
+  'Chilli Powder',
+  'Turmeric Powder',
+  'Coriander Powder',
+  'Mustard Seeds',
+  'Cumin Seeds',
+  'Sugar',
+  'Salt',
+  'Sambar Powder',
+  'Rasam Powder',
+  'Tea (Sabari varieties)',
+  'Wheat Atta',
+  'Puttupodi',
+]
 
 function OutletMap({ outlet }) {
   const mapRef = useRef(null)
@@ -52,6 +80,73 @@ function OutletMap({ outlet }) {
   return <div ref={mapRef} className="w-full h-44 rounded-md mt-4" />
 }
 
+function EssentialItemsStock({ outletId, stockReports }) {
+  const getStockIcon = (status) => {
+    switch (status) {
+      case 'in_stock':
+        return <CheckCircle2 className="h-4 w-4 text-green-600" />
+      case 'low_stock':
+        return <AlertCircle className="h-4 w-4 text-yellow-600" />
+      case 'out_of_stock':
+        return <XCircle className="h-4 w-4 text-red-600" />
+      default:
+        return <CheckCircle2 className="h-4 w-4 text-green-600" /> // Default to in stock
+    }
+  }
+
+  const getStockBadge = (status) => {
+    switch (status) {
+      case 'in_stock':
+        return <Badge className="bg-green-100 text-green-700 border-green-300">In Stock</Badge>
+      case 'low_stock':
+        return <Badge className="bg-yellow-100 text-yellow-700 border-yellow-300">Low Stock</Badge>
+      case 'out_of_stock':
+        return <Badge className="bg-red-100 text-red-700 border-red-300">Out of Stock</Badge>
+      default:
+        return <Badge className="bg-green-100 text-green-700 border-green-300">In Stock</Badge> // Default to in stock
+    }
+  }
+
+  return (
+    <div className="space-y-3">
+      <div className="flex items-center justify-between">
+        <h4 className="text-sm font-semibold text-green-800 flex items-center gap-2">
+          <Package className="h-4 w-4 text-gold" />
+          Essential Items Availability
+        </h4>
+        <Badge variant="outline" className="text-xs">
+          {ESSENTIAL_ITEMS.length} items
+        </Badge>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        {ESSENTIAL_ITEMS.map((item, idx) => {
+          // Get reported status or default to 'in_stock'
+          const status = stockReports?.[item]?.status || 'in_stock'
+          return (
+            <div 
+              key={idx}
+              className="flex items-center justify-between p-2 rounded-md border border-border hover:bg-green-50/50 transition-colors"
+            >
+              <div className="flex items-center gap-2 flex-1 min-w-0">
+                {getStockIcon(status)}
+                <span className="text-sm text-foreground truncate">{item}</span>
+              </div>
+              <div className="ml-2">
+                {getStockBadge(status)}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+      
+      <p className="text-xs text-muted-foreground">
+        Stock information is crowdsourced - help keep it updated by reporting availability below.
+      </p>
+    </div>
+  )
+}
+
 export default function StoresView() {
   const [outlets, setOutlets] = useState([])
   const [selected, setSelected] = useState(null)
@@ -61,12 +156,61 @@ export default function StoresView() {
   const [userLoc, setUserLoc] = useState(null)
   const [loading, setLoading] = useState(true)
   const [locating, setLocating] = useState(false)
+  const [stockReports, setStockReports] = useState({}) // Store latest stock reports for selected outlet
+  const [stockReportDialog, setStockReportDialog] = useState({ open: false, outlet: null })
 
   useEffect(() => {
     getAllOutlets()
       .then(data => setOutlets(data))
       .finally(() => setLoading(false))
   }, [])
+
+  // Fetch stock reports when outlet is selected
+  useEffect(() => {
+    if (!selected?.outlet_id) {
+      setStockReports({})
+      return
+    }
+    
+    const fetchStockReports = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('stock_reports')
+          .select('item_name, status, reported_at')
+          .eq('outlet_id', selected.outlet_id)
+          .order('reported_at', { ascending: false })
+        
+        if (error) {
+          console.error('Error fetching stock reports:', error)
+          return
+        }
+        
+        // Get most recent report for each item
+        const latestReports = {}
+        if (data) {
+          data.forEach(report => {
+            if (!latestReports[report.item_name]) {
+              latestReports[report.item_name] = report
+            }
+          })
+        }
+        
+        setStockReports(latestReports)
+      } catch (err) {
+        console.error('Error fetching stock reports:', err)
+      }
+    }
+    
+    fetchStockReports()
+  }, [selected?.outlet_id])
+
+  // Callback to refresh stock reports after submission
+  const handleStockReportSubmitted = () => {
+    if (selected?.outlet_id) {
+      // Trigger a refresh by setting selected again
+      setSelected({ ...selected })
+    }
+  }
 
   const districts = useMemo(() => {
     const s = new Set(outlets.map(o => o.district_name).filter(Boolean))
@@ -344,21 +488,39 @@ export default function StoresView() {
                       {/* Map */}
                       <OutletMap outlet={selected} />
 
-                      {/* Action Buttons */}
+                      {/* Get Directions Button - Below Map */}
+                      {selected.latitude && selected.longitude && (
+                        <Button asChild variant="default" className="w-full">
+                          <a
+                            href={`https://www.google.com/maps/dir/?api=1&destination=${selected.latitude},${selected.longitude}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-2"
+                          >
+                            <Navigation className="h-4 w-4" />
+                            Get Directions
+                          </a>
+                        </Button>
+                      )}
+
+                      {/* Essential Items Stock Status */}
+                      <div className="pt-4">
+                        <EssentialItemsStock 
+                          outletId={selected.outlet_id}
+                          stockReports={stockReports}
+                        />
+                      </div>
+
+                      {/* Other Action Buttons */}
                       <div className="flex flex-wrap gap-3">
-                        {selected.latitude && selected.longitude && (
-                          <Button asChild variant="default">
-                            <a
-                              href={`https://www.google.com/maps/dir/?api=1&destination=${selected.latitude},${selected.longitude}`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2"
-                            >
-                              <ExternalLink className="h-4 w-4" />
-                              Get Directions
-                            </a>
-                          </Button>
-                        )}
+                        <Button 
+                          variant="secondary"
+                          onClick={() => setStockReportDialog({ open: true, outlet: selected })}
+                          className="flex items-center gap-2"
+                        >
+                          <Package className="h-4 w-4" />
+                          Report Stock
+                        </Button>
                         <ReportDialog
                           type="outlet"
                           outletId={selected.outlet_id}
@@ -375,11 +537,6 @@ export default function StoresView() {
                           Close
                         </Button>
                       </div>
-
-                      {/* Stock Report Form */}
-                      <div className="pt-4 border-t">
-                        <StockReportForm outletId={selected.outlet_id} />
-                      </div>
                     </div>
                   </CardContent>
                 )}
@@ -388,6 +545,17 @@ export default function StoresView() {
           </div>
         )}
       </div>
+
+      {/* Stock Report Dialog */}
+      {stockReportDialog.outlet && (
+        <StockReportForm 
+          outletId={stockReportDialog.outlet.outlet_id}
+          outletName={stockReportDialog.outlet.name}
+          open={stockReportDialog.open}
+          onOpenChange={(open) => setStockReportDialog({ open, outlet: open ? stockReportDialog.outlet : null })}
+          onReportSubmitted={handleStockReportSubmitted}
+        />
+      )}
     </div>
   )
 }

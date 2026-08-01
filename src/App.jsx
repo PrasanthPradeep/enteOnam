@@ -41,7 +41,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       {/* Enhanced Navigation */}
       <nav className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled 

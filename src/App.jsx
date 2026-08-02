@@ -9,6 +9,7 @@ import FlowerView from './components/flower/FlowerView.jsx'
 import SadyaPlanner from './components/sadya/SadyaPlanner.jsx'
 import CountdownView from './components/countdown/CountdownView.jsx'
 import AuthModal from './components/auth/AuthModal.jsx'
+import MusicToggle from './components/shared/MusicToggle.jsx'
 import { Button } from './components/ui/button'
 
 const navigationItems = [
@@ -165,6 +166,7 @@ export default function App() {
       </nav>
 
       {/* Main Content */}
+      <MusicToggle />
       <main className="container section">
         <Routes>
           <Route path="/" element={<CountdownView />} />

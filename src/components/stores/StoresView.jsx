@@ -285,6 +285,17 @@ export default function StoresView() {
               {loading ? 'Loading stores...' : `${outlets.length} outlets across Kerala`}
             </p>
           </div>
+          <Button asChild variant="secondary" className="flex items-center gap-2 shrink-0">
+            <a
+              href="https://www.google.com/maps/search/supermarkets+near+me/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-link flex items-center gap-2"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Other Local Stores Near You
+            </a>
+          </Button>
         </div>
 
         {/* Filters */}
@@ -385,9 +396,20 @@ export default function StoresView() {
             <CardContent className="text-center py-12">
               <Store className="h-12 w-12 text-gold mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-green-800 mb-2">Find Supplyco Stores</h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-4">
                 Select a district, search by name, or find nearby stores to get started
               </p>
+              <Button asChild variant="secondary" className="flex items-center gap-2">
+                <a
+                  href="https://www.google.com/maps/search/supermarkets+near+me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button-link flex items-center gap-2"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Find Other Local Stores Near You
+                </a>
+              </Button>
             </CardContent>
           </Card>
         ) : filtered.length === 0 ? (

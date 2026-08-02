@@ -1388,110 +1388,6 @@
     "cookTime": "20 mins",
     "difficulty": "Medium"
   },
-  "payasam_nyp": {
-    "id": "payasam_nyp",
-    "name": "Neyyappam",
-    "baseServings": 1,
-    "ingredients": [
-      {
-        "item": "rice matta",
-        "qty": 40.0,
-        "unit": "g"
-      },
-      {
-        "item": "jaggery",
-        "qty": 30.0,
-        "unit": "g"
-      },
-      {
-        "item": "ghee",
-        "qty": 10.0,
-        "unit": "g"
-      },
-      {
-        "item": "coconut oil",
-        "qty": 10.0,
-        "unit": "ml"
-      },
-      {
-        "item": "salt",
-        "qty": 0.5,
-        "unit": "tsp"
-      },
-      {
-        "item": "turmeric powder",
-        "qty": 0.25,
-        "unit": "tsp"
-      },
-      {
-        "item": "curry leaves",
-        "qty": 1,
-        "unit": "sprig"
-      }
-    ],
-    "steps": [
-      "Mix rice flour (or ground soaked rice) with jaggery syrup and mashed ripe banana into a thick batter.",
-      "Add a pinch of cumin and dry ginger powder.",
-      "Heat coconut oil in a small deep pan (appam chatti).",
-      "Pour small ladles of batter and fry until golden brown and crisp outside, soft inside.",
-      "Drain on paper towels and serve warm."
-    ],
-    "prepTime": "10 mins",
-    "cookTime": "20 mins",
-    "difficulty": "Medium"
-  },
-  "payasam_kozhukkatta": {
-    "id": "payasam_kozhukkatta",
-    "name": "Kozhukkatta",
-    "baseServings": 1,
-    "ingredients": [
-      {
-        "item": "rice matta",
-        "qty": 40.0,
-        "unit": "g"
-      },
-      {
-        "item": "jaggery",
-        "qty": 20.0,
-        "unit": "g"
-      },
-      {
-        "item": "coconut grated",
-        "qty": 20.0,
-        "unit": "g"
-      },
-      {
-        "item": "coconut oil",
-        "qty": 5.0,
-        "unit": "ml"
-      },
-      {
-        "item": "salt",
-        "qty": 0.5,
-        "unit": "tsp"
-      },
-      {
-        "item": "turmeric powder",
-        "qty": 0.25,
-        "unit": "tsp"
-      },
-      {
-        "item": "curry leaves",
-        "qty": 1,
-        "unit": "sprig"
-      }
-    ],
-    "steps": [
-      "Make a dough with rice flour, hot water, and a pinch of salt.",
-      "Prepare filling by cooking grated coconut with jaggery until thick.",
-      "Shape dough into small cups, fill with coconut-jaggery mixture, and seal into dumplings.",
-      "Steam the dumplings for 10-15 minutes until cooked through.",
-      "Serve warm, optionally with a drizzle of ghee."
-    ],
-    "prepTime": "10 mins",
-    "cookTime": "20 mins",
-    "difficulty": "Medium"
-  },
   "buttermilk": {
     "id": "buttermilk",
     "name": "Buttermilk (finale)",
@@ -1573,5 +1469,81 @@
     "prepTime": "10 mins",
     "cookTime": "20 mins",
     "difficulty": "Medium"
+  },
+  "payasam_semiya": {
+    "id": "payasam_semiya",
+    "name": "Semiya Payasam",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "vermicelli (semiya)",
+        "qty": 35,
+        "unit": "g"
+      },
+      {
+        "item": "milk",
+        "qty": 220,
+        "unit": "ml"
+      },
+      {
+        "item": "sugar",
+        "qty": 25,
+        "unit": "g"
+      },
+      {
+        "item": "ghee",
+        "qty": 5,
+        "unit": "g"
+      },
+      {
+        "item": "cashew nuts",
+        "qty": 5,
+        "unit": "g"
+      },
+      {
+        "item": "raisins",
+        "qty": 5,
+        "unit": "g"
+      },
+      {
+        "item": "cardamom powder",
+        "qty": 0.125,
+        "unit": "tsp"
+      }
+    ],
+    "steps": [
+      "Roast vermicelli in ghee until lightly golden.",
+      "Boil milk and add roasted vermicelli.",
+      "Cook until soft, then add sugar.",
+      "Garnish with ghee-fried cashews, raisins and cardamom."
+    ],
+    "prepTime": "10 mins",
+    "cookTime": "25 mins",
+    "difficulty": "Easy"
+  },
+  "ghee_boli": {
+    "id": "ghee_boli",
+    "name": "Ghee Boli",
+    "baseServings": 1,
+    "ingredients": [
+      {
+        "item": "sweet boli",
+        "qty": 1,
+        "unit": "piece"
+      },
+      {
+        "item": "ghee",
+        "qty": 10,
+        "unit": "g"
+      }
+    ],
+    "steps": [
+      "Warm the boli lightly on a tawa.",
+      "Spread or drizzle hot ghee generously on both sides.",
+      "Serve warm, traditionally with palada or semiya payasam."
+    ],
+    "prepTime": "2 mins",
+    "cookTime": "3 mins",
+    "difficulty": "Easy"
   }
 }

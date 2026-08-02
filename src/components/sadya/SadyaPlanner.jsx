@@ -35,8 +35,8 @@ const SADYA_DISHES = [
   { id: 'rice', name: 'Steamed Rice (Matta)', category: 'Rice' },
   { id: 'payasam_ada', name: 'Ada Payasam', category: 'Payasam' },
   { id: 'payasam_palada', name: 'Palada Payasam', category: 'Payasam' },
-  { id: 'payasam_nyp', name: 'Neyyappam', category: 'Payasam' },
-  { id: 'payasam_kozhukkatta', name: 'Kozhukkatta', category: 'Payasam' },
+  { id: 'payasam_semiya', name: 'Semiya Payasam', category: 'Payasam' },
+  { id: 'ghee_boli', name: 'Ghee Boli', category: 'Finishers' },
   { id: 'buttermilk', name: 'Buttermilk (finale)', category: 'Finishers' },
   { id: 'vada', name: 'Vada', category: 'Finishers' },
 ]

@@ -245,14 +245,14 @@ export default function CountdownView() {
                   ritual.isMainDay ? 'ring-2 ring-gold border-gold' : ''
                 }`}
               >
-                <CardContent className="flex items-center gap-4 p-6">
+                <CardContent className="flex flex-wrap items-center gap-4 p-6">
                   {/* Icon */}
                   <div className={`flex-shrink-0 p-3 rounded-lg ${ritual.bgColor}`}>
                     <Icon className={`h-6 w-6 ${ritual.color}`} />
                   </div>
 
                   {/* Content */}
-                  <div className="flex-grow">
+                  <div className="flex-grow min-w-0">
                     <div className="flex items-center gap-2 mb-1">
               <h3 className={`font-bold text-lg ${ritual.color} ml`}>
                 {ritual.day}
@@ -267,7 +267,7 @@ export default function CountdownView() {
                   </div>
 
                   {/* Date & info */}
-                  <div className="flex-shrink-0 text-right space-y-1">
+                  <div className="w-full md:w-auto flex-shrink-0 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 md:block md:ml-auto md:text-right">
                     <div className="text-sm font-semibold text-muted-foreground">
                       {ritual.weekday}, {ritual.date}
                     </div>

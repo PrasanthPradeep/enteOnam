@@ -275,8 +275,8 @@ export default function StoresView() {
     <div className="space-y-6">
       {/* Header */}
       <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <div>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="min-w-0">
             <h1 className="text-3xl font-bold text-green-800 flex items-center gap-2">
               <Store className="h-8 w-8 text-gold" />
               Supplyco Stores
@@ -285,7 +285,7 @@ export default function StoresView() {
               {loading ? 'Loading stores...' : `${outlets.length} outlets across Kerala`}
             </p>
           </div>
-          <Button asChild variant="secondary" className="flex items-center gap-2 shrink-0">
+          <Button asChild variant="secondary" className="flex items-center gap-2 w-full sm:w-auto shrink-0">
             <a
               href="https://www.google.com/maps/search/supermarkets+near+me/"
               target="_blank"

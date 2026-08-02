@@ -215,7 +215,7 @@ export default function PricesView() {
             </div>
 
             {/* Product Grid */}
-            <div className="grid gap-3">
+            <div className="grid grid-cols-1 gap-3">
               {visible.map((product, index) => (
                 <Card key={`${product.product_id}-${index}`} className="festival-card hover:shadow-md transition-shadow">
                   <CardContent className="p-4">

@@ -57,9 +57,13 @@ export default function App() {
               onClick={closeMobileMenu}
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-gold/20 rounded-full blur-xl group-hover:bg-gold/30 transition-all"></div>
-                <div className="relative bg-gold/10 p-2 rounded-full group-hover:bg-gold/20 transition-all">
-                  <Flower className="h-5 w-5 text-gold group-hover:scale-110 transition-transform" />
+                <div className="absolute inset-0 bg-gold/20 rounded-xl blur-xl group-hover:bg-gold/30 transition-all"></div>
+                <div className="relative p-1.5 rounded-xl group-hover:bg-gold/20 transition-all">
+                  <img
+                    src="/enteOnam_logo_mark.png"
+                    alt="EnteOnam"
+                    className="h-8 w-8 md:h-9 md:w-9 rounded-xl object-cover group-hover:scale-110 transition-transform"
+                  />
                 </div>
               </div>
               <span className="font-bold text-xl text-white group-hover:text-gold transition-colors">

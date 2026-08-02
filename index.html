@@ -6,10 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#2F5D3A" />
     <meta name="description" content="Onam 2026 — Supplyco stores, prices, celebration spots & flower shops across Kerala" />
-    <meta name="color-scheme" content="light" />
+    <meta name="color-scheme" content="light only" />
+    <meta name="darkreader-lock" content="on" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="/icons/icon-192.png" />
     <title>EnteOnam — Onam 2026</title>
+    <style>
+      /* Inline critical styles to prevent dark mode override */
+      html, body {
+        color-scheme: light only !important;
+        background-color: #FAFAF7 !important;
+      }
+      body {
+        background-image:
+          linear-gradient(rgba(250, 250, 247, 0.95), rgba(250, 250, 247, 0.95)),
+          url('/EnteOnam_bg.png') !important;
+        background-size: cover, cover !important;
+        background-position: center, center !important;
+        background-attachment: fixed, fixed !important;
+      }
+    </style>
+    <script>
+      // Force light mode - prevent dark reader and other extensions
+      (function() {
+        const applyBackground = () => {
+          if (!document.body) return;
+          const isMobile = window.innerWidth <= 768;
+          const image = isMobile ? '/EnteOnam_bg_mobile.png' : '/EnteOnam_bg.png';
+          const attach = isMobile ? 'scroll, scroll' : 'fixed, fixed';
+          document.body.style.setProperty('color-scheme', 'light only', 'important');
+          document.body.style.setProperty('background-color', '#FAFAF7', 'important');
+          document.body.style.setProperty('background-image',
+            'linear-gradient(rgba(250, 250, 247, 0.95), rgba(250, 250, 247, 0.95)), url(' + image + ')', 'important');
+          document.body.style.setProperty('background-size', 'cover, cover', 'important');
+          document.body.style.setProperty('background-position', 'center, center', 'important');
+          document.body.style.setProperty('background-repeat', 'no-repeat, no-repeat', 'important');
+          document.body.style.setProperty('background-attachment', attach, 'important');
+        };
+        const forceLight = () => {
+          document.documentElement.style.setProperty('color-scheme', 'light only', 'important');
+          document.documentElement.setAttribute('data-color-scheme', 'light');
+          applyBackground();
+        };
+        forceLight();
+        // Re-apply on DOM changes to counter extension modifications
+        new MutationObserver(forceLight).observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ['data-darkreader-mode', 'data-darkreader-scheme', 'style']
+        });
+        window.addEventListener('resize', applyBackground);
+        if (document.readyState !== 'loading') {
+          forceLight();
+        } else {
+          document.addEventListener('DOMContentLoaded', forceLight);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

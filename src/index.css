@@ -57,11 +57,26 @@
 @layer base {
   /* Force light mode - prevent dark mode extensions from inverting colors */
   :root {
-    color-scheme: light only;
+    color-scheme: light only !important;
+    -webkit-color-scheme: light only !important;
   }
   
   html {
-    color-scheme: light;
+    color-scheme: light !important;
+    -webkit-color-scheme: light !important;
+    background: #FAFAF7 !important;
+  }
+
+  /* Prevent dark reader and other extensions from changing colors */
+  html[data-darkreader-mode],
+  html[data-darkreader-scheme],
+  html[style*="color-scheme"],
+  body[data-darkreader-mode],
+  body[data-darkreader-scheme] {
+    color-scheme: light only !important;
+    -webkit-color-scheme: light only !important;
+    background-color: #FAFAF7 !important;
+    filter: none !important;
   }
 
   *, *::before, *::after {
@@ -75,50 +90,40 @@
   }
 
   body {
-    background-color: #FAFAF7;
-    background-image: url('/EnteOnam_bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: var(--color-muted-foreground);
+    background-color: #FAFAF7 !important;
+    background-image:
+      linear-gradient(rgba(250, 250, 247, 0.95), rgba(250, 250, 247, 0.95)),
+      url('/EnteOnam_bg.png') !important;
+    background-size: cover, cover !important;
+    background-position: center, center !important;
+    background-repeat: no-repeat, no-repeat !important;
+    background-attachment: fixed, fixed !important;
+    color: var(--color-muted-foreground) !important;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
     position: relative;
   }
 
-  /* Cloudy blur overlay */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(250, 250, 247, 0.95);
-    backdrop-filter: blur(2px);
-    z-index: -1;
-    pointer-events: none;
-  }
-
   /* Mobile background */
   @media (max-width: 768px) {
     body {
-      background-image: url('/EnteOnam_bg_mobile.png');
-      background-attachment: scroll;
+      background-image:
+        linear-gradient(rgba(250, 250, 247, 0.95), rgba(250, 250, 247, 0.95)),
+        url('/EnteOnam_bg_mobile.png') !important;
+      background-attachment: scroll, scroll !important;
     }
   }
 
   h1, h2, h3, h4 {
-    color: var(--color-foreground);
+    color: var(--color-foreground) !important;
     font-weight: 600;
     line-height: 1.3;
   }
   h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 700; }
   h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
   h3 { font-size: clamp(1.15rem, 2.5vw, 1.4rem); }
-  a { color: var(--color-green); }
+  main a { color: var(--color-green) !important; }
 }
 
 @layer components {
@@ -139,11 +144,11 @@
   }
 
   .card {
-    @apply bg-surface/90 backdrop-blur-sm border border-border rounded-lg p-6;
+    @apply bg-surface/95 backdrop-blur-md border border-border rounded-lg p-6 shadow-sm;
   }
 
   .festival-card {
-    @apply bg-surface/90 backdrop-blur-sm border border-border rounded-lg shadow-sm;
+    @apply bg-surface/95 backdrop-blur-md border border-border rounded-lg shadow-sm;
   }
 
   .badge {
@@ -171,7 +176,7 @@
     @apply text-lg font-bold text-white no-underline flex items-center gap-2;
   }
   .nav-link {
-    @apply text-white/85 text-sm px-3 py-2 rounded-md transition-colors duration-150 hover:bg-white/10 no-underline flex items-center gap-1.5;
+    @apply text-white text-sm px-3 py-2 rounded-md transition-colors duration-150 hover:bg-white/10 no-underline flex items-center gap-1.5;
   }
   .nav-link.active {
     @apply bg-gold text-foreground font-medium;

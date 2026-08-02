@@ -79,7 +79,7 @@ export default function App() {
                       `relative flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 group ${
                         isActive 
                           ? 'text-white bg-gold shadow-lg shadow-gold/20' 
-                          : 'text-white/80 hover:text-white hover:bg-white/10'
+                          : 'text-white hover:bg-white/10'
                       }`
                     }
                   >

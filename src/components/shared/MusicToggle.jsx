@@ -2,15 +2,15 @@ import { useState, useRef, useEffect } from 'react'
 import { Volume2, VolumeOff } from 'lucide-react'
 
 export default function MusicToggle() {
-  const [playing, setPlaying] = useState(false)
+  const [playing, setPlaying] = useState(true)
   const audioRef = useRef(null)
 
   useEffect(() => {
     const audio = audioRef.current
     if (!audio) return
+    audio.volume = 0.3
+    audio.loop = true
     if (playing) {
-      audio.volume = 0.25
-      audio.loop = true
       audio.play().catch(() => setPlaying(false))
     } else {
       audio.pause()
@@ -19,7 +19,7 @@ export default function MusicToggle() {
 
   return (
     <>
-      <audio ref={audioRef} src="/onamBgm.mp3" preload="none" />
+      <audio ref={audioRef} src="/onamBgm.mp3" preload="auto" />
       <button
         onClick={() => setPlaying(prev => !prev)}
         aria-label={playing ? 'Pause background music' : 'Play background music'}

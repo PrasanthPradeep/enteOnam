@@ -119,7 +119,7 @@ export default function FlowerView() {
   return (
     <section className="space-y-5">
       <header>
-        <h1 className="text-2xl font-semibold text-foreground">Flower Shops</h1>
+        <h1 className="text-3xl font-bold text-green-800 ml">പൂക്കട</h1>
         <p className="text-sm text-muted-foreground">
           Find and report shops selling pookalam flowers near you
         </p>

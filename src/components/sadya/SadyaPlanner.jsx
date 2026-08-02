@@ -107,7 +107,7 @@ export default function SadyaPlanner() {
   return (
     <section className="space-y-5">
       <header>
-        <h1 className="text-2xl font-semibold text-foreground">Sadya Planner</h1>
+        <h1 className="text-3xl font-bold text-green-800 ml">സദ്യ ഒരുക്കങ്ങൾ</h1>
         <p className="text-sm text-muted-foreground">
           Plan your Onam feast and estimate the cost
         </p>

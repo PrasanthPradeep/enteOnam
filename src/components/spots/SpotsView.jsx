@@ -173,9 +173,9 @@ export default function SpotsView() {
     <div className="space-y-6">
       {/* Header */}
       <div className="text-center space-y-2">
-        <h1 className="text-3xl font-bold text-green-800 flex items-center justify-center gap-2">
+        <h1 className="text-3xl font-bold text-green-800 flex items-center justify-center gap-2 ml">
           <Camera className="h-8 w-8 text-gold" />
-          Celebration Spots
+          ഓണാഘോഷ പരിപാടികൾ
         </h1>
         <p className="text-muted-foreground">
           {spots.length} celebration spots shared by the community

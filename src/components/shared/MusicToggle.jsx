@@ -8,7 +8,6 @@ export default function MusicToggle() {
   useEffect(() => {
     const audio = audioRef.current
     if (!audio) return
-    audio.volume = 0.3
     audio.loop = true
     if (playing) {
       audio.play().catch(() => setPlaying(false))

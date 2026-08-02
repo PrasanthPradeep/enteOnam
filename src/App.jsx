@@ -180,7 +180,7 @@ export default function App() {
           <div className="text-center space-y-4">
             <div className="flex justify-center items-center gap-3">
               <Flower className="h-6 w-6 text-gold" />
-              <h3 className="text-lg font-semibold text-green">ഓണാശംസകൾ</h3>
+              <h3 className="text-lg font-semibold text-green ml">ഓണാശംസകൾ</h3>
               <Flower className="h-6 w-6 text-gold" />
             </div>
             <p className="text-sm text-muted-foreground max-w-md mx-auto">
@@ -190,7 +190,7 @@ export default function App() {
             <div className="flex justify-center gap-4 text-xs text-muted-foreground">
               <span>Made with ❤️ for Keralam from <a href="https://prasanthp.tech" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">Prasanth P</a></span>
               <span>•</span>
-              <span>ഓണം 2026</span>
+              <span className="ml">ഓണം 2026</span>
             </div>
           </div>
         </div>

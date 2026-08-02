@@ -5,75 +5,117 @@ import { Button } from '../ui/button'
 
 const rituals = [
   { 
-    day: 'Atham', 
+    day: 'അത്തം', 
     desc: 'Start of Onam season. Pookalam begins.',
     icon: Flower,
     color: 'text-green-600',
-    bgColor: 'bg-green-50'
+    bgColor: 'bg-green-50',
+    weekday: 'Monday',
+    date: 17
   },
   { 
-    day: 'Chithira', 
+    day: 'ചിത്തിര', 
     desc: 'Second layer added to pookalam.',
     icon: Star,
     color: 'text-gold-600',
-    bgColor: 'bg-gold-50'
+    bgColor: 'bg-gold-50',
+    weekday: 'Tuesday',
+    date: 18
   },
   { 
-    day: 'Chodhi', 
+    day: 'ചോതി', 
     desc: 'Shopping for new clothes begins.',
     icon: Gift,
     color: 'text-terracotta-600',
-    bgColor: 'bg-terracotta-50'
+    bgColor: 'bg-terracotta-50',
+    weekday: 'Wednesday',
+    date: 19
   },
   { 
-    day: 'Vishakam', 
+    day: 'വിശാഖം', 
     desc: 'Markets get busy. Sweets prepared.',
     icon: Star,
     color: 'text-green-600',
-    bgColor: 'bg-green-50'
+    bgColor: 'bg-green-50',
+    weekday: 'Thursday',
+    date: 20
   },
   { 
-    day: 'Anizham', 
+    day: 'അനിഴം', 
     desc: 'Vallamkali (boat race) practice starts.',
     icon: Crown,
     color: 'text-gold-600',
-    bgColor: 'bg-gold-50'
+    bgColor: 'bg-gold-50',
+    weekday: 'Friday',
+    date: 21
   },
   { 
-    day: 'Thriketa', 
+    day: 'തൃക്കേട്ട', 
     desc: 'Grand pookalam. Family gatherings begin.',
     icon: Flower,
     color: 'text-terracotta-600',
-    bgColor: 'bg-terracotta-50'
+    bgColor: 'bg-terracotta-50',
+    weekday: 'Saturday',
+    date: 22
   },
   { 
-    day: 'Moolam', 
+    day: 'മൂലം', 
     desc: 'Feasts in temples. Onam sadya served.',
     icon: Star,
     color: 'text-green-600',
-    bgColor: 'bg-green-50'
+    bgColor: 'bg-green-50',
+    weekday: 'Sunday',
+    date: 23
   },
   { 
-    day: 'Pooradam', 
+    day: 'പൂരാടം', 
     desc: 'Small conical clay idols (Onathappan) placed.',
     icon: Crown,
     color: 'text-gold-600',
-    bgColor: 'bg-gold-50'
+    bgColor: 'bg-gold-50',
+    weekday: 'Monday',
+    date: 24
   },
   { 
-    day: 'Uthradam', 
+    day: 'ഉത്രാടം', 
     desc: 'Final shopping day. Family arrivals.',
     icon: Gift,
     color: 'text-terracotta-600',
-    bgColor: 'bg-terracotta-50'
+    bgColor: 'bg-terracotta-50',
+    weekday: 'Tuesday',
+    date: 25,
+    onamDay: 'ഒന്നാം ഓണം'
   },
   { 
-    day: 'Thiruvonam', 
+    day: 'തിരുവോണം', 
     desc: 'Main Onam day. Grand sadya, festivities.',
     icon: Crown,
     color: 'text-gold-600',
     bgColor: 'bg-gold-50',
-    isMainDay: true
+    isMainDay: true,
+    weekday: 'Wednesday',
+    date: 26,
+    onamDay: 'രണ്ടാം ഓണം / തിരുവോണം'
+  },
+  { 
+    day: 'അവിട്ടം', 
+    desc: 'Third Onam. Visits and gift exchanges.',
+    icon: Gift,
+    color: 'text-green-600',
+    bgColor: 'bg-green-50',
+    weekday: 'Thursday',
+    date: 27,
+    onamDay: 'മൂന്നാം ഓണം'
+  },
+  { 
+    day: 'ചതയം', 
+    desc: 'Fourth Onam. Day of rest and reflection.',
+    icon: Star,
+    color: 'text-terracotta-600',
+    bgColor: 'bg-terracotta-50',
+    weekday: 'Friday',
+    date: 28,
+    onamDay: 'നാലാം ഓണം'
   },
 ]
 
@@ -117,7 +159,7 @@ export default function CountdownView() {
       {/* Hero Section with Countdown */}
       <div className="text-center space-y-6">
         <div className="space-y-2">
-          <h1 className="text-4xl md:text-5xl font-bold text-green-800 flex items-center justify-center gap-3">
+          <h1 className="text-4xl md:text-5xl font-bold text-green-800 flex items-center justify-center gap-3 ml">
             <Flower className="h-8 w-8 md:h-12 md:w-12 text-gold" />
             ഓണം 2026
             <Flower className="h-8 w-8 md:h-12 md:w-12 text-gold" />
@@ -132,7 +174,7 @@ export default function CountdownView() {
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center justify-center gap-2 text-2xl">
               <Clock className="h-6 w-6 text-gold" />
-              {daysLeft > 0 ? 'Thiruvonam Countdown' : 'Onam Ashamsakal! 🎉'}
+              <span className="ml">{daysLeft > 0 ? 'തിരുവോണം in' : 'Onam Ashamsakal! 🎉'}</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -210,9 +252,9 @@ export default function CountdownView() {
                   {/* Content */}
                   <div className="flex-grow">
                     <div className="flex items-center gap-2 mb-1">
-                      <h3 className={`font-bold text-lg ${ritual.color}`}>
-                        {ritual.day}
-                      </h3>
+              <h3 className={`font-bold text-lg ${ritual.color} ml`}>
+                {ritual.day}
+              </h3>
                       {ritual.isMainDay && (
                         <Crown className="h-4 w-4 text-gold animate-pulse" />
                       )}
@@ -222,14 +264,22 @@ export default function CountdownView() {
                     </p>
                   </div>
 
-                  {/* Special indicator for main day */}
-                  {ritual.isMainDay && (
-                    <div className="flex-shrink-0">
+                  {/* Date & info */}
+                  <div className="flex-shrink-0 text-right space-y-1">
+                    <div className="text-sm font-semibold text-muted-foreground">
+                      {ritual.weekday}, {ritual.date}
+                    </div>
+                    {ritual.onamDay && (
+                      <div className="text-xs font-semibold text-gold ml">
+                        {ritual.onamDay}
+                      </div>
+                    )}
+                    {ritual.isMainDay && (
                       <div className="bg-gold text-white px-3 py-1 rounded-full text-xs font-medium">
                         Main Day
                       </div>
-                    </div>
-                  )}
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             )
@@ -248,13 +298,13 @@ export default function CountdownView() {
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Button asChild variant="default" className="flex items-center gap-2">
-                <a href="./sadya">
+                <a href="./sadya" className="button-link">
                   <Calendar className="h-4 w-4" />
                   Plan Sadya
                 </a>
               </Button>
               <Button asChild variant="secondary" className="flex items-center gap-2">
-                <a href="./stores">
+                <a href="./stores" className="button-link">
                   <Gift className="h-4 w-4" />
                   Find Stores
                 </a>

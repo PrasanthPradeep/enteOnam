@@ -11,7 +11,7 @@ const rituals = [
     color: 'text-green-600',
     bgColor: 'bg-green-50',
     weekday: 'Monday',
-    date: 17
+    date: 16
   },
   { 
     day: 'ചിത്തിര', 
@@ -20,7 +20,7 @@ const rituals = [
     color: 'text-gold-600',
     bgColor: 'bg-gold-50',
     weekday: 'Tuesday',
-    date: 18
+    date: 17
   },
   { 
     day: 'ചോതി', 
@@ -29,6 +29,15 @@ const rituals = [
     color: 'text-terracotta-600',
     bgColor: 'bg-terracotta-50',
     weekday: 'Wednesday',
+    date: 18
+  },
+  {
+    day: 'ചോതി', 
+    desc: 'Shopping for new clothes begins.',
+    icon: Gift,
+    color: 'text-terracotta-600',
+    bgColor: 'bg-terracotta-50',
+    weekday: 'Thursday',
     date: 19
   },
   { 
@@ -165,7 +174,7 @@ export default function CountdownView() {
             <Flower className="h-8 w-8 md:h-12 md:w-12 text-gold" />
           </h1>
           <p className="text-lg text-muted-foreground">
-            Kerala's grand festival of harvest, homecoming, and happiness
+            Keralam's grand festival of harvest, homecoming, and happiness
           </p>
         </div>
 
@@ -220,7 +229,7 @@ export default function CountdownView() {
       {/* Onam Days & Rituals */}
       <div className="space-y-6">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-green-800 mb-2">Ten Days of Onam</h2>
+          <h2 className="text-3xl font-bold text-green-800 mb-2">പത്ത് ദിനങ്ങൾ, ഒരായിരം ഓർമ്മകൾ</h2>
           <p className="text-muted-foreground">
             Each day brings unique traditions and rituals leading to the grand celebration
           </p>
@@ -231,19 +240,12 @@ export default function CountdownView() {
             const Icon = ritual.icon
             return (
               <Card 
-                key={ritual.day} 
+                key={`${ritual.day}-${ritual.date}`} 
                 className={`festival-card hover:shadow-xl transition-all duration-300 hover:scale-[1.02] ${
                   ritual.isMainDay ? 'ring-2 ring-gold border-gold' : ''
                 }`}
               >
                 <CardContent className="flex items-center gap-4 p-6">
-                  {/* Day Counter */}
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-full ${ritual.bgColor} flex items-center justify-center`}>
-                    <span className="text-sm font-bold text-green-800">
-                      {index + 1}
-                    </span>
-                  </div>
-
                   {/* Icon */}
                   <div className={`flex-shrink-0 p-3 rounded-lg ${ritual.bgColor}`}>
                     <Icon className={`h-6 w-6 ${ritual.color}`} />
@@ -275,7 +277,7 @@ export default function CountdownView() {
                       </div>
                     )}
                     {ritual.isMainDay && (
-                      <div className="bg-gold text-white px-3 py-1 rounded-full text-xs font-medium">
+                      <div className="bg-gold text-white px-3 py-1 rounded-full text-xs text-center font-medium">
                         Main Day
                       </div>
                     )}

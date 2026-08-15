@@ -3,6 +3,7 @@ import { MapPin, Camera, Navigation, Loader2, ExternalLink, X, Clock, List } fro
 import SpotSubmissionForm from './SpotSubmissionForm.jsx'
 import { fetchLocations } from '../../shared/locations.js'
 import { timeAgo, haversine } from '../../shared/utils.js'
+import MapModal from '../shared/MapModal.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
@@ -19,6 +20,7 @@ export default function SpotsView() {
   const [locating, setLocating] = useState(false)
   const [mapLink, setMapLink] = useState('')
   const [mapLoading, setMapLoading] = useState(true)
+  const [mapModal, setMapModal] = useState(null)
   const mapRef = useRef(null)
   const mapInstance = useRef(null)
   const LRef = useRef(null)
@@ -258,15 +260,9 @@ export default function SpotsView() {
                     {pickLat.toFixed(4)}, {pickLng.toFixed(4)}
                   </Badge>
                   
-                  <Button asChild variant="outline" size="sm" className="flex items-center gap-2">
-                    <a
-                      href={'https://www.google.com/maps/@' + pickLat + ',' + pickLng + ',16z'}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      Google Maps
-                    </a>
+                  <Button variant="outline" size="sm" className="flex items-center gap-2" onClick={() => setMapModal({ query: pickLat + ',' + pickLng, name: 'Selected Location' })}>
+                    <ExternalLink className="h-4 w-4" />
+                    Google Maps
                   </Button>
 
                   <Button
@@ -367,15 +363,9 @@ export default function SpotsView() {
                 Added {timeAgo(selected.createdAt)}
               </p>
               {selected.lat && selected.lng && (
-                <Button asChild variant="outline" size="sm" className="flex items-center gap-2">
-                  <a
-                    href={'https://www.google.com/maps/@' + selected.lat + ',' + selected.lng + ',16z'}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <MapPin className="h-4 w-4" />
-                    View Location
-                  </a>
+                <Button variant="outline" size="sm" className="flex items-center gap-2" onClick={() => setMapModal({ query: selected.lat + ',' + selected.lng, name: selected.name })}>
+                  <MapPin className="h-4 w-4" />
+                  View Location
                 </Button>
               )}
             </div>
@@ -471,6 +461,17 @@ export default function SpotsView() {
             })}
           </div>
         </div>
+      )}
+
+      {mapModal && (
+        <MapModal
+          open={true}
+          onOpenChange={v => { if (!v) setMapModal(null) }}
+          name={mapModal.name}
+          query={mapModal.query}
+          lat={pickLat}
+          lng={pickLng}
+        />
       )}
     </div>
   )

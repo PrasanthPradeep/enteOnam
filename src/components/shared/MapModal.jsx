@@ -3,9 +3,13 @@ import { ExternalLink } from 'lucide-react'
 
 export default function MapModal({ open, onOpenChange, name, query, lat, lng }) {
   const embedUrl = 'https://www.google.com/maps?q=' + encodeURIComponent(query) + '&output=embed'
-  const fullUrl = query
-    ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(query)
-    : 'https://www.google.com/maps?q=' + lat + ',' + lng
+  const isCoords = /^-?\d+(\.\d+)?,-?\d+(\.\d+)?$/.test(query || '')
+  const fullUrl = isCoords
+    // Exact location view - avoids the Maps app resolving to a place name
+    ? 'https://www.google.com/maps/@' + query + ',16z'
+    : query
+      ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(query)
+      : 'https://www.google.com/maps?q=' + lat + ',' + lng
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>

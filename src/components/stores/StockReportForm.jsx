@@ -43,9 +43,6 @@ export default function StockReportForm({ outletId, outletName, open, onOpenChan
     setMessage(null)
 
     try {
-      // Get current user (if authenticated)
-      const { data: { user } } = await supabase.auth.getUser()
-      
       // Insert stock report
       const { error } = await supabase
         .from('stock_reports')
@@ -53,7 +50,6 @@ export default function StockReportForm({ outletId, outletName, open, onOpenChan
           outlet_id: outletId,
           item_name: selectedItem,
           status: stockStatus,
-          reported_by: user?.id || null
         })
       
       if (error) throw error

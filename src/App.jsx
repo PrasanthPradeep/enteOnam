@@ -8,7 +8,6 @@ import SpotsView from './components/spots/SpotsView.jsx'
 import FlowerView from './components/flower/FlowerView.jsx'
 import SadyaPlanner from './components/sadya/SadyaPlanner.jsx'
 import CountdownView from './components/countdown/CountdownView.jsx'
-import AuthModal from './components/auth/AuthModal.jsx'
 import MusicToggle from './components/shared/MusicToggle.jsx'
 import { Button } from './components/ui/button'
 
@@ -102,14 +101,10 @@ export default function App() {
                   </NavLink>
                 )
               })}
-              <div className="ml-2 pl-2 border-l border-white/20">
-                <AuthModal />
-              </div>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center gap-2">
-              <AuthModal />
               <Button
                 variant="ghost"
                 size="icon"

@@ -18,9 +18,3 @@ const configured = isValidUrl(supabaseUrl) && supabaseAnonKey.length > 0
 export const supabase = configured
   ? createClient(supabaseUrl, supabaseAnonKey)
   : null
-
-export async function getCurrentUser() {
-  if (!supabase) return null
-  const { data: { user } } = await supabase.auth.getUser()
-  return user
-}

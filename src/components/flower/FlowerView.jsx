@@ -10,6 +10,7 @@ import { Label } from '../ui/label'
 import { Badge } from '../ui/badge'
 import { haversine, timeAgo } from '../../shared/utils.js'
 import { fetchLocations, insertLocation } from '../../shared/locations.js'
+import MapModal from '../shared/MapModal.jsx'
 
 const FLOWER_TYPES = ['Thumba', 'Arali', 'Jamanthi', 'Marigold', 'Chembarathi', 'Mukutti', 'Krishna kireedam']
 
@@ -31,6 +32,7 @@ export default function FlowerView() {
   const [reportPrices, setReportPrices] = useState({})
   const [reporting, setReporting] = useState(false)
   const [reportSaved, setReportSaved] = useState(false)
+  const [mapModal, setMapModal] = useState(null)
   const mapRef = useRef(null)
   const mapInstance = useRef(null)
   const LRef = useRef(null)
@@ -246,15 +248,10 @@ export default function FlowerView() {
                 variant="outline"
                 size="sm"
                 className="gap-1"
-                asChild
+                onClick={() => setMapModal({ query: name || (lat + ',' + lng), name: name || 'Selected Location' })}
               >
-                <a
-                  href={mapsUrl(name, lat, lng)}
-                  target="_blank" rel="noopener noreferrer"
-                >
-                  <ExternalLink className="h-3 w-3" />
-                  Google Maps
-                </a>
+                <ExternalLink className="h-3 w-3" />
+                Google Maps
               </Button>
             )}
             {lat == null && (
@@ -369,14 +366,9 @@ export default function FlowerView() {
                           <Store className="h-3 w-3" />
                           Report Prices
                         </Button>
-                        <Button variant="outline" size="sm" className="gap-1" asChild>
-                          <a
-                            href={mapsUrl(s.name, s.lat, s.lng)}
-                            target="_blank" rel="noopener noreferrer"
-                          >
-                            <ExternalLink className="h-3 w-3" />
-                            Maps
-                          </a>
+                        <Button variant="outline" size="sm" className="gap-1" onClick={() => setMapModal({ query: s.name || (s.lat + ',' + s.lng), name: s.name })}>
+                          <ExternalLink className="h-3 w-3" />
+                          Maps
                         </Button>
                       </div>
                     </div>
@@ -431,6 +423,17 @@ export default function FlowerView() {
             })}
           </div>
         </div>
+      )}
+
+      {mapModal && (
+        <MapModal
+          open={true}
+          onOpenChange={v => { if (!v) setMapModal(null) }}
+          name={mapModal.name}
+          query={mapModal.query}
+          lat={lat}
+          lng={lng}
+        />
       )}
     </section>
   )

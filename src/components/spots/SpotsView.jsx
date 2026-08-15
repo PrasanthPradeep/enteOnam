@@ -260,7 +260,7 @@ export default function SpotsView() {
                   
                   <Button asChild variant="outline" size="sm" className="flex items-center gap-2">
                     <a
-                      href={'https://www.google.com/maps?q=' + pickLat + ',' + pickLng}
+                      href={'https://www.google.com/maps/@' + pickLat + ',' + pickLng + ',16z'}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -369,7 +369,7 @@ export default function SpotsView() {
               {selected.lat && selected.lng && (
                 <Button asChild variant="outline" size="sm" className="flex items-center gap-2">
                   <a
-                    href={'https://www.google.com/maps?q=' + selected.lat + ',' + selected.lng}
+                    href={'https://www.google.com/maps/@' + selected.lat + ',' + selected.lng + ',16z'}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

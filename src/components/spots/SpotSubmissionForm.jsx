@@ -4,22 +4,9 @@ import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
+import { insertLocation } from '../../shared/locations.js'
 
-const STORAGE_KEY = 'enteonam_spots'
 const CATEGORIES = ['Pookalam', 'Cultural Event', 'Temple Festival', 'Other']
-
-export function getSpots() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [] } catch { return [] }
-}
-
-export function addSpot(spot) {
-  const spots = getSpots()
-  spot.id = Date.now() + '_' + Math.random().toString(36).slice(2, 6)
-  spot.createdAt = new Date().toISOString()
-  spots.push(spot)
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(spots))
-  return spot
-}
 
 export default function SpotSubmissionForm({ onSpotAdded, lat, lng }) {
   const [showForm, setShowForm] = useState(false)
@@ -29,6 +16,7 @@ export default function SpotSubmissionForm({ onSpotAdded, lat, lng }) {
   const [photo, setPhoto] = useState(null)
   const [submitting, setSubmitting] = useState(false)
   const [saved, setSaved] = useState(false)
+  const [error, setError] = useState(null)
 
   const handlePhoto = (e) => {
     const file = e.target.files[0]
@@ -38,19 +26,32 @@ export default function SpotSubmissionForm({ onSpotAdded, lat, lng }) {
     reader.readAsDataURL(file)
   }
 
-  const submit = () => {
+  const submit = async () => {
     if (!name || !category || lat == null || lng == null) return
     setSubmitting(true)
-    const spot = { name, description, category, lat, lng }
-    if (photo) spot.photo = photo
-    addSpot(spot)
-    setSubmitting(false)
-    setSaved(true)
-    setTimeout(() => {
-      setSaved(false)
-      setName(''); setDescription(''); setCategory(''); setPhoto(null); setShowForm(false)
-    }, 1500)
-    if (onSpotAdded) onSpotAdded()
+    setError(null)
+    try {
+      await insertLocation({
+        category: 'onam_spot',
+        subCategory: category,
+        name,
+        description,
+        lat,
+        lng,
+        photoUrl: photo,
+      })
+      setSaved(true)
+      setTimeout(() => {
+        setSaved(false)
+        setName(''); setDescription(''); setCategory(''); setPhoto(null); setShowForm(false)
+      }, 1500)
+      if (onSpotAdded) onSpotAdded()
+    } catch (err) {
+      console.error('Error saving spot:', err)
+      setError('Failed to save spot. Please try again.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const canSubmit = name && category && lat != null && lng != null
@@ -150,6 +151,13 @@ export default function SpotSubmissionForm({ onSpotAdded, lat, lng }) {
                 </div>
               )}
             </div>
+
+            {error && (
+              <div className="flex items-start gap-2 p-3 bg-red-50 rounded-md text-sm text-red-800">
+                <X className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>{error}</span>
+              </div>
+            )}
 
             <Button
               onClick={submit}

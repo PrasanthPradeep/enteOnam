@@ -8,16 +8,13 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Badge } from '../ui/badge'
+import { fetchLocations, insertLocation, insertFlowerDetails } from '../../shared/locations.js'
 
-const STORAGE_KEY = 'enteonam_flower_shops'
 const FLOWER_TYPES = ['Thumba', 'Arali', 'Jamanthi', 'Marigold', 'Chembarathi', 'Mukutti', 'Krishna kireedam']
-
-function getShops() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [] } catch { return [] }
-}
 
 export default function FlowerView() {
   const [shops, setShops] = useState([])
+  const [loading, setLoading] = useState(true)
   const [showForm, setShowForm] = useState(false)
   const [name, setName] = useState('')
   const [area, setArea] = useState('')
@@ -27,11 +24,28 @@ export default function FlowerView() {
   const [locating, setLocating] = useState(false)
   const [mapLink, setMapLink] = useState('')
   const [saved, setSaved] = useState(false)
+  const [error, setError] = useState(null)
   const mapRef = useRef(null)
   const mapInstance = useRef(null)
   const LRef = useRef(null)
 
-  const refresh = () => setShops([...getShops()])
+  const refresh = async () => {
+    const data = await fetchLocations('flower_shop')
+    setShops(data.map(row => {
+      const details = row.flower_shop_details
+      const detail = Array.isArray(details) ? details[0] : details
+      return {
+        id: row.id,
+        name: row.name,
+        area: row.description || '',
+        lat: row.lat,
+        lng: row.lng,
+        prices: (detail && detail.prices) || {},
+        createdAt: row.created_at,
+      }
+    }))
+    setLoading(false)
+  }
 
   useEffect(() => { refresh() }, [])
 
@@ -97,21 +111,26 @@ export default function FlowerView() {
     )
   }
 
-  const submit = () => {
+  const submit = async () => {
     if (!name || !area || lat == null || lng == null) return
-    const shops = getShops()
-    const shop = {
-      id: Date.now() + '_' + Math.random().toString(36).slice(2, 6),
-      name, area, lat, lng,
-      prices: Object.fromEntries(Object.entries(prices).filter(([_, v]) => v)),
-      createdAt: new Date().toISOString(),
+    setError(null)
+    try {
+      const location = await insertLocation({
+        category: 'flower_shop',
+        name,
+        description: area,
+        lat,
+        lng,
+      })
+      await insertFlowerDetails(location.id, prices)
+      setName(''); setArea(''); setLat(null); setLng(null); setPrices({}); setShowForm(false)
+      setSaved(true)
+      setTimeout(() => setSaved(false), 1500)
+      refresh()
+    } catch (err) {
+      console.error('Error saving shop:', err)
+      setError('Failed to save shop. Please try again.')
     }
-    shops.push(shop)
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(shops))
-    setName(''); setArea(''); setLat(null); setLng(null); setPrices({}); setShowForm(false)
-    setSaved(true)
-    setTimeout(() => setSaved(false), 1500)
-    refresh()
   }
 
   const canSubmit = name && area && lat != null && lng != null
@@ -211,6 +230,13 @@ export default function FlowerView() {
                 </div>
               </div>
 
+              {error && (
+                <div className="flex items-start gap-2 p-3 bg-red-50 rounded-md text-sm text-red-800">
+                  <X className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                  <span>{error}</span>
+                </div>
+              )}
+
               <Button
                 onClick={submit}
                 disabled={!canSubmit}
@@ -237,7 +263,7 @@ export default function FlowerView() {
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold text-foreground">Reported Shops</h2>
-            <Badge variant="secondary">{shops.length} shops</Badge>
+            <Badge variant="secondary">{loading ? 'Loading...' : `${shops.length} shops`}</Badge>
           </div>
           <div className="grid grid-cols-1 gap-3">
             {shops.map(s => (

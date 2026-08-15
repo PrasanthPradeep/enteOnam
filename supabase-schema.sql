@@ -68,6 +68,7 @@ create table if not exists stock_reports (
 create table if not exists locations (
   id serial primary key,
   category text check (category in ('onam_spot','flower_shop','event')),
+  sub_category text,
   name text not null,
   description text,
   lat double precision,
@@ -79,11 +80,12 @@ create table if not exists locations (
   created_at timestamptz default now()
 );
 
--- Flower-specific extra data
+-- Flower-specific extra data (prices optional; JSON map of flower-type -> price)
 create table if not exists flower_shop_details (
   location_id int references locations(id) primary key,
   flower_types text[],
   price_per_kg numeric,
+  prices jsonb,
   last_price_update timestamptz default now()
 );
 
@@ -121,26 +123,40 @@ create table if not exists sadya_dishes (
   unit text
 );
 
+-- Performance indexes for the query paths actually used by the app
+create index if not exists idx_stock_reports_outlet_reported
+  on stock_reports (outlet_id, reported_at desc);
+create index if not exists idx_reports_created_at
+  on reports (created_at desc);
+create index if not exists idx_outlets_district
+  on outlets (district_name);
+create index if not exists idx_outlets_depot
+  on outlets (depot);
+
 -- RLS
 alter table stock_reports enable row level security;
 create policy "anyone_can_read_stock_reports" on stock_reports for select using (true);
+-- Anonymous app (no auth): dedupe floods of identical reports per outlet+item within an hour.
+-- Without auth we can't scope per-user, so this throttles identical repeated reports globally.
 create policy "one_report_per_hour" on stock_reports for insert
 with check (not exists (
   select 1 from stock_reports sr
   where sr.outlet_id = stock_reports.outlet_id
     and sr.item_name = stock_reports.item_name
-    and sr.reported_by = auth.uid()
+    and sr.status = stock_reports.status
     and sr.reported_at > now() - interval '1 hour'
 ));
 
 alter table locations enable row level security;
-create policy "auto_hide_after_flags" on locations for select
-using (status = 'active' or submitted_by = auth.uid());
-create policy "authenticated_can_insert_locations" on locations for insert
-with check (auth.role() = 'authenticated');
+create policy "anyone_can_read_active_locations" on locations for select
+using (status = 'active');
+create policy "anyone_can_insert_locations" on locations for insert
+with check (category in ('onam_spot','flower_shop','event'));
 
 alter table flower_shop_details enable row level security;
 create policy "anyone_can_read_flower_details" on flower_shop_details for select using (true);
+create policy "anyone_can_insert_flower_details" on flower_shop_details for insert
+with check (true);
 
 alter table location_flags enable row level security;
 create policy "authenticated_can_flag" on location_flags for insert

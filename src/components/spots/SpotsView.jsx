@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { MapPin, Camera, Navigation, Loader2, ExternalLink, X, Clock } from 'lucide-react'
 import SpotSubmissionForm from './SpotSubmissionForm.jsx'
-import { getSpots } from './SpotSubmissionForm.jsx'
+import { fetchLocations } from '../../shared/locations.js'
 import { timeAgo } from '../../shared/utils.js'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Button } from '../ui/button'
@@ -11,6 +11,7 @@ import { Skeleton } from '../ui/skeleton'
 
 export default function SpotsView() {
   const [spots, setSpots] = useState([])
+  const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState(null)
   const [pickLat, setPickLat] = useState(null)
   const [pickLng, setPickLng] = useState(null)
@@ -22,11 +23,22 @@ export default function SpotsView() {
   const LRef = useRef(null)
   const layer = useRef(null)
 
-  const refresh = () => setSpots([...getSpots()])
+  const refresh = async () => {
+    const data = await fetchLocations('onam_spot')
+    setSpots(data.map(row => ({
+      id: row.id,
+      name: row.name,
+      category: row.sub_category || row.category,
+      description: row.description,
+      lat: row.lat,
+      lng: row.lng,
+      photo: row.photo_url,
+      createdAt: row.created_at,
+    })))
+    setLoading(false)
+  }
 
-  useEffect(() => { 
-    refresh() 
-  }, [])
+  useEffect(() => { refresh() }, [])
 
   useEffect(() => {
     if (mapInstance.current) return
@@ -178,7 +190,7 @@ export default function SpotsView() {
           ഓണാഘോഷ പരിപാടികൾ
         </h1>
         <p className="text-muted-foreground">
-          {spots.length} celebration spots shared by the community
+          {loading ? 'Loading spots...' : `${spots.length} celebration spots shared by the community`}
         </p>
       </div>
 

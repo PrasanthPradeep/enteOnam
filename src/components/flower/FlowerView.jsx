@@ -104,10 +104,10 @@ export default function FlowerView() {
     if (m) { setLat(parseFloat(m[1])); setLng(parseFloat(m[2])) }
     m = url.match(/[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/)
     if (m) { setLat(parseFloat(m[1])); setLng(parseFloat(m[2])) }
-    m = url.match(/(?:place|maps)\/([^/]+?)@/)
-    if (!m) m = url.match(/[?&](?:q|query)=([^&]+)/)
+    m = url.match(/\/place\/([^/@]+)/) || url.match(/[?&](?:q|query)=([^&]+)/)
     if (m) {
-      const raw = decodeURIComponent(m[1].replace(/\+/g, ' '))
+      let raw = decodeURIComponent(m[1].replace(/\+/g, ' '))
+      raw = raw.replace(/@-?\d+\.\d+.*$/, '').trim()
       const parsedName = raw.split(',')[0].trim()
       if (parsedName && !name.trim()) setName(parsedName)
     }

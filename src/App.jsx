@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Routes, Route, NavLink } from 'react-router-dom'
-import { Menu, X, Calendar, Store, MapPin, Camera, Flower, ChefHat, IndianRupee } from 'lucide-react'
+import { Routes, Route, NavLink, useLocation } from 'react-router-dom'
+import { Menu, X, Calendar, Store, MapPin, Camera, Flower, ChefHat, IndianRupee, Home } from 'lucide-react'
 import MapView from './components/map/MapView.jsx'
 import StoresView from './components/stores/StoresView.jsx'
 import PricesView from './components/stores/PricesView.jsx'
@@ -23,6 +23,8 @@ const navigationItems = [
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,6 +75,15 @@ export default function App() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-1">
+              {!isHome && (
+                <NavLink
+                  to="/"
+                  className="relative flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 group text-white hover:bg-white/10"
+                >
+                  <Home className="h-4 w-4 transition-transform group-hover:scale-110" />
+                  <span className="text-sm">Home</span>
+                </NavLink>
+              )}
               {navigationItems.map((item) => {
                 const Icon = item.icon
                 return (
@@ -128,7 +139,17 @@ export default function App() {
           <div className="bg-green-900/50 backdrop-blur-md border-t border-green-700/50">
             <div className="container mx-auto px-4 py-4">
               <div className="grid grid-cols-2 gap-3">
-                {navigationItems.map((item) => {
+                  {!isHome && (
+                    <NavLink
+                      to="/"
+                      className="flex flex-col items-center gap-2 p-4 rounded-xl transition-all duration-200 text-white hover:bg-white/10 active:scale-95"
+                      onClick={closeMobileMenu}
+                    >
+                      <Home className="h-6 w-6" />
+                      <span className="text-xs font-semibold">Home</span>
+                    </NavLink>
+                  )}
+                  {navigationItems.map((item) => {
                   const Icon = item.icon
                   return (
                     <NavLink

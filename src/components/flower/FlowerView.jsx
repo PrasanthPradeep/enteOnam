@@ -31,6 +31,7 @@ export default function FlowerView() {
   const [reportPrices, setReportPrices] = useState({})
   const [reporting, setReporting] = useState(false)
   const [reportSaved, setReportSaved] = useState(false)
+  const [selectedShop, setSelectedShop] = useState(null)
   const mapRef = useRef(null)
   const mapInstance = useRef(null)
   const LRef = useRef(null)
@@ -94,6 +95,12 @@ export default function FlowerView() {
       const m = L.marker([s.lat, s.lng])
       m._isShopMarker = true
       m.bindTooltip(s.name + ' - ' + s.area)
+      m.on('click', () => {
+        setSelectedShop(s)
+        setLat(s.lat)
+        setLng(s.lng)
+        map.setView([s.lat, s.lng], 14)
+      })
       m.addTo(map)
     })
     if (lat != null && lng != null) {
@@ -214,8 +221,47 @@ export default function FlowerView() {
         </p>
       </header>
 
-      <Card className="overflow-hidden">
-        <div ref={mapRef} className="w-full h-72 z-0" />
+      <Card className="relative overflow-hidden">
+            <div ref={mapRef} className="w-full h-72 z-0" />
+
+            {selectedShop && (
+              <div className="absolute top-3 left-3 z-20 bg-white p-3 rounded-md shadow-md w-80">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="min-w-0">
+                    <div className="font-semibold truncate">{selectedShop.name}</div>
+                    <div className="text-sm text-muted-foreground truncate">{selectedShop.area}</div>
+                  </div>
+                  <div className="flex-shrink-0 ml-2">
+                    <Button variant="ghost" size="sm" onClick={() => setSelectedShop(null)} className="p-1">
+                      <X className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+
+                {Object.keys(selectedShop.prices || {}).length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {Object.entries(selectedShop.prices || {}).map(([k, v]) => (
+                      <Badge key={k} variant="outline" className="text-xs">
+                        {k}: ₹{v}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
+
+                <div className="mt-3 flex items-center gap-2">
+                  <Button asChild size="sm">
+                    <a href={mapsUrl(selectedShop.name, selectedShop.lat, selectedShop.lng)} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-3 w-3" />
+                      Open in Maps
+                    </a>
+                  </Button>
+                  <Button variant="outline" size="sm" onClick={() => { setReportShopId(selectedShop.id); setSelectedShop(null) }}>
+                    <Store className="h-3 w-3" />
+                    Report Prices
+                  </Button>
+                </div>
+              </div>
+            )}
         <CardContent className="p-4 space-y-3">
           <div className="flex flex-wrap items-center gap-2">
             <Button
@@ -365,6 +411,10 @@ export default function FlowerView() {
                             {dist < 1 ? `${Math.round(dist * 1000)}m away` : `${dist.toFixed(1)}km away`}
                           </Badge>
                         )}
+                        <Button variant="outline" size="sm" className="gap-1" onClick={() => { setSelectedShop(s); setLat(s.lat); setLng(s.lng); if (mapInstance.current) mapInstance.current.setView([s.lat, s.lng], 14) }}>
+                          <MapPin className="h-3 w-3" />
+                          Show
+                        </Button>
                         <Button variant="outline" size="sm" className="gap-1" onClick={() => openReport(s)}>
                           <Store className="h-3 w-3" />
                           Report Prices

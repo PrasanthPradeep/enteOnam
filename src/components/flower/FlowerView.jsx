@@ -105,17 +105,39 @@ export default function FlowerView() {
   }, [shops, lat, lng])
 
   const parseMapLink = (url) => {
-    let m = url.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/)
-    if (m) { setLat(parseFloat(m[1])); setLng(parseFloat(m[2])) }
-    m = url.match(/[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/)
-    if (m) { setLat(parseFloat(m[1])); setLng(parseFloat(m[2])) }
+    // Prefer the actual pin coordinates (!3d<lat>!4d<lng>) over the
+    // viewport center (@lat,lng) that Google also embeds in place URLs.
+    // When several pairs exist, the last one is the place's true location.
+    let lat = null, lng = null
+    const pins = [...url.matchAll(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/g)]
+    const lastPin = pins[pins.length - 1]
+    let m = lastPin || url.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/)
+    if (m) {
+      lat = parseFloat(m[1]); lng = parseFloat(m[2])
+    } else {
+      m = url.match(/[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/)
+      if (m) { lat = parseFloat(m[1]); lng = parseFloat(m[2]) }
+    }
+    if (lat != null) { setLat(lat); setLng(lng) }
+
     m = url.match(/\/place\/([^/@]+)/) || url.match(/[?&](?:q|query)=([^&]+)/)
     if (m) {
       let raw = decodeURIComponent(m[1].replace(/\+/g, ' '))
       raw = raw.replace(/@-?\d+\.\d+.*$/, '').trim()
       const parsedName = raw.split(',')[0].trim()
-      if (parsedName && !name.trim()) setName(parsedName)
+      // Skip coordinate-style "names" like 8°53'10.1"N 76°35'05.7"E
+      const looksLikeCoords = /[°'"′]/.test(parsedName) || /^-?\d+(\.\d+)?\s*[NSEW]?$/.test(parsedName)
+      if (parsedName && !looksLikeCoords && !name.trim()) setName(parsedName)
     }
+  }
+
+  const mapsUrl = (name, lat, lng) => {
+    if (name && name.trim()) {
+      // Keep the business name in the URL so Google doesn't redirect to a
+      // bare coordinate pin.
+      return 'https://www.google.com/maps/place/' + encodeURIComponent(name.trim()) + '/@' + lat + ',' + lng
+    }
+    return 'https://www.google.com/maps?q=' + lat + ',' + lng
   }
 
   const locateMe = () => {
@@ -227,7 +249,7 @@ export default function FlowerView() {
                 asChild
               >
                 <a
-                  href={'https://www.google.com/maps?q=' + lat + ',' + lng}
+                  href={mapsUrl(name, lat, lng)}
                   target="_blank" rel="noopener noreferrer"
                 >
                   <ExternalLink className="h-3 w-3" />
@@ -349,7 +371,7 @@ export default function FlowerView() {
                         </Button>
                         <Button variant="outline" size="sm" className="gap-1" asChild>
                           <a
-                            href={'https://www.google.com/maps?q=' + s.lat + ',' + s.lng}
+                            href={mapsUrl(s.name, s.lat, s.lng)}
                             target="_blank" rel="noopener noreferrer"
                           >
                             <ExternalLink className="h-3 w-3" />

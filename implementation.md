@@ -5,6 +5,7 @@
 A crowdsourced + official-data web app for Kerala residents, built around the Onam 2026 season (Atham to Thiruvonam window). Ships as a responsive installable PWA.
 
 ### Core Features
+
 1. Supplyco Store Locator (official API data)
 2. Crowdsourced Stock & Price Reporting (per Supplyco outlet)
 3. Onam Celebration Spot Finder (fully crowdsourced map)
@@ -17,15 +18,15 @@ A crowdsourced + official-data web app for Kerala residents, built around the On
 
 ## 2. Tech Stack
 
-| Layer | Choice |
-|---|---|
-| Frontend | HTML/CSS/JS (or React) — PWA |
-| Backend/DB | Supabase (PostgreSQL, Auth, RLS, Realtime) |
-| Maps | Leaflet.js + OpenStreetMap tiles + Leaflet.markercluster |
-| Hosting | Vercel/Netlify (frontend), Supabase (backend) |
-| Notifications | OneSignal free tier (Web Push) |
-| Data Sync | Python (requests) scheduled sync script for Supplyco APIs |
-| Geocoding | OpenStreetMap Nominatim (only for crowdsourced pins without coords) |
+| Layer         | Choice                                                              |
+| ------------- | ------------------------------------------------------------------- |
+| Frontend      | HTML/CSS/JS (or React) — PWA                                        |
+| Backend/DB    | Supabase (PostgreSQL, Auth, RLS, Realtime)                          |
+| Maps          | Leaflet.js + OpenStreetMap tiles + Leaflet.markercluster            |
+| Hosting       | Vercel/Netlify (frontend), Supabase (backend)                       |
+| Notifications | OneSignal free tier (Web Push)                                      |
+| Data Sync     | Python (requests) scheduled sync script for Supplyco APIs           |
+| Geocoding     | OpenStreetMap Nominatim (only for crowdsourced pins without coords) |
 
 ---
 
@@ -35,13 +36,13 @@ Keep the UI flat, clean, and content-first — no gradients, no more than 3-4 co
 
 ### 3.1 Color Palette
 
-| Role | Color | Hex | Usage |
-|---|---|---|---|
-| Primary (Base) | Banana Leaf Green | `#2F5D3A` | Header, nav bar, primary buttons, active states |
-| Secondary | Kasavu Gold | `#C9A24B` | Accents, icons, highlights, active tab underline |
-| Background | Off-White (Mundu) | `#FAF7F0` | Page background, cards |
-| Text | Charcoal | `#2B2B2B` | Body text, headings |
-| Alert/Error (sparingly) | Muted Terracotta | `#B5533C` | Errors, out-of-stock tags, spam flags only |
+| Role                    | Color             | Hex       | Usage                                            |
+| ----------------------- | ----------------- | --------- | ------------------------------------------------ |
+| Primary (Base)          | Banana Leaf Green | `#2F5D3A` | Header, nav bar, primary buttons, active states  |
+| Secondary               | Kasavu Gold       | `#C9A24B` | Accents, icons, highlights, active tab underline |
+| Background              | Off-White (Mundu) | `#FAF7F0` | Page background, cards                           |
+| Text                    | Charcoal          | `#2B2B2B` | Body text, headings                              |
+| Alert/Error (sparingly) | Muted Terracotta  | `#B5533C` | Errors, out-of-stock tags, spam flags only       |
 
 No gradients anywhere — flat fills only. Avoid decorative flower/pookalam imagery as backgrounds; keep it to small iconography if needed (e.g. a single flower icon marking Onam-spot pins on the map).
 
@@ -74,28 +75,30 @@ Real public JSON APIs confirmed on supplycokerala.com — use these as primary s
 
 ### 4.1 Confirmed Endpoints
 
-| Endpoint | Purpose | Key Params |
-|---|---|---|
-| `GET /api/outlets?limit=9999` | Statewide outlet master list (~1,651 outlets) | `limit` |
-| `GET /api/price-list-types?limit=1000&status=1` | 5 official catalog types | `limit`, `status` |
-| `GET /api/price-list?page=&limit=&search=&status=1&price_list_type_id=&year=&month=` | Monthly product pricing per catalog type | `page`, `limit`, `search`, `status`, `price_list_type_id`, `year`, `month` |
+| Endpoint                                                                             | Purpose                                       | Key Params                                                                 |
+| ------------------------------------------------------------------------------------ | --------------------------------------------- | -------------------------------------------------------------------------- |
+| `GET /api/outlets?limit=9999`                                                        | Statewide outlet master list (~1,651 outlets) | `limit`                                                                    |
+| `GET /api/price-list-types?limit=1000&status=1`                                      | 5 official catalog types                      | `limit`, `status`                                                          |
+| `GET /api/price-list?page=&limit=&search=&status=1&price_list_type_id=&year=&month=` | Monthly product pricing per catalog type      | `page`, `limit`, `search`, `status`, `price_list_type_id`, `year`, `month` |
 
 ### 4.2 Outlet Fields (from `/api/outlets`)
+
 `outletid`, `name`, `outlettype`, `status`, `address1`, `address2`, `address3`, `pincode`, `phone`, `email`, `latitude`, `longitude`, `issundayopen`, `depot`, `taluk`, `districtname`. Response wrapped in `message` / `data` / `pagination` (`total`, `page`, `limit`, `totalPages`).
 
 ### 4.3 Price List Types
 
-| id | Name | Notes |
-|---|---|---|
-| 1 | Subsidy Price List | 17 items — core subsidy basket |
-| 2 | Free sale Subsidy Rate of Maveli items | 63 items — broader free-sale list |
-| 3 | Bulk Rate of Maveli items | 181 items, 2 pages — general/bulk catalog |
-| 4 | K Store Rate of Maveli items | 47 items — Sabari-branded retail |
-| 5 | Maveli Price List | 264 items, 3 pages — broadest combined catalog (recommended default) |
+| id  | Name                                   | Notes                                                                |
+| --- | -------------------------------------- | -------------------------------------------------------------------- |
+| 1   | Subsidy Price List                     | 17 items — core subsidy basket                                       |
+| 2   | Free sale Subsidy Rate of Maveli items | 63 items — broader free-sale list                                    |
+| 3   | Bulk Rate of Maveli items              | 181 items, 2 pages — general/bulk catalog                            |
+| 4   | K Store Rate of Maveli items           | 47 items — Sabari-branded retail                                     |
+| 5   | Maveli Price List                      | 264 items, 3 pages — broadest combined catalog (recommended default) |
 
 Product fields returned: `product_id`, `product_name`, `department`, `status`, `rate`. Watch for near-zero rates (e.g. `0.01`) representing offers/kit entries — handle as special cases, not real prices.
 
 ### 4.4 Confirmed Gap: No Live Stock API
+
 No endpoint exposes outlet-wise live stock/availability. This means the crowdsourced stock-reporting feature is the **only** source of real-time "is this item in stock at this outlet" data — it is not redundant with the price API and must be built as originally planned.
 
 ### 4.5 Sync Script Approach (Python)
@@ -194,7 +197,6 @@ create table locations (
 create table flower_shop_details (
   location_id int references locations(id) primary key,
   flower_types text[],
-  price_per_kg numeric,
   last_price_update timestamptz default now()
 );
 

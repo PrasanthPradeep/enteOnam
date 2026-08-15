@@ -84,7 +84,6 @@ create table if not exists locations (
 create table if not exists flower_shop_details (
   location_id int references locations(id) primary key,
   flower_types text[],
-  price_per_kg numeric,
   prices jsonb,
   last_price_update timestamptz default now()
 );

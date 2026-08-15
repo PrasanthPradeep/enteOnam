@@ -8,7 +8,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Badge } from '../ui/badge'
-import { fetchLocations, insertLocation, insertFlowerDetails } from '../../shared/locations.js'
+import { fetchLocations, insertLocation } from '../../shared/locations.js'
 
 const FLOWER_TYPES = ['Thumba', 'Arali', 'Jamanthi', 'Marigold', 'Chembarathi', 'Mukutti', 'Krishna kireedam']
 
@@ -121,8 +121,8 @@ export default function FlowerView() {
         description: area,
         lat,
         lng,
+        prices,
       })
-      await insertFlowerDetails(location.id, prices)
       setName(''); setArea(''); setLat(null); setLng(null); setPrices({}); setShowForm(false)
       setSaved(true)
       setTimeout(() => setSaved(false), 1500)

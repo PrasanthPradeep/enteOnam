@@ -183,6 +183,13 @@ export default function SpotsView() {
     setMapLink('')
   }
 
+  const mapsUrl = (name, lat, lng) => {
+    if (name && name.trim()) {
+      return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(name.trim())
+    }
+    return 'https://www.google.com/maps?q=' + lat + ',' + lng
+  }
+
   const MapLoadingSkeleton = () => (
     <div className="h-80 bg-muted rounded-lg flex items-center justify-center">
       <div className="flex flex-col items-center gap-3">
@@ -260,7 +267,7 @@ export default function SpotsView() {
                   
                   <Button asChild variant="outline" size="sm">
                     <a
-                      href={`https://www.google.com/maps?q=${pickLat},${pickLng}`}
+                      href={mapsUrl('', pickLat, pickLng)}
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center gap-2"
@@ -370,7 +377,7 @@ export default function SpotsView() {
               {selected.lat && selected.lng && (
                 <Button asChild variant="outline" size="sm">
                   <a
-                    href={`https://www.google.com/maps?q=${selected.lat},${selected.lng}`}
+                    href={mapsUrl(selected.name, selected.lat, selected.lng)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

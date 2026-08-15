@@ -36,7 +36,7 @@ export async function fetchLocations(category) {
   return data || []
 }
 
-export async function insertLocation({ category, subCategory, name, description, lat, lng, photoUrl, prices, mapUrl }) {
+export async function insertLocation({ category, subCategory, name, description, lat, lng, photoUrl, prices }) {
   if (!supabase) throw new Error('Database not configured')
   const { data, error } = await supabase
     .from('locations')
@@ -48,7 +48,6 @@ export async function insertLocation({ category, subCategory, name, description,
       lat,
       lng,
       photo_url: photoUrl || null,
-      map_url: mapUrl || null,
       status: 'active',
     })
     .select()

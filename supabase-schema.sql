@@ -74,7 +74,6 @@ create table if not exists locations (
   lat double precision,
   lng double precision,
   photo_url text,
-  map_url text,
   event_date timestamptz,
   submitted_by uuid references profiles(id),
   status text default 'active' check (status in ('active','hidden','pending')),

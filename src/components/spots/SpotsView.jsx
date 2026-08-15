@@ -138,14 +138,15 @@ export default function SpotsView() {
   }, [pickLat, pickLng])
 
   const parseMapLink = (url) => {
-    // google.com/maps/@lat,lng,zoom
-    let m = url.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/)
+    // Prefer the actual pin coordinates (!3d<lat>!4d<lng>) over the
+    // viewport center (@lat,lng) that Google also embeds in place URLs.
+    // When several pairs exist, the last one is the place's true location.
+    const pins = [...url.matchAll(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/g)]
+    const lastPin = pins[pins.length - 1]
+    let m = lastPin || url.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/)
     if (m) { setPickLat(parseFloat(m[1])); setPickLng(parseFloat(m[2])); return }
     // google.com/maps?q=lat,lng
     m = url.match(/[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/)
-    if (m) { setPickLat(parseFloat(m[1])); setPickLng(parseFloat(m[2])); return }
-    // google.com/maps/place/.../@lat,lng,zoom
-    m = url.match(/\/place\/.*@(-?\d+\.\d+),(-?\d+\.\d+)/)
     if (m) { setPickLat(parseFloat(m[1])); setPickLng(parseFloat(m[2])); return }
   }
 

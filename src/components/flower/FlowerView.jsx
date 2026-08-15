@@ -46,6 +46,7 @@ export default function FlowerView() {
         area: row.description || '',
         lat: row.lat,
         lng: row.lng,
+        mapUrl: row.map_url || '',
         prices: (detail && detail.prices) || {},
         lastPriceUpdate: (detail && detail.last_price_update) || null,
         createdAt: row.created_at,
@@ -165,8 +166,9 @@ export default function FlowerView() {
         lat,
         lng,
         prices,
+        mapUrl: mapLink,
       })
-      setName(''); setArea(''); setLat(null); setLng(null); setPrices({}); setShowForm(false)
+      setName(''); setArea(''); setLat(null); setLng(null); setPrices({}); setMapLink(''); setShowForm(false)
       setSaved(true)
       setTimeout(() => setSaved(false), 1500)
       refresh()
@@ -249,7 +251,7 @@ export default function FlowerView() {
                 asChild
               >
                 <a
-                  href={mapsUrl(name, lat, lng)}
+                  href={mapLink || mapsUrl(name, lat, lng)}
                   target="_blank" rel="noopener noreferrer"
                 >
                   <ExternalLink className="h-3 w-3" />
@@ -371,7 +373,7 @@ export default function FlowerView() {
                         </Button>
                         <Button variant="outline" size="sm" className="gap-1" asChild>
                           <a
-                            href={mapsUrl(s.name, s.lat, s.lng)}
+                            href={s.mapUrl || mapsUrl(s.name, s.lat, s.lng)}
                             target="_blank" rel="noopener noreferrer"
                           >
                             <ExternalLink className="h-3 w-3" />

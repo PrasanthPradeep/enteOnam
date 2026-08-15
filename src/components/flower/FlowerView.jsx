@@ -101,11 +101,16 @@ export default function FlowerView() {
 
   const parseMapLink = (url) => {
     let m = url.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/)
-    if (m) { setLat(parseFloat(m[1])); setLng(parseFloat(m[2])); return }
+    if (m) { setLat(parseFloat(m[1])); setLng(parseFloat(m[2])) }
     m = url.match(/[?&]q=(-?\d+\.\d+),(-?\d+\.\d+)/)
-    if (m) { setLat(parseFloat(m[1])); setLng(parseFloat(m[2])); return }
-    m = url.match(/\/place\/.*@(-?\d+\.\d+),(-?\d+\.\d+)/)
-    if (m) { setLat(parseFloat(m[1])); setLng(parseFloat(m[2])); return }
+    if (m) { setLat(parseFloat(m[1])); setLng(parseFloat(m[2])) }
+    m = url.match(/(?:place|maps)\/([^/]+?)@/)
+    if (!m) m = url.match(/[?&](?:q|query)=([^&]+)/)
+    if (m) {
+      const raw = decodeURIComponent(m[1].replace(/\+/g, ' '))
+      const parsedName = raw.split(',')[0].trim()
+      if (parsedName && !name.trim()) setName(parsedName)
+    }
   }
 
   const locateMe = () => {
@@ -207,7 +212,7 @@ export default function FlowerView() {
             <Link2 className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
               className="pl-10"
-              placeholder="Or paste a Google Maps link..."
+              placeholder="Or paste a Google Maps link (shop name auto-filled)..."
               value={mapLink}
               onChange={e => { setMapLink(e.target.value); parseMapLink(e.target.value) }}
             />

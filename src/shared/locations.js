@@ -22,7 +22,7 @@ export async function fetchLocations(category) {
   if (category === 'flower_shop') {
     query = supabase
       .from('locations')
-      .select('*, flower_shop_details(prices)')
+      .select('*, flower_shop_details(prices, last_price_update)')
       .eq('category', 'flower_shop')
       .eq('status', 'active')
       .order('created_at', { ascending: false })
@@ -79,10 +79,13 @@ export async function insertFlowerDetails(locationId, prices) {
     // is not left NULL when the client provided prices.
     prices: prices && Object.keys(prices).length > 0 ? prices : null,
     flower_types: prices && Object.keys(prices).length > 0 ? Object.keys(prices) : null,
+    last_price_update: new Date().toISOString(),
   }
+  // Upsert on location_id so re-reporting prices for an existing shop
+  // updates the same row instead of failing on the primary key.
   const { data, error } = await supabase
     .from('flower_shop_details')
-    .insert(payload)
+    .upsert(payload, { onConflict: 'location_id' })
     .select()
     .single()
   if (error) console.error('Error saving flower details:', error)

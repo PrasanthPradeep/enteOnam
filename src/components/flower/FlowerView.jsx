@@ -8,7 +8,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Badge } from '../ui/badge'
-import { haversine } from '../../shared/utils.js'
+import { haversine, timeAgo } from '../../shared/utils.js'
 import { fetchLocations, insertLocation } from '../../shared/locations.js'
 
 const FLOWER_TYPES = ['Thumba', 'Arali', 'Jamanthi', 'Marigold', 'Chembarathi', 'Mukutti', 'Krishna kireedam']
@@ -27,6 +27,10 @@ export default function FlowerView() {
   const [mapLink, setMapLink] = useState('')
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState(null)
+  const [reportShopId, setReportShopId] = useState(null)
+  const [reportPrices, setReportPrices] = useState({})
+  const [reporting, setReporting] = useState(false)
+  const [reportSaved, setReportSaved] = useState(false)
   const mapRef = useRef(null)
   const mapInstance = useRef(null)
   const LRef = useRef(null)
@@ -43,6 +47,7 @@ export default function FlowerView() {
         lat: row.lat,
         lng: row.lng,
         prices: (detail && detail.prices) || {},
+        lastPriceUpdate: (detail && detail.last_price_update) || null,
         createdAt: row.created_at,
       }
     }))
@@ -150,6 +155,33 @@ export default function FlowerView() {
   }
 
   const canSubmit = name && area && lat != null && lng != null
+
+  const openReport = (shop) => {
+    setReportShopId(shop.id)
+    setReportPrices({ ...shop.prices })
+    setReportSaved(false)
+  }
+
+  const submitPriceReport = async (shop) => {
+    const filled = Object.fromEntries(
+      Object.entries(reportPrices).filter(([_, v]) => v !== '' && v != null)
+    )
+    if (Object.keys(filled).length === 0) return
+    setReporting(true)
+    setError(null)
+    try {
+      await insertFlowerDetails(shop.id, filled)
+      setReportShopId(null)
+      setReportSaved(true)
+      setTimeout(() => setReportSaved(false), 1500)
+      refresh()
+    } catch (err) {
+      console.error('Error reporting prices:', err)
+      setError('Failed to report prices. Please try again.')
+    } finally {
+      setReporting(false)
+    }
+  }
 
   return (
     <section className="space-y-5">
@@ -311,6 +343,10 @@ export default function FlowerView() {
                             {dist < 1 ? `${Math.round(dist * 1000)}m away` : `${dist.toFixed(1)}km away`}
                           </Badge>
                         )}
+                        <Button variant="outline" size="sm" className="gap-1" onClick={() => openReport(s)}>
+                          <Store className="h-3 w-3" />
+                          Report Prices
+                        </Button>
                         <Button variant="outline" size="sm" className="gap-1" asChild>
                           <a
                             href={'https://www.google.com/maps?q=' + s.lat + ',' + s.lng}
@@ -323,6 +359,11 @@ export default function FlowerView() {
                       </div>
                     </div>
                     <p className="text-sm text-muted-foreground mt-0.5">{s.area}</p>
+                    {s.lastPriceUpdate && (
+                      <p className="text-xs text-muted-foreground mt-1">
+                        Prices updated {timeAgo(s.lastPriceUpdate)}
+                      </p>
+                    )}
                     {Object.keys(s.prices || {}).length > 0 && (
                       <div className="flex flex-wrap gap-2 mt-3">
                         {Object.entries(s.prices || {}).map(([k, v]) => (
@@ -330,6 +371,36 @@ export default function FlowerView() {
                             {k}: ₹{v}
                           </Badge>
                         ))}
+                      </div>
+                    )}
+
+                    {reportShopId === s.id && (
+                      <div className="mt-4 pt-4 border-t border-border space-y-3">
+                        <Label>Report current prices (₹ per bunch)</Label>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {FLOWER_TYPES.map(ft => (
+                            <div key={ft} className="flex items-center gap-2">
+                              <span className="text-sm flex-1">{ft}</span>
+                              <Input
+                                className="max-w-[90px]"
+                                placeholder="₹"
+                                value={reportPrices[ft] || ''}
+                                onChange={e => setReportPrices({ ...reportPrices, [ft]: e.target.value })}
+                              />
+                            </div>
+                          ))}
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Button
+                            onClick={() => submitPriceReport(s)}
+                            disabled={reporting || Object.values(reportPrices).every(v => !v)}
+                            className="flex items-center gap-2"
+                          >
+                            {reporting ? <Loader2 className="h-4 w-4 animate-spin" /> : <CheckCircle2 className="h-4 w-4" />}
+                            {reporting ? 'Reporting...' : reportSaved ? 'Saved!' : 'Submit Prices'}
+                          </Button>
+                          <Button variant="outline" onClick={() => setReportShopId(null)}>Cancel</Button>
+                        </div>
                       </div>
                     )}
                   </CardContent>

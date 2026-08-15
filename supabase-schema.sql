@@ -156,6 +156,8 @@ alter table flower_shop_details enable row level security;
 create policy "anyone_can_read_flower_details" on flower_shop_details for select using (true);
 create policy "anyone_can_insert_flower_details" on flower_shop_details for insert
 with check (true);
+create policy "anyone_can_update_flower_details" on flower_shop_details for update
+using (true) with check (true);
 
 alter table location_flags enable row level security;
 create policy "authenticated_can_flag" on location_flags for insert

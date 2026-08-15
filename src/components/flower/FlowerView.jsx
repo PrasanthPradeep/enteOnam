@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import {
   Flower2, MapPin, Loader2, ExternalLink, Link2, Store, Plus, X,
   CheckCircle2, Navigation
@@ -8,6 +8,7 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Label } from '../ui/label'
 import { Badge } from '../ui/badge'
+import { haversine } from '../../shared/utils.js'
 import { fetchLocations, insertLocation } from '../../shared/locations.js'
 
 const FLOWER_TYPES = ['Thumba', 'Arali', 'Jamanthi', 'Marigold', 'Chembarathi', 'Mukutti', 'Krishna kireedam']
@@ -21,6 +22,7 @@ export default function FlowerView() {
   const [prices, setPrices] = useState({})
   const [lat, setLat] = useState(null)
   const [lng, setLng] = useState(null)
+  const [nearMe, setNearMe] = useState(null)
   const [locating, setLocating] = useState(false)
   const [mapLink, setMapLink] = useState('')
   const [saved, setSaved] = useState(false)
@@ -48,6 +50,14 @@ export default function FlowerView() {
   }
 
   useEffect(() => { refresh() }, [])
+
+  const sortedShops = useMemo(() => {
+    if (!nearMe) return shops
+    const dist = (s) => s.lat != null && s.lng != null
+      ? haversine(nearMe.lat, nearMe.lng, s.lat, s.lng)
+      : Infinity
+    return [...shops].sort((a, b) => dist(a) - dist(b))
+  }, [shops, nearMe])
 
   useEffect(() => {
     if (mapInstance.current) return
@@ -105,6 +115,7 @@ export default function FlowerView() {
       pos => {
         setLat(pos.coords.latitude)
         setLng(pos.coords.longitude)
+        setNearMe({ lat: pos.coords.latitude, lng: pos.coords.longitude })
         setLocating(false)
       },
       () => setLocating(false)
@@ -259,44 +270,67 @@ export default function FlowerView() {
         </CardContent>
       </Card>
 
-      {shops.length > 0 && (
+      {sortedShops.length > 0 && (
         <div className="space-y-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between flex-wrap gap-2">
             <h2 className="text-lg font-semibold text-foreground">Reported Shops</h2>
-            <Badge variant="secondary">{loading ? 'Loading...' : `${shops.length} shops`}</Badge>
+            <div className="flex items-center gap-2">
+              <Badge variant="secondary">{loading ? 'Loading...' : `${sortedShops.length} shops`}</Badge>
+              {nearMe && (
+                <Button variant="outline" size="sm" onClick={() => setNearMe(null)} className="gap-1">
+                  <X className="h-3 w-3" />
+                  Clear
+                </Button>
+              )}
+            </div>
           </div>
+          {nearMe && (
+            <p className="text-sm text-muted-foreground">Sorted by distance from your location</p>
+          )}
           <div className="grid grid-cols-1 gap-3">
-            {shops.map(s => (
-              <Card key={s.id}>
-                <CardContent className="p-4">
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <Flower2 className="h-4 w-4 text-gold" />
-                      <span className="font-semibold text-foreground">{s.name}</span>
+            {sortedShops.map(s => {
+              const dist = nearMe && s.lat != null && s.lng != null
+                ? haversine(nearMe.lat, nearMe.lng, s.lat, s.lng)
+                : null
+              return (
+                <Card key={s.id}>
+                  <CardContent className="p-4">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <Flower2 className="h-4 w-4 text-gold flex-shrink-0" />
+                        <span className="font-semibold text-foreground truncate">{s.name}</span>
+                      </div>
+                      <div className="flex items-center gap-2 flex-shrink-0">
+                        {dist != null && (
+                          <Badge variant="outline" className="text-gold border-gold text-xs">
+                            {dist < 1 ? `${Math.round(dist * 1000)}m away` : `${dist.toFixed(1)}km away`}
+                          </Badge>
+                        )}
+                        <Button variant="outline" size="sm" className="gap-1" asChild>
+                          <a
+                            href={'https://www.google.com/maps?q=' + s.lat + ',' + s.lng}
+                            target="_blank" rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="h-3 w-3" />
+                            Maps
+                          </a>
+                        </Button>
+                      </div>
                     </div>
-                    <Button variant="outline" size="sm" className="gap-1" asChild>
-                      <a
-                        href={'https://www.google.com/maps?q=' + s.lat + ',' + s.lng}
-                        target="_blank" rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="h-3 w-3" />
-                        Maps
-                      </a>
-                    </Button>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-0.5">{s.area}</p>
-                  {Object.keys(s.prices || {}).length > 0 && (
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {Object.entries(s.prices || {}).map(([k, v]) => (
-                        <Badge key={k} variant="outline" className="text-xs">
-                          {k}: ₹{v}
-                        </Badge>
-                      ))}
-                    </div>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+                    <p className="text-sm text-muted-foreground mt-0.5">{s.area}</p>
+                    {Object.keys(s.prices || {}).length > 0 && (
+                      <div className="flex flex-wrap gap-2 mt-3">
+                        {Object.entries(s.prices || {}).map(([k, v]) => (
+                          <Badge key={k} variant="outline" className="text-xs">
+                            {k}: ₹{v}
+                          </Badge>
+                        ))}
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              )
+            })}
           </div>
         </div>
       )}

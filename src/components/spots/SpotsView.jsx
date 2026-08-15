@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from 'react'
-import { MapPin, Camera, Navigation, Loader2, ExternalLink, X, Clock } from 'lucide-react'
+import { useState, useEffect, useMemo, useRef } from 'react'
+import { MapPin, Camera, Navigation, Loader2, ExternalLink, X, Clock, List } from 'lucide-react'
 import SpotSubmissionForm from './SpotSubmissionForm.jsx'
 import { fetchLocations } from '../../shared/locations.js'
-import { timeAgo } from '../../shared/utils.js'
+import { timeAgo, haversine } from '../../shared/utils.js'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
@@ -13,6 +13,7 @@ export default function SpotsView() {
   const [spots, setSpots] = useState([])
   const [loading, setLoading] = useState(true)
   const [selected, setSelected] = useState(null)
+  const [nearMe, setNearMe] = useState(null)
   const [pickLat, setPickLat] = useState(null)
   const [pickLng, setPickLng] = useState(null)
   const [locating, setLocating] = useState(false)
@@ -39,6 +40,14 @@ export default function SpotsView() {
   }
 
   useEffect(() => { refresh() }, [])
+
+  const sortedSpots = useMemo(() => {
+    if (!nearMe) return spots
+    const dist = (s) => s.lat != null && s.lng != null
+      ? haversine(nearMe.lat, nearMe.lng, s.lat, s.lng)
+      : Infinity
+    return [...spots].sort((a, b) => dist(a) - dist(b))
+  }, [spots, nearMe])
 
   useEffect(() => {
     if (mapInstance.current) return
@@ -151,6 +160,7 @@ export default function SpotsView() {
       pos => {
         setPickLat(pos.coords.latitude)
         setPickLng(pos.coords.longitude)
+        setNearMe({ lat: pos.coords.latitude, lng: pos.coords.longitude })
         setLocating(false)
       },
       (error) => {
@@ -394,6 +404,75 @@ export default function SpotsView() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Celebration Spots List */}
+      {!loading && sortedSpots.length > 0 && (
+        <div className="space-y-3">
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <h2 className="text-lg font-semibold text-green-800 flex items-center gap-2">
+              <List className="h-5 w-5 text-gold" />
+              Celebration Spots
+              <Badge variant="secondary">{sortedSpots.length} spots</Badge>
+            </h2>
+            {nearMe ? (
+              <Button variant="outline" size="sm" onClick={() => setNearMe(null)} className="flex items-center gap-2">
+                <X className="h-3 w-3" />
+                Clear nearest sorting
+              </Button>
+            ) : (
+              <span className="text-xs text-muted-foreground">
+                Use "My Location" to sort by nearest first
+              </span>
+            )}
+          </div>
+
+          {nearMe && (
+            <p className="text-sm text-muted-foreground">
+              Sorted by distance from your location
+            </p>
+          )}
+
+          <div className="space-y-3">
+            {sortedSpots.map(spot => {
+              const dist = nearMe && spot.lat != null && spot.lng != null
+                ? haversine(nearMe.lat, nearMe.lng, spot.lat, spot.lng)
+                : null
+              return (
+                <Card
+                  key={spot.id}
+                  className={`festival-card hover:shadow-lg transition-all duration-200 cursor-pointer ${selected?.id === spot.id ? 'ring-2 ring-terracotta border-terracotta' : ''}`}
+                  onClick={() => setSelected(spot)}
+                >
+                  <CardContent className="p-4">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex items-center gap-2 min-w-0">
+                        <div className="p-2 rounded-lg bg-terracotta/10 flex-shrink-0">
+                          <Camera className="h-4 w-4 text-terracotta" />
+                        </div>
+                        <div className="min-w-0">
+                          <div className="font-semibold text-green-800 truncate">{spot.name}</div>
+                          <div className="flex items-center gap-2 mt-0.5 flex-wrap">
+                            <Badge variant="secondary" className="text-xs">{spot.category}</Badge>
+                            <span className="text-xs text-muted-foreground flex items-center gap-1">
+                              <Clock className="h-3 w-3" />
+                              {timeAgo(spot.createdAt)}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      {dist != null && (
+                        <Badge variant="outline" className="text-gold border-gold flex-shrink-0">
+                          {dist < 1 ? `${Math.round(dist * 1000)}m away` : `${dist.toFixed(1)}km away`}
+                        </Badge>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

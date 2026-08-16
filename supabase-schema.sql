@@ -101,18 +101,30 @@ create table if not exists location_flags (
 -- User reports for data quality issues
 create table if not exists reports (
   id serial primary key,
-  type text check (type in ('outlet','price','general')) not null,
-  issue_type text check (issue_type in ('coordinates','price','stock','closed','contact','other')) not null,
+  type text check (type in ('outlet','price','general','spot')) not null,
+  issue_type text check (issue_type in ('coordinates','price','stock','closed','contact','wrong_info','event_over','spam','other')) not null,
   description text not null,
   contact_email text,
   outlet_id int references outlets(outlet_id),
   outlet_name text,
+  location_id int references locations(id),
+  location_name text,
   price_id int,
   product_name text,
   user_agent text,
   status text default 'pending' check (status in ('pending','reviewed','resolved','dismissed')),
   created_at timestamptz default now()
 );
+
+-- Migrations for databases where `reports` already exists
+alter table reports add column if not exists location_id int references locations(id);
+alter table reports add column if not exists location_name text;
+alter table reports drop constraint if exists reports_type_check;
+alter table reports add constraint reports_type_check
+  check (type in ('outlet','price','general','spot'));
+alter table reports drop constraint if exists reports_issue_type_check;
+alter table reports add constraint reports_issue_type_check
+  check (issue_type in ('coordinates','price','stock','closed','contact','wrong_info','event_over','spam','other'));
 
 -- Sadya menu reference
 create table if not exists sadya_dishes (

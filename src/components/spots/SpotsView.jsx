@@ -4,6 +4,7 @@ import SpotSubmissionForm from './SpotSubmissionForm.jsx'
 import { fetchLocations } from '../../shared/locations.js'
 import { timeAgo, haversine } from '../../shared/utils.js'
 import MapModal from '../shared/MapModal.jsx'
+import ReportDialog from '../shared/ReportDialog.jsx'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
@@ -381,12 +382,21 @@ export default function SpotsView() {
               <p className="text-xs text-muted-foreground">
                 Added {timeAgo(selected.createdAt)}
               </p>
-              {selected.lat && selected.lng && (
-                <Button variant="outline" size="sm" className="flex items-center gap-2" onClick={() => setMapModal({ query: selected.lat + ',' + selected.lng, name: selected.name })}>
-                  <MapPin className="h-4 w-4" />
-                  View Location
-                </Button>
-              )}
+              <div className="flex items-center gap-2">
+                <ReportDialog
+                  type="spot"
+                  locationId={selected.id}
+                  locationName={selected.name}
+                  triggerVariant="outline"
+                  triggerText="Report Issue"
+                />
+                {selected.lat && selected.lng && (
+                  <Button variant="outline" size="sm" className="flex items-center gap-2" onClick={() => setMapModal({ query: selected.lat + ',' + selected.lng, name: selected.name })}>
+                    <MapPin className="h-4 w-4" />
+                    View Location
+                  </Button>
+                )}
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -477,11 +487,24 @@ export default function SpotsView() {
                           </div>
                         </div>
                       </div>
-                      {dist != null && (
-                        <Badge variant="outline" className="text-gold border-gold flex-shrink-0">
-                          {dist < 1 ? `${Math.round(dist * 1000)}m away` : `${dist.toFixed(1)}km away`}
-                        </Badge>
-                      )}
+                      <div className="flex items-center gap-2 flex-shrink-0">
+                        {dist != null && (
+                          <Badge variant="outline" className="text-gold border-gold">
+                            {dist < 1 ? `${Math.round(dist * 1000)}m away` : `${dist.toFixed(1)}km away`}
+                          </Badge>
+                        )}
+                        <div onClick={(e) => e.stopPropagation()}>
+                          <ReportDialog
+                            type="spot"
+                            locationId={spot.id}
+                            locationName={spot.name}
+                            triggerVariant="ghost"
+                            triggerText=""
+                            triggerSize="icon"
+                            showIcon
+                          />
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>

@@ -29,10 +29,21 @@ const ISSUE_TYPES = {
   other: 'Other Issue',
 }
 
+const SPOT_ISSUE_TYPES = {
+  coordinates: 'Wrong Location/Coordinates',
+  wrong_info: 'Wrong Information',
+  event_over: 'Event Already Over',
+  closed: 'Spot Not Found/Removed',
+  spam: 'Spam or Duplicate',
+  other: 'Other Issue',
+}
+
 export default function ReportDialog({ 
-  type = 'outlet', // 'outlet', 'price', or 'general'
+  type = 'outlet', // 'outlet', 'price', 'general', or 'spot'
   outletId = null,
   outletName = null,
+  locationId = null,
+  locationName = null,
   priceId = null,
   productName = null,
   triggerVariant = 'ghost',
@@ -47,6 +58,8 @@ export default function ReportDialog({
   const [submitting, setSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(null)
+
+  const issueTypes = type === 'spot' ? SPOT_ISSUE_TYPES : ISSUE_TYPES
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -73,6 +86,8 @@ export default function ReportDialog({
         contact_email: contactEmail.trim() || null,
         outlet_id: outletId,
         outlet_name: outletName,
+        location_id: locationId,
+        location_name: locationName,
         price_id: priceId,
         product_name: productName,
         user_agent: navigator.userAgent,
@@ -140,6 +155,11 @@ export default function ReportDialog({
                     {outletName}
                   </span>
                 )}
+                {locationName && (
+                  <span className="block font-medium text-green-800 mt-1">
+                    {locationName}
+                  </span>
+                )}
                 {productName && (
                   <span className="block font-medium text-green-800 mt-1">
                     {productName}
@@ -157,7 +177,7 @@ export default function ReportDialog({
                     <SelectValue placeholder="Select issue type" />
                   </SelectTrigger>
                   <SelectContent>
-                    {Object.entries(ISSUE_TYPES).map(([key, label]) => (
+                    {Object.entries(issueTypes).map(([key, label]) => (
                       <SelectItem key={key} value={key}>
                         {label}
                       </SelectItem>

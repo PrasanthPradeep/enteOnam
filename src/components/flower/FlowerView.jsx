@@ -165,13 +165,13 @@ export default function FlowerView() {
   }
 
   const submit = async () => {
-    if (!name || !area || lat == null || lng == null) return
+    if (!name || lat == null || lng == null) return
     setError(null)
     try {
       const location = await insertLocation({
         category: 'flower_shop',
         name,
-        description: area,
+        description: area || null,
         lat,
         lng,
         prices,
@@ -186,7 +186,7 @@ export default function FlowerView() {
     }
   }
 
-  const canSubmit = name && area && lat != null && lng != null
+  const canSubmit = name && lat != null && lng != null
 
   const openReport = (shop) => {
     setReportShopId(shop.id)
@@ -292,7 +292,7 @@ export default function FlowerView() {
                 <Input id="shop-name" value={name} onChange={e => setName(e.target.value)} placeholder="e.g. Aluva Flower Market" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="shop-area">Area / Location *</Label>
+                <Label htmlFor="shop-area">Area / Location (optional)</Label>
                 <Input id="shop-area" value={area} onChange={e => setArea(e.target.value)} placeholder="e.g. Mattancherry, Kochi" />
               </div>
 

@@ -26,6 +26,7 @@ export default function FlowerView() {
   const [nearMe, setNearMe] = useState(null)
   const [locating, setLocating] = useState(false)
   const [mapLink, setMapLink] = useState('')
+  const [mapLinkError, setMapLinkError] = useState(null)
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState(null)
   const [reportShopId, setReportShopId] = useState(null)
@@ -107,6 +108,13 @@ export default function FlowerView() {
   }, [shops, lat, lng])
 
   const parseMapLink = (url) => {
+    // Short goo.gl / maps.app.goo.gl links can't be parsed without
+    // following the redirect, so reject them and ask for the full URL.
+    if (/maps\.app\.goo\.gl|goo\.gl\//.test(url)) {
+      setMapLinkError('Short Google Maps links can\'t be read. Please copy the full link from your browser\'s address bar (e.g. https://www.google.com/maps/place/Shop+Name/@10.0000,76.0000...).')
+      return
+    }
+    setMapLinkError(null)
     // Prefer the actual pin coordinates (!3d<lat>!4d<lng>) over the
     // viewport center (@lat,lng) that Google also embeds in place URLs.
     // When several pairs exist, the last one is the place's true location.
@@ -267,7 +275,14 @@ export default function FlowerView() {
               placeholder="https://www.google.com/maps/place/Shop+Name/@10.0000,76.0000..."
               value={mapLink}
               onChange={e => { setMapLink(e.target.value); parseMapLink(e.target.value) }}
+              className={mapLinkError ? 'border-red-400 focus-visible:ring-red-400' : ''}
             />
+            {mapLinkError && (
+              <p className="flex items-start gap-2 text-sm text-red-700 bg-red-50 rounded-md p-3">
+                <X className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                <span>{mapLinkError}</span>
+              </p>
+            )}
           </div>
 
           {showForm && (

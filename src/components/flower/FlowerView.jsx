@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
 import {
-  Flower2, MapPin, Loader2, ExternalLink, Link2, Store, Plus, X,
+  Flower2, MapPin, Loader2, ExternalLink, Store, Plus, X,
   CheckCircle2, Navigation
 } from 'lucide-react'
 import { Card, CardContent } from '../ui/card'
@@ -259,11 +259,12 @@ export default function FlowerView() {
             )}
           </div>
 
-          <div className="relative">
-            <Link2 className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <div className="space-y-2">
+            <label className="text-sm font-medium">
+              Or paste a Google Maps link
+            </label>
             <Input
-              className="pl-10"
-              placeholder="Or paste a Google Maps link (shop name auto-filled)..."
+              placeholder="https://www.google.com/maps/place/Shop+Name/@10.0000,76.0000..."
               value={mapLink}
               onChange={e => { setMapLink(e.target.value); parseMapLink(e.target.value) }}
             />

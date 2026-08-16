@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo, useRef } from 'react'
-import { MapPin, Camera, Navigation, Loader2, ExternalLink, X, Clock, List } from 'lucide-react'
+import { MapPin, Camera, Navigation, Loader2, ExternalLink, X, Clock, List, Calendar } from 'lucide-react'
 import SpotSubmissionForm from './SpotSubmissionForm.jsx'
 import { fetchLocations } from '../../shared/locations.js'
 import { timeAgo, haversine } from '../../shared/utils.js'
@@ -9,6 +9,11 @@ import { Button } from '../ui/button'
 import { Input } from '../ui/input'
 import { Badge } from '../ui/badge'
 import { Skeleton } from '../ui/skeleton'
+
+const formatSpotDate = (iso) => {
+  if (!iso) return ''
+  return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+}
 
 export default function SpotsView() {
   const [spots, setSpots] = useState([])
@@ -36,6 +41,8 @@ export default function SpotsView() {
       lat: row.lat,
       lng: row.lng,
       photo: row.photo_url,
+      eventDate: row.event_date,
+      eventEndDate: row.event_end_date,
       createdAt: row.created_at,
     })))
     setLoading(false)
@@ -347,6 +354,18 @@ export default function SpotsView() {
                 {selected.description}
               </p>
             )}
+
+            {(selected.eventDate || selected.eventEndDate) && (
+              <div className="flex items-center gap-2 text-sm text-green-700 bg-green-50 rounded-lg p-3">
+                <Calendar className="h-4 w-4 flex-shrink-0" />
+                <span>
+                  {formatSpotDate(selected.eventDate)}
+                  {selected.eventEndDate && selected.eventEndDate !== selected.eventDate && (
+                    <> – {formatSpotDate(selected.eventEndDate)}</>
+                  )}
+                </span>
+              </div>
+            )}
             
             {selected.photo && (
               <div className="relative">
@@ -442,6 +461,15 @@ export default function SpotsView() {
                           <div className="font-semibold text-green-800 truncate">{spot.name}</div>
                           <div className="flex items-center gap-2 mt-0.5 flex-wrap">
                             <Badge variant="secondary" className="text-xs">{spot.category}</Badge>
+                            {(spot.eventDate || spot.eventEndDate) && (
+                              <span className="text-xs text-muted-foreground flex items-center gap-1">
+                                <Calendar className="h-3 w-3" />
+                                {formatSpotDate(spot.eventDate)}
+                                {spot.eventEndDate && spot.eventEndDate !== spot.eventDate && (
+                                  <> – {formatSpotDate(spot.eventEndDate)}</>
+                                )}
+                              </span>
+                            )}
                             <span className="text-xs text-muted-foreground flex items-center gap-1">
                               <Clock className="h-3 w-3" />
                               {timeAgo(spot.createdAt)}

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Camera, MapPin, Loader2, Upload, X, CheckCircle2 } from 'lucide-react'
+import { Camera, MapPin, Loader2, Upload, X, CheckCircle2, Calendar } from 'lucide-react'
 import { Card, CardContent } from '../ui/card'
 import { Button } from '../ui/button'
 import { Input } from '../ui/input'
@@ -14,6 +14,8 @@ export default function SpotSubmissionForm({ onSpotAdded, lat, lng }) {
   const [description, setDescription] = useState('')
   const [category, setCategory] = useState('')
   const [photo, setPhoto] = useState(null)
+  const [eventDate, setEventDate] = useState('')
+  const [eventEndDate, setEventEndDate] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState(null)
@@ -39,11 +41,13 @@ export default function SpotSubmissionForm({ onSpotAdded, lat, lng }) {
         lat,
         lng,
         photoUrl: photo,
+        eventDate: eventDate ? new Date(eventDate + 'T12:00:00').toISOString() : null,
+        eventEndDate: eventEndDate ? new Date(eventEndDate + 'T12:00:00').toISOString() : null,
       })
       setSaved(true)
       setTimeout(() => {
         setSaved(false)
-        setName(''); setDescription(''); setCategory(''); setPhoto(null); setShowForm(false)
+        setName(''); setDescription(''); setCategory(''); setPhoto(null); setEventDate(''); setEventEndDate(''); setShowForm(false)
       }, 1500)
       if (onSpotAdded) onSpotAdded()
     } catch (err) {
@@ -118,6 +122,29 @@ export default function SpotSubmissionForm({ onSpotAdded, lat, lng }) {
                 onChange={e => setDescription(e.target.value)}
                 placeholder="Describe this spot..."
               />
+            </div>
+
+            <div className="space-y-2">
+              <Label className="flex items-center gap-2">
+                <Calendar className="h-4 w-4 text-muted-foreground" />
+                Event date range (optional)
+              </Label>
+              <div className="grid grid-cols-2 gap-2">
+                <Input
+                  type="date"
+                  aria-label="Event start date"
+                  value={eventDate}
+                  onChange={e => setEventDate(e.target.value)}
+                />
+                <Input
+                  type="date"
+                  aria-label="Event end date"
+                  value={eventEndDate}
+                  min={eventDate || undefined}
+                  onChange={e => setEventEndDate(e.target.value)}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground">Start date (left) to end date (right)</p>
             </div>
 
             <div className="space-y-2">

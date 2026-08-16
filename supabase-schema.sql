@@ -75,6 +75,7 @@ create table if not exists locations (
   lng double precision,
   photo_url text,
   event_date timestamptz,
+  event_end_date timestamptz,
   submitted_by uuid references profiles(id),
   status text default 'active' check (status in ('active','hidden','pending')),
   created_at timestamptz default now()

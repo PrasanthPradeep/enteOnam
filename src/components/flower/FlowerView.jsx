@@ -243,7 +243,7 @@ export default function FlowerView() {
               className="flex items-center gap-2"
             >
               {locating ? <Loader2 className="h-4 w-4 animate-spin" /> : <Navigation className="h-4 w-4" />}
-              {locating ? 'Locating...' : 'Use my location'}
+              {locating ? 'Locating...' : 'Nearby'}
             </Button>
             {lat != null && (
               <Badge variant="outline" className="gap-1">

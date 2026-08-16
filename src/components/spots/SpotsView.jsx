@@ -250,7 +250,7 @@ export default function SpotsView() {
                 ) : (
                   <Navigation className="h-4 w-4" />
                 )}
-                {locating ? 'Locating...' : 'Use My Location'}
+                {locating ? 'Locating...' : 'Nearby'}
               </Button>
 
               {pickLat != null && (

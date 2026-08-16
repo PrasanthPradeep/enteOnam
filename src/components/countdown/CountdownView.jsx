@@ -10,7 +10,7 @@ const rituals = [
     icon: Flower,
     color: 'text-green-600',
     bgColor: 'bg-green-50',
-    weekday: 'Monday',
+    weekday: 'Sunday',
     date: 16
   },
   { 
@@ -19,7 +19,7 @@ const rituals = [
     icon: Star,
     color: 'text-gold-600',
     bgColor: 'bg-gold-50',
-    weekday: 'Tuesday',
+    weekday: 'Monday',
     date: 17
   },
   { 
@@ -28,7 +28,7 @@ const rituals = [
     icon: Gift,
     color: 'text-terracotta-600',
     bgColor: 'bg-terracotta-50',
-    weekday: 'Wednesday',
+    weekday: 'Tuesday',
     date: 18
   },
   {
@@ -37,7 +37,7 @@ const rituals = [
     icon: Gift,
     color: 'text-terracotta-600',
     bgColor: 'bg-terracotta-50',
-    weekday: 'Thursday',
+    weekday: 'Wednesday',
     date: 19
   },
   { 

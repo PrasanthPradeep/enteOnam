@@ -12,7 +12,7 @@ import { haversine, timeAgo } from '../../shared/utils.js'
 import { fetchLocations, insertLocation } from '../../shared/locations.js'
 import MapModal from '../shared/MapModal.jsx'
 
-const FLOWER_TYPES = ['Thumba', 'Arali', 'Jamanthi', 'Marigold', 'Chembarathi', 'Mukutti', 'Krishna kireedam']
+const FLOWER_TYPES = ['Thumba', 'Arali', 'Jamanthi', 'Marigold', 'Chembarathi', 'Mukutti', 'Krishna kireedam', 'Mullapoo']
 
 export default function FlowerView() {
   const [shops, setShops] = useState([])

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route, NavLink, useLocation } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import { Menu, X, Calendar, Store, MapPin, Camera, Flower, ChefHat, IndianRupee, Home } from 'lucide-react'
 import MapView from './components/map/MapView.jsx'
 import StoresView from './components/stores/StoresView.jsx'
@@ -183,6 +184,7 @@ export default function App() {
 
       {/* Main Content */}
       <MusicToggle />
+      <Analytics />
       <main className="container section">
         <Routes>
           <Route path="/" element={<CountdownView />} />
